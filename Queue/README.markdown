@@ -46,7 +46,7 @@ queue.dequeue()
 
 ```swift
 public struct Queue<T> {
-  private var array = [T]()
+  fileprivate var array = [T]()
 
   public var isEmpty: Bool {
     return array.isEmpty
@@ -56,7 +56,7 @@ public struct Queue<T> {
     return array.count
   }
 
-  public mutating func enqueue(element: T) {
+  public mutating func enqueue(_ element: T) {
     array.append(element)
   }
   
@@ -68,7 +68,7 @@ public struct Queue<T> {
     }
   }
   
-  public func peek() -> T? {
+  public var front: T? {
     return array.first
   }
 }
@@ -136,8 +136,8 @@ queue.enqueue("Tim")
 
 ```swift
 public struct Queue<T> {
-  private var array = [T?]()
-  private var head = 0
+  fileprivate var array = [T?]()
+  fileprivate var head = 0
   
   public var isEmpty: Bool {
     return count == 0
@@ -147,7 +147,7 @@ public struct Queue<T> {
     return array.count - head
   }
   
-  public mutating func enqueue(element: T) {
+  public mutating func enqueue(_ element: T) {
     array.append(element)
   }
   
@@ -166,7 +166,7 @@ public struct Queue<T> {
     return element
   }
   
-  public func peek() -> T? {
+  public var front: T? {
     if isEmpty {
       return nil
     } else {

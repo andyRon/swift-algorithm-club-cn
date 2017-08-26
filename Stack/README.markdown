@@ -38,11 +38,11 @@ stack.pop()
 
 这行代码返回 `3`，以此类推。如果栈空了，弹栈操作将返回 `nil`，在有些实现中，会触发一个 `stack underflow` 错误消息。
 
-栈在 Swift 中的实现非常容易。只需要包装一下自带的数组，将存取功能限制为 pop、push 和 peek 即可。
+栈在 Swift 中的实现非常容易。只需要包装一下自带的数组，将存取功能限制为 pop、push 和 查看栈的顶部元素。
 
 ```swift
 public struct Stack<T> {
-  private var array = [T]()
+  fileprivate var array = [T]()
 
   public var isEmpty: Bool {
     return array.isEmpty
@@ -52,19 +52,15 @@ public struct Stack<T> {
     return array.count
   }
 
-  public mutating func push(element: T) {
+  public mutating func push(_ element: T) {
     array.append(element)
   }
 
   public mutating func pop() -> T? {
-    if isEmpty {
-      return nil
-    } else {
-      return array.removeLast()
-    }
+    return array.popLast()
   }
 
-  public func peek() -> T? {
+  public var top: T? {
     return array.last
   }
 }
