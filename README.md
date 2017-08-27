@@ -1,4 +1,5 @@
 > 注：本文译自 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。
+> 部分翻译来自https://github.com/ksco/swift-algorithm-club-cn。
 
 ![Swift Algorithm Club](/Images/SwiftAlgorithm-410-transp.png)
 
