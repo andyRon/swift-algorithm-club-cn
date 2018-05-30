@@ -11,7 +11,7 @@
 
 这个项目的目的是**解释各种算法的工作方式**。所以我们主要关注代码的清晰性和可读性，而不是为了产出一个可复用的库，让读者可以直接拖进自己的工程使用。换句话说，绝大多数的代码都是可以用于实际的项目中的，不过需要你根据自己的项目需求进行一些修整。
 
-所有的代码都是兼容 **Xcode 8** 以及 **Swift 3** 的。如果 Swift 有更新，我们也会及时跟进。
+所有的代码都是兼容 **Xcode 9** 以及 **Swift 4** 的。如果 Swift 有更新，我们也会及时跟进。
 
 这个项目目前正在进行中。更多的算法将被加入，敬请期待。:-)
 
@@ -19,15 +19,15 @@
 
 ## 重要链接
 
-[什么是算法和数据结构？](What%20are%20Algorithms.markdown)－薄饼！
+[什么是算法和数据结构？](What%20are%20Algorithms.markdown)－ 薄饼！
 
-[为什么要学习算法？](Why%20Algorithms.markdown)－还在担心这不是你的菜吗？请读一下这篇文章。
+[为什么要学习算法？](Why%20Algorithms.markdown)－ 还在担心这不是你的菜吗？请读一下这篇文章。
 
-[大 O 表示法](Big-O%20Notation.markdown)－我们经常会听到这样的话：“这个算法是 O(n) 的”。如果你不知道这是啥意思，请读读这篇文章。
+[大 O 表示法](Big-O%20Notation.markdown)－ 我们经常会听到这样的话：“这个算法是 O(n) 的”。如果你不知道这是啥意思，请读读这篇文章。
 
-[*算法设计技巧](Algorithm%20Design.markdown)－怎样设计自己的算法？
+[*算法设计技巧](Algorithm%20Design.markdown)－ 怎样设计自己的算法？
 
-[欢迎参与翻译！](How%20to%20Contribute.markdown)－如果有意参与翻译，请阅读注意事项！
+[欢迎参与贡献](How%20to%20Contribute.markdown)－ 通过留下issue反馈，或者提交pull request。
 
 ## 从哪开始？
 
@@ -38,7 +38,7 @@
 - [*插入排序](Insertion%20Sort/)
 - [*二分搜索](Binary%20Search/)和[*二分搜索树](Binary%20Search%20Tree/)
 - [*归并排序](Merge%20Sort/)
-- [*Boyer-Moore 字符串搜索算法](Boyer-Moore/)
+- [*Boyer-Moore 字符串搜索算法](Boyer-Moore-Horspool/)
 
 ## 算法列表
 
@@ -56,8 +56,10 @@
 
 - [*Brute-Force 算法](Brute-Force%20String%20Search/)－一个简单粗暴的方法。
 - [*Boyer-Moore 算法](Boyer-Moore/)－一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
-- Rabin-Karp 算法
+- [Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/) 一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
+- [Rabin-Karp 算法] 使用哈希的快速搜索
 - [*最长公共子序列算法](Longest%20Common%20Subsequence/)－找到两个字符串中的最长公共子序列。
+- [Z-Algorithm](Z-Algorithm/) Finds all instances of a pattern in a String, and returns the indexes of where the pattern starts within the String.
 
 ### 排序算法
 
@@ -75,16 +77,19 @@
 - [*归并排序](Merge%20Sort/)
 - [*堆排序](Heap%20Sort/)
 
+混合排序算法：
+- [内省排序](Introsort/)
+
 特殊的排序算法
 
-- [*桶排序](Bucket%20Sort/) :construction:
 - [*计数排序](Counting%20Sort/)
-- 基数排序
+- [基数排序](Radix%20Sort/)
 - [*拓扑排序](Topological%20Sort/)
 
 不好的排序算法（知道就行了，不要用！）：
 
 - [*冒泡排序](Bubble%20Sort/)
+- [慢排序](Slow%20Sort/)
 
 ### 压缩算法
 
@@ -93,14 +98,20 @@
 
 ### 杂项
 
-- [*搅乱算法](Shuffle/)－随机搅乱数组中的内容。
+- [*洗牌算法](Shuffle/)－随机搅乱数组中的内容。
+- [梳排序](Comb%20Sort/). An improve upon the Bubble Sort algorithm.
+- [凸包算法](Convex%20Hull/).
+- [Miller-Rabin素性检测](Miller-Rabin%20Primality%20Test/). Is the number a prime number?
+- [MinimumCoinChange](MinimumCoinChange/). A showcase for dynamic programming.
 
 ### 数学向算法
 
 - [*最大公约数算法(GCD)](GCD/)－特殊福利：最小公倍数算法。
 - [*排列组合算法](Combinatorics/)－还记得高中学过俄组合数学吗？
 - [*调度场算法](Shunting%20Yard/)－用于将中缀表达式转换为后缀表达式的经典算法。
-- 统计算法
+- [Karatsuba Multiplication](Karatsuba%20Multiplication/). Another take on elementary multiplication.
+- [Haversine Distance](HaversineDistance/). Calculating the distance between 2 points from a sphere.
+- [Strassen's Multiplication Matrix](Strassen%20Matrix%20Multiplication/). Efficient way to handle matrix multiplication.
 
 ### 机器学习
 
@@ -110,6 +121,8 @@
 - 逻辑回归
 - 神经网络
 - 网页排名算法
+- [Naive Bayes Classifier](Naive%20Bayes%20Classifier/)
+
 
 ## 数据结构
 
@@ -125,8 +138,9 @@
 
 - [*二维数组](Array2D/)－固定尺寸的二维数组，可用于棋盘游戏。
 - [*比特集](Bit%20Set/)－**n** 位大小固定尺度的序列。
-- [*固定长度数组](Fixed%20Size%20Array/)－如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
+- [*固定长度数组](Fixed%20Size%20Array/) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
 - [*有序数组](Ordered%20Array/)－一个永远有序的数组。
+- [Rootish Array Stack](Rootish%20Array%20Stack/). A space and time efficient variation on Swift arrays.
 
 ### 队列
 
@@ -140,7 +154,7 @@
 ### 列表
 
 - [*链表](Linked%20List/)－链接起来的数据序列。包含单向和双向链表。
-- 跳跃列表
+- [跳跃列表](Skip-List/)
 
 ### 树
 
@@ -185,8 +199,13 @@
 很多程序员在面试时都会被问到一些算法性质的智力题。这里只囊括了一点比较有趣的。想了解更多的智力题（及答案），请浏览[这里](http://elementsofprogramminginterviews.com/)，还有[这里](http://www.crackingthecodinginterview.com)。
 
 - [*二和问题](Two-Sum%20Problem/)
+- [Three-Sum/Four-Sum Problem](3Sum%20and%204Sum/)
 - [*Fizz Buzz](Fizz%20Buzz/)
 - [*蒙提霍尔问题](Monty%20Hall%20Problem/)
+- [Finding Palindromes](Palindromes/)
+- [Dining Philosophers](DiningPhilosophers/)
+- [Egg Drop Problem](Egg%20Drop%20Problem/)
+- [Encoding and Decoding Binary Tree](Encode%20and%20Decode%20Tree/)
 
 ## 学无止境！
 
