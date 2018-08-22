@@ -1,7 +1,7 @@
 > 注：本文译自 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。
 > 部分翻译来自https://github.com/ksco/swift-algorithm-club-cn。
 
-![Swift Algorithm Club](/Images/SwiftAlgorithm-410-transp.png)
+![Swift Algorithm Club](Images/SwiftAlgorithm-410-transp.png)
 
 # 欢迎来到 Swift 算法俱乐部！
 
@@ -23,11 +23,12 @@
 
 [为什么要学习算法？](Why%20Algorithms.markdown)－ 还在担心这不是你的菜吗？请读一下这篇文章。
 
-[大 O 表示法](Big-O%20Notation.markdown)－ 我们经常会听到这样的话：“这个算法是 O(n) 的”。如果你不知道这是啥意思，请读读这篇文章。
+[大O表示法](Big-O%20Notation.markdown)－ 我们经常会听到这样的话：“这个算法是 O(n) 的”。如果你不知道这是啥意思，请读读这篇文章。
 
-[*算法设计技巧](Algorithm%20Design.markdown)－ 怎样设计自己的算法？
-
+[算法设计技巧](Algorithm%20Design.markdown)－ 怎样设计自己的算法？
+<!--
 [欢迎参与贡献](How%20to%20Contribute.markdown)－ 通过留下issue反馈，或者提交pull request。
+-->
 
 ## 从哪开始？
 
@@ -35,7 +36,7 @@
 
 - [栈](Stack/)
 - [队列](Queue/)
-- [*插入排序](Insertion%20Sort/)
+- [插入排序](Insertion%20Sort/)
 - [*二分搜索](Binary%20Search/)和[*二分搜索树](Binary%20Search%20Tree/)
 - [*归并排序](Merge%20Sort/)
 - [*Boyer-Moore 字符串搜索算法](Boyer-Moore-Horspool/)
