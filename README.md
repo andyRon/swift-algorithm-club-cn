@@ -34,9 +34,9 @@
 
 如果你之前没有接触过算法和数据结构，你可以从下面这些简单易懂的算法开始看起：
 
-- [栈](Stack/)
-- [队列](Queue/)
-- [插入排序](Insertion%20Sort/)
+- [栈](Stack/README_zh.markdown)
+- [队列](Queue/README_zh.markdown)
+- [插入排序](Insertion%20Sort/README_zh.markdown)
 - [*二分搜索](Binary%20Search/)和[*二分搜索树](Binary%20Search%20Tree/)
 - [*归并排序](Merge%20Sort/)
 - [*Boyer-Moore 字符串搜索算法](Boyer-Moore-Horspool/)
@@ -68,7 +68,7 @@
 
 基本的排序算法：
 
-- [*插入排序](Insertion%20Sort/)
+- [插入排序](Insertion%20Sort/README_zh.markdown)
 - [*选择排序](Selection%20Sort/)
 - [*希尔排序](Shell%20Sort/)
 

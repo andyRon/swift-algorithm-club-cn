@@ -1,8 +1,11 @@
 # Insertion Sort
+# 插入排序
 
 Goal: Sort an array from low to high (or high to low).
+目标：把数组从低到高（或从高到低）排序
 
 You are given an array of numbers and need to put them in the right order. The insertion sort algorithm works as follows:
+您将获得一系列数字，需要按正确的顺序排列。插入排序算法的工作原理如下
 
 - Put the numbers on a pile. This pile is unsorted.
 - Pick a number from the pile. It doesn't really matter which one you pick, but it's easiest to pick from the top of the pile. 
@@ -10,40 +13,62 @@ You are given an array of numbers and need to put them in the right order. The i
 - Pick the next number from the unsorted pile and also insert that into the new array. It either goes before or after the first number you picked, so that now these two numbers are sorted.
 - Again, pick the next number from the pile and insert it into the array in the proper sorted position.
 - Keep doing this until there are no more numbers on the pile. You end up with an empty pile and an array that is sorted.
+- 把数字放在一个堆里。 这个堆是未排序的。
+- 从堆中挑选一个数字。 你选择哪一个并不重要，但最容易从堆顶挑选。
+- 把这个数插入一个新的数组。
+- 从未排序堆中再选择一个数字，并将其插入之前的数组中。 它要么在第一个数字之前或之后，所以现在这两个数字被排序。
+- 再次，从堆中选择下一个数字，并将其插入到数组中的正确排序位置。
+- 继续这样做，直到堆上没有数字。 最终得到一个空堆和一个排序的数组。
+
 
 That's why this is called an "insertion" sort, because you take a number from the pile and insert it in the array in its proper sorted position. 
+这就是为什么这被称为“插入”排序，因为你从堆中取一个数字并将其插入数组中的正确排序位置。
 
 ## An example
+## 一个例子
 
 Let's say the numbers to sort are `[ 8, 3, 5, 4, 6 ]`. This is our unsorted pile.
+假设这边有需要排序的一些数字  `[ 8, 3, 5, 4, 6 ]`。
 
 Pick the first number, `8`, and insert it into the new array. There is nothing in that array yet, so that's easy. The sorted array is now `[ 8 ]` and the pile is `[ 3, 5, 4, 6 ]`.
+选择第一个数字“8”，然后将其插入新数组中。 新数组是空的，所以插入很容易。 排序的数组现在是`[8]`，堆是`[3,5,4,6]`。
 
 Pick the next number from the pile, `3`, and insert it into the sorted array. It should go before the `8`, so the sorted array is now `[ 3, 8 ]` and the pile is reduced to `[ 5, 4, 6 ]`.
+从堆中选择下一个数字“3”，然后将其插入到已排序的数组中。 `3`应该在`8`之前，所以排序的数组现在是`[3,8]`，并且堆被缩减为`[5,4,6]`。
 
 Pick the next number from the pile, `5`, and insert it into the sorted array. It goes in between the `3` and `8`. The sorted array is `[ 3, 5, 8 ]` and the pile is `[ 4, 6 ]`.
+从堆中选择下一个数字“5”，然后将其插入到已排序的数组中。 `5`介于“3”和“8”之间。 排序的数组是`[3,5,8]`，堆是`[4,6]`。
 
 Repeat this process until the pile is empty.
+重复上面的过程直到堆为空。
 
 ## In-place sort
+## 原地排序
 
 The above explanation makes it seem like you need two arrays: one for the unsorted pile and one that contains the numbers in sorted order.
+上面的解释使你看起来需要两个数组：一个用于存放未排序的堆，另一个用于存放按次序排好的数字。
 
 But you can perform the insertion sort *in-place*, without having to create a separate array. You just keep track of which part of the array is sorted already and which part is the unsorted pile.
+但您可以执行*原地*插入排序，而无需创建单独的数组。 您只需跟踪数组的哪个部分已经排序，哪个部分是未排序。
 
 Initially, the array is `[ 8, 3, 5, 4, 6 ]`. The `|` bar shows where the sorted portion ends and the pile begins:
+最初，数组是`[8,3,5,4,6]`。 `|`栏显示已排序部分的结束位置和堆的开始位置：
 
 	[| 8, 3, 5, 4, 6 ]
 
 This shows that the sorted portion is empty and the pile starts at `8`.
+这表明排序的部分是空的，堆开始于'8'。
 
 After processing the first number, we have:
+处理完第一步后，我们有：
 
 	[ 8 | 3, 5, 4, 6 ]
 
 The sorted portion is `[ 8 ]` and the pile is `[ 3, 5, 4, 6 ]`. The `|` bar has shifted one position to the right.
+排好序的部分是`[8]`，未排序的堆是`[ 3, 5, 4, 6 ]`。`|`条向右移动了一个位置。
 
 This is how the content of the array changes during the sort:
+这是排序期间数组内容的变化方式：
 
 	[| 8, 3, 5, 4, 6 ]
 	[ 8 | 3, 5, 4, 6 ]
@@ -53,35 +78,44 @@ This is how the content of the array changes during the sort:
 	[ 3, 4, 5, 6, 8 |]
 
 In each step, the `|` bar moves up one position. As you can see, the beginning of the array up to the `|` is always sorted. The pile shrinks by one and the sorted portion grows by one, until the pile is empty and there are no more unsorted numbers left.
+每一步，`|`条向右移动一个位置。 如您所见，数组的开头到`|`总是排好序的。堆缩小一位置，排序部分增加一位置，直到堆变为空的，没有更多未排序的数字为止。
 
 ## How to insert
+## 怎么插入
 
 At each step you pick the top-most number from the unsorted pile and insert it into the sorted portion of the array. You must put that number in the proper place so that the beginning of the array remains sorted. How does that work?
+每一步，您从未排序堆中选择最顶部的数字，并将其插入到数组的已排序部分。 您必须将该数字放在适当的位置，以便数组的从头开始保持排序。 这是如何运作的？
 
 Let's say we've already done the first few elements and the array looks like this:
+假设我们已经完成了前几个元素，并且数组看起来像这样：
 
 	[ 3, 5, 8 | 4, 6 ]
 
 The next number to sort is `4`. We need to insert that into the sorted portion `[ 3, 5, 8 ]` somewhere. 
+要排序的下一个数字是`4`。 我们需要将它插入到已经排好序的`[3,5,8]`中。
 
 Here's one way to do this: Look at the previous element, `8`. 
+这是实现此目的的一种方法：查看前一个元素`8`。
 
 	[ 3, 5, 8, 4 | 6 ]
 	        ^
 	        
 Is this greater than `4`? Yes it is, so the `4` should come before the `8`. We swap these two numbers to get:
+前一个元素比`4`大吗？ 是的，所以`4`应该在`8`之前。 我们交换这两个数字得到：
 
 	[ 3, 5, 4, 8 | 6 ]
 	        <-->
 	       swapped
 
 We're not done yet. The new previous element, `5`, is also greater than `4`. We also swap these two numbers:
+还没有完成。 新的前一个元素`5`也大于`4`。 我们还交换了这两个数字：
 
 	[ 3, 4, 5, 8 | 6 ]
 	     <-->
 	    swapped
 
 Again, look at the previous element. Is `3` greater than `4`? No, it is not. That means we're done with number `4`. The beginning of the array is sorted again.
+再看一下前面的元素。 “3”大于“4”吗？ 不它不是。 这意味着我们完成了数字'4'。 数组的开头再次排序。
 
 This was a description of the inner loop of the insertion sort algorithm, which you'll see in the next section. It inserts the number from the top of the pile into the sorted portion by swapping numbers.
 
