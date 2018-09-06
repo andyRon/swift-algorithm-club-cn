@@ -118,10 +118,13 @@ Again, look at the previous element. Is `3` greater than `4`? No, it is not. Tha
 再看一下前面的元素。 “3”大于“4”吗？ 不它不是。 这意味着我们完成了数字'4'。 数组的开头再次排序。
 
 This was a description of the inner loop of the insertion sort algorithm, which you'll see in the next section. It inserts the number from the top of the pile into the sorted portion by swapping numbers.
+这是对插入排序算法的内部循环的描述，您将在下一节中看到。 它通过交换数字将数字从堆的顶部插入到已排序的部分。
 
 ## The code
+## 代码
 
 Here is an implementation of insertion sort in Swift:
+这是插入排序的Swift实现：
 
 ```swift
 func insertionSort(_ array: [Int]) -> [Int] {
@@ -140,6 +143,7 @@ func insertionSort(_ array: [Int]) -> [Int] {
 ```
 
 Put this code in a playground and test it like so:
+将代码放在Playground上测试：
 
 ```swift
 let list = [ 10, -1, 3, 9, 2, 27, 8, 5, 1, 3, 0, 26 ]
@@ -156,11 +160,24 @@ Here is how the code works.
 
 > **Note:** The outer loop starts at index 1, not 0. Moving the very first element from the pile to the sorted portion doesn't actually change anything, so we might as well skip it. 
 
+下面就说说代码是如何工作的。
+
+1. 先创建一个数组的拷贝。因为我们不能直接修改参数`array`中的内容，所以这是非常必要的。`insertionSort()` 会返回一个原始数组的拷贝，就像Swift自己的`sort()` 方法一样。
+
+2. 在函数里有两个循环，外层的循环依次查找数组中的每一个元素；这就是从数字堆中取最上面的数字的过程。变量`x`是有序部分结束和堆开始的索引（也就是 | 符号的位置）。要记住的是，在任何时候，从`9`到`x`的位置数组都是有序的，剩下的则是无序的。
+
+3. 内存循环则查找`x` 位置的元素。这就是堆顶的元素，它有可能比前面的所有元素都小。内存循环从有序数组的后面开始往前找。每次找到一个比它的元素，就交换它们的位置，直到内层循环结束，数组的前面部分依然是有序的，有序的元素也增加了一个。
+
+> **注意：** 外层循环是从 1 开始，而不是0。从堆顶将第一个元素移动到有序数组没有任何意义，所以我们跳过这一步。
+
 ## No more swaps
+## 不需要交换
 
 The above version of insertion sort works fine, but it can be made a tiny bit faster by removing the call to `swap()`. 
+上面的插入排序算法可以很好的完成任务，但是也可以移除对 `swap()` 的调用来让它更快。
 
 You've seen that we swap numbers to move the next element into its sorted position:
+通过交换两个数字来让下一个元素移动到合适的位置的
 
 	[ 3, 5, 8, 4 | 6 ]
 	        <-->
@@ -171,6 +188,7 @@ You've seen that we swap numbers to move the next element into its sorted positi
 	     swap
 
 Instead of swapping with each of the previous elements, we can just shift all those elements one position to the right, and then copy the new number into the right position.
+可以通过将前面的元素往右挪一个位置来代替元素的交换，然后将新的数字放到正确的位置。
 
 	[ 3, 5, 8, 4 | 6 ]   remember 4
 	           *
@@ -185,6 +203,7 @@ Instead of swapping with each of the previous elements, we can just shift all th
 	     *
 
 In code that looks like this:
+代码里是这样的：
 
 ```swift
 func insertionSort(_ array: [Int]) -> [Int] {
@@ -202,13 +221,18 @@ func insertionSort(_ array: [Int]) -> [Int] {
 }
 ```
 
-The line at `//1` is what shifts up the previous elements by one position. At the end of the inner loop, `y` is the destination index for the new number in the sorted portion, and the line at `//2` copies this number into place.
+The line at `//1` is what shifts up the previous elements by one position. At the end of the inner loop, `y` is the destination index for the new number in the sorted portion, and the line at `//2` copies this number into place.  
+`//1` 这行代码就是将前一个元素往右移动一个位置，在内层循环结束的时候， `y` 就是新数字在有序数组中的位置， `//2` 这行代码就是将数字拷贝到正确的地方。
+
 
 ## Making it generic
+## 泛型化
 
 It would be nice to sort other things than just numbers. We can make the datatype of the array generic and use a user-supplied function (or closure) to perform the less-than comparison. This only requires two changes to the code.
+如果能排序除了数字之外的东西就更好了。我们可以使数组的数据类型泛型化，然后使用一个用户提供的函数（或闭包）来执行比较操作。这仅仅只要改变两个地方。
 
 The function signature becomes:
+函数变成这样了：
 
 ```swift
 func insertionSort<T>(_ array: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
@@ -218,15 +242,23 @@ The array has type `[T]` where `T` is the placeholder type for the generics. Now
 
 The new parameter `isOrderedBefore: (T, T) -> Bool` is a function that takes two `T` objects and returns true if the first object comes before the second, and false if the second object should come before the first. This is exactly what Swift's built-in `sort()` function does.
 
+数组有一个类型 `[T]`，`[T]` 是泛型化的一个占位类型。现在 `insertionSort()` 可以接收任何类型的数组，不管它是包含数字、字符串或者别的什么东西。
+
+新的参数 `isOrderedBefore: (T, T) -> Bool` 是一个接收两个 `T` 对象然后返回一个 `Bool` 值的方法，如果第一个对象大于第二个，那么返回 `true`，反之则返回 `false`。这与 Swift 内置的 `sort()` 方法是一样的。
+
 The only other change is in the inner loop, which now becomes:
+另外一个变化就是内层循环，现在应该是这样的：
+
 
 ```swift
       while y > 0 && isOrderedBefore(temp, a[y - 1]) {
 ```
 
 Instead of writing `temp < a[y - 1]`, we call the `isOrderedBefore()` function. It does the exact same thing, except we can now compare any kind of object, not just numbers.
+`temp < a[y - 1]`被 `isOrderedBefore()` 替代，不仅可以比较数字，还可以比较各种对象了。
 
 To test this in a playground, do:
+在Playground中测试:
 
 ```swift
 let numbers = [ 10, -1, 3, 9, 2, 27, 8, 5, 1, 3, 0, 26 ]
@@ -235,8 +267,10 @@ insertionSort(numbers, >)
 ```
 
 The `<` and `>` determine the sort order, low-to-high and high-to-low, respectively.
+`<` 和 `>` 决定排序的顺序，分别代表低到高和高到低。
 
 Of course, you can also sort other things such as strings,
+当然，我们也可以排布像字符串一样的数据：
 
 ```swift
 let strings = [ "b", "a", "d", "c", "e" ]
@@ -244,6 +278,7 @@ insertionSort(strings, <)
 ```
 
 or even more complex objects:
+也可以是更复杂的对象：
 
 ```swift
 let objects = [ obj1, obj2, obj3, ... ]
@@ -251,21 +286,33 @@ insertionSort(objects) { $0.priority < $1.priority }
 ```
 
 The closure tells `insertionSort()` to sort on the `priority` property of the objects.
+闭包告诉 `insertionSort()` 方法用 `priority` 属性来进行排序。
+
 
 Insertion sort is a *stable* sort. A sort is stable when elements that have identical sort keys remain in the same relative order after sorting. This is not important for simple values such as numbers or strings, but it is important when sorting more complex objects. In the example above, if two objects have the same `priority`, regardless of the values of their other properties, those two objects don't get swapped around.
+插入排序是一个 *稳定* 的排序算法。当元素相同时，排序后依然保持排序之前的相对顺序，那么这个排序算法就是 *稳定* 的。对于像数字或者字符串这样的简单类型来说，这不是很重要，但是对于复杂的对象来说，这就很重要了。如果两个对象有相同的 `priority`， 不管它们其他的属性如何，这两个对象都不会交换位置。
 
 ## Performance
+## 性能
 
 Insertion sort is really fast if the array is already sorted. That sounds obvious, but this is not true for all search algorithms. In practice, a lot of data will already be largely -- if not entirely -- sorted and insertion sort works quite well in that case.
+如果数组是已经排好序的话，插入排序是非常快速的。这听起来好像很明显，但是不是所有的搜索算法都是这样的。在实际中，有很多数据（大部分，可能不是全部）是已经排序好的，插入排序在这种情况下就是一个非常好的选择。
 
 The worst-case and average case performance of insertion sort is **O(n^2)**. That's because there are two nested loops in this function. Other sort algorithms, such as quicksort and merge sort, have **O(n log n)** performance, which is faster on large inputs.
+插入排序的最差和平均表现是 **O( n^2 )**。这是因为在函数里有两个嵌套的循环。其他如快速排序和归并排序的表现则是 **O(n log n)**，在有大量输入的时候会更快。
 
 Insertion sort is actually very fast for sorting small arrays. Some standard libraries have sort functions that switch from a quicksort to insertion sort when the partition size is 10 or less.
+插入排序在对小数组进行排序的时候实际是非常快的。一些标准库在数据量小于或者等于10的时候会从快速排序切换到插入排序。
 
 I did a quick test comparing our `insertionSort()` with Swift's built-in `sort()`. On arrays of about 100 items or so, the difference in speed is tiny. However, as your input becomes larger, **O(n^2)** quickly starts to perform a lot worse than **O(n log n)** and insertion sort just can't keep up.
+我们做了一个速度测试来对比我们的 `insertionSort()` 和 Swift 内置的 `sort()`。在大概有 100 个元素的数组中，速度上的差异非常小。然后，如果输入一个非常大的数据量， **O(n^2)** 马上就比 **O(n log n)** 表现的糟糕多了，插入排序远远比不上。
 
 ## See also
+## 扩展阅读
 
 [Insertion sort on Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
+[插入排序的维基百科](https://en.wikipedia.org/wiki/Insertion_sort)
 
 *Written for Swift Algorithm Club by Matthijs Hollemans*
+*作者：Matthijs Hollemans*   
+*翻译：Andy Ron*
