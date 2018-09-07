@@ -1,9 +1,33 @@
-> 注：本文译自 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。
-> 部分翻译来自https://github.com/ksco/swift-algorithm-club-cn。
+> 注：本项目译自 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。
+> 部分翻译来自[ksco/swift-algorithm-club-cn](https://github.com/ksco/swift-algorithm-club-cn)
+
+## 进度
+
+| 题目    					|  翻译人员    |   翻译是否完成  | 校对人员   | 校对是否完成|
+|---------------------------|------------|:-------------:|----------|:---------:|
+|README						| ksco		 |   Y           |	andyRon	|			|	
+|What are Algorithms		| ksco		 |   Y           |	andyRon	|			|	
+|WWhy Algorithms		    | ksco		 |   Y           |	andyRon	|			|	
+|Big-O Notation		        | ksco		 |   Y           |	andyRon	|			|	
+|Algorithm Design		    | andyRon	 |   Y           |	andyRon	|			|	
+|Stack  					| andyRon    |   Y  		 |  andyRon | 			|
+|Queue  					| andyRon    |   Y  		 |  andyRon | 			|
+|Insertion Sort  			| andyRon    |   Y  		 |  andyRon | 			|
+|Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
+
+
+
+
+
+
+
+以下是正文翻译部分
+------------------------------
+
 
 ![Swift Algorithm Club](Images/SwiftAlgorithm-410-transp.png)
 
-# 欢迎来到 Swift 算法俱乐部！
+# 欢迎来到Swift算法俱乐部！
 
 在这里，你可以找到很多流行的算法和数据结构的具体实现，使用的是大家最喜欢的新语言 Swift，并对他们的工作原理配有详细的解释。
 
@@ -37,7 +61,7 @@
 - [栈](Stack/README_zh.markdown)
 - [队列](Queue/README_zh.markdown)
 - [插入排序](Insertion%20Sort/README_zh.markdown)
-- [*二分搜索](Binary%20Search/)和[*二分搜索树](Binary%20Search%20Tree/)
+- [二分搜索](Binary%20Search/README_zh.md)和[*二分搜索树](Binary%20Search%20Tree/)
 - [*归并排序](Merge%20Sort/)
 - [*Boyer-Moore 字符串搜索算法](Boyer-Moore-Horspool/)
 
