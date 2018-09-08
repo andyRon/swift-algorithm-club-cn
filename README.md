@@ -14,6 +14,7 @@
 |Queue  					| andyRon    |   Y  		 |  andyRon | 			|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
+|Binary Search Tree (BST)  	| andyRon    |   Y  		 |  andyRon | 			|
 
 
 
@@ -61,16 +62,16 @@
 - [栈](Stack/README_zh.markdown)
 - [队列](Queue/README_zh.markdown)
 - [插入排序](Insertion%20Sort/README_zh.markdown)
-- [二分搜索](Binary%20Search/README_zh.md)和[*二分搜索树](Binary%20Search%20Tree/)
-- [*归并排序](Merge%20Sort/)
-- [*Boyer-Moore 字符串搜索算法](Boyer-Moore-Horspool/)
+- [二分搜索](Binary%20Search/README_zh.md)和[二分搜索树](Binary%20Search%20Tree/README_zh.md)
+- [归并排序](Merge%20Sort/)
+- [Boyer-Moore字符串搜索算法]()
 
 ## 算法列表
 
 ### 搜索算法
 
 - [*线性搜索](Linear%20Search/)－从数组中查找某个元素。
-- [*二分搜索](Binary%20Search/)－从已排序的数组中快速查找元素。
+- [二分搜索](Binary%20Search/README_zh.md)－从已排序的数组中快速查找元素。
 - [*统计出现次数](Count%20Occurrences/)－统计某个值在数组中的出现次数。
 - [*查找最大／最小值](Select%20Minimum%20Maximum)－找到数组中的最大／最小值。
 - [*第 K 大元素](Kth%20Largest%20Element/)－找到数组中的第 **K** 大元素，例如中位数。
