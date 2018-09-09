@@ -867,4 +867,4 @@ The other solution is to use a *self-balancing* binary tree. This type of data s
 
 *Written for the Swift Algorithm Club by [Nicolas Ameghino](http://www.github.com/nameghino) and Matthijs Hollemans*
 *作者：[Nicolas Ameghino](http://www.github.com/nameghino) 和 Matthijs Hollemans*  
-*译者：andyRon**=
+*译者：[Andy Ron](https://github.com/andyRon)*

@@ -327,4 +327,4 @@ Most implementations of the merge-sort algorithm produce a **stable** sort. This
 
 *Written by Kelvin Lau. Additions by Matthijs Hollemans.*
 *作者：Kelvin Lau. Additions ， Matthijs Hollemans*  
-*翻译：Andy Ron*
+*翻译：[Andy Ron](https://github.com/andyRon)*

@@ -269,4 +269,4 @@ See also [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm).
 
 *Written for Swift Algorithm Club by Matthijs Hollemans*
 *作者：Matthijs Hollemans*
-*译者：andyRon*
+*译者：[Andy Ron](https://github.com/andyRon)*
