@@ -63,7 +63,7 @@
 - [队列](Queue/README_zh.markdown)
 - [插入排序](Insertion%20Sort/README_zh.markdown)
 - [二分搜索](Binary%20Search/README_zh.md)和[二分搜索树](Binary%20Search%20Tree/README_zh.md)
-- [归并排序](Merge%20Sort/)
+- [归并排序](Merge%20Sort/README_zh.md)
 - [Boyer-Moore字符串搜索算法]()
 
 ## 算法列表
