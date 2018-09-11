@@ -19,6 +19,7 @@
 |Linear Search  			| andyRon    |   Y  		 |  andyRon | 			|
 |Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
+|Hash Table 				| andyRon    |   Y  		 |  andyRon | 			|
 
 
 
@@ -205,7 +206,7 @@
 
 ### 哈希
 
-- [⏳哈希表](Hash%20Table/)－允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
+- [哈希表](Hash%20Table/README_zh.md)－允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
 - ⏳哈希函数
 
 ### 集合
