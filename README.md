@@ -14,7 +14,11 @@
 |Queue  					| andyRon    |   Y  		 |  andyRon | 			|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
-|Binary Search Tree (BST)  	| andyRon    |   Y  		 |  andyRon | 			|
+|Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
+|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
+|Linear Search  			| andyRon    |   Y  		 |  andyRon | 			|
+|Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
+|Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
 
 
 
@@ -93,14 +97,14 @@
 
 基本的排序算法：
 
-- [插入排序](Insertion%20Sort/README_zh.markdown)
-- [⏳选择排序](Selection%20Sort/)
+- [插入排序](Insertion%20Sort/README_zh.md)
+- [选择排序](Selection%20Sort/README_zh.md)
 - [⏳希尔排序](Shell%20Sort/)
 
 快速的排序算法：
 
-- [⏳快速排序](Quicksort/)
-- [⏳归并排序](Merge%20Sort/)
+- [快速排序](Quicksort/README_zh.md)
+- [归并排序](Merge%20Sort/README_zh.md)
 - [⏳堆排序](Heap%20Sort/)
 
 混合排序算法：
@@ -130,7 +134,7 @@
 - [⏳Miller-Rabin素性检测](Miller-Rabin%20Primality%20Test/). Is the number a prime number?
 - [⏳MinimumCoinChange](MinimumCoinChange/). A showcase for dynamic programming.
 
-### 数学向算法
+### 数学算法
 
 - [⏳最大公约数算法(GCD)](GCD/)－特殊福利：最小公倍数算法。
 - [⏳排列组合算法](Combinatorics/)－还记得高中学过俄组合数学吗？
