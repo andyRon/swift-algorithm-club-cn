@@ -22,6 +22,7 @@
 |Hash Table 				| andyRon    |   Y  		 |  andyRon | 			|
 |Count Occurrences 			| andyRon    |   Y  		 |  andyRon | 			|
 |Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | 			|
+|k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | 			|
 
 
 
@@ -64,9 +65,9 @@
 
 如果你之前没有接触过算法和数据结构，你可以从下面这些简单易懂的算法开始看起：
 
-- [栈](Stack/README_zh.markdown)
-- [队列](Queue/README_zh.markdown)
-- [插入排序](Insertion%20Sort/README_zh.markdown)
+- [栈](Stack/README_zh.md)
+- [队列](Queue/README_zh.md)
+- [插入排序](Insertion%20Sort/README_zh.md)
 - [二分搜索](Binary%20Search/README_zh.md)和[二分搜索树](Binary%20Search%20Tree/README_zh.md)
 - [归并排序](Merge%20Sort/README_zh.md)
 - [Boyer-Moore字符串搜索](Boyer-Moore-Horspool/README_zh.md)
@@ -79,7 +80,7 @@
 - [二分搜索](Binary%20Search/README_zh.md)－从已排序的数组中快速查找元素。
 - [统计出现次数](Count%20Occurrences/README_zh.md)－统计某个值在数组中的出现次数。
 - [查找最大／最小值](Select%20Minimum%20Maximum)－找到数组中的最大／最小值。
-- [⏳第 K 大元素](Kth%20Largest%20Element/)－找到数组中的第 **K** 大元素，例如中位数。
+- [第K大元素](Kth%20Largest%20Element/)－找到数组中的第 **K** 大元素，例如中位数。
 - [⏳选取样本](Selection%20Sampling/)－随机地从集合中选取一些元素作为样本。
 - [⏳并查集](Union-Find/)－保持一些不相交的集合，帮助你快速合并它们。
 
