@@ -23,6 +23,7 @@
 |Count Occurrences 			| andyRon    |   Y  		 |  andyRon | 			|
 |Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | 			|
 |k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | 			|
+|Selection Sampling     	| andyRon    |   Y  		 |  andyRon | 			|
 
 
 
@@ -81,7 +82,7 @@
 - [统计出现次数](Count%20Occurrences/README_zh.md)－统计某个值在数组中的出现次数。
 - [查找最大／最小值](Select%20Minimum%20Maximum)－找到数组中的最大／最小值。
 - [第K大元素](Kth%20Largest%20Element/)－找到数组中的第 **K** 大元素，例如中位数。
-- [⏳选取样本](Selection%20Sampling/)－随机地从集合中选取一些元素作为样本。
+- [选取样本](Selection%20Sampling/)－随机地从集合中选取一些元素作为样本。
 - [⏳并查集](Union-Find/)－保持一些不相交的集合，帮助你快速合并它们。
 
 ### 字符串搜索算法
