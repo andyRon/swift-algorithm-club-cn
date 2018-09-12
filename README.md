@@ -3,7 +3,7 @@
 
 ## 进度
 
-| 题目    					|  翻译人员    |   翻译是否完成  | 校对人员   | 校对是否完成|
+| 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 |README						| ksco		 |   Y           |	andyRon	|			|	
 |What are Algorithms		| ksco		 |   Y           |	andyRon	|			|	
@@ -20,6 +20,7 @@
 |Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
 |Hash Table 				| andyRon    |   Y  		 |  andyRon | 			|
+|Count Occurrences 			| andyRon    |   Y  		 |  andyRon | 			|
 
 
 
