@@ -1,54 +1,29 @@
-> 注：本项目译自 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。
-> 部分翻译来自[ksco/swift-algorithm-club-cn](https://github.com/ksco/swift-algorithm-club-cn)
-
-## 进度
-
-| 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
-|---------------------------|------------|:-------------:|----------|:---------:|
-|README						| ksco		 |   Y           |	andyRon	|			|	
-|What are Algorithms		| ksco		 |   Y           |	andyRon	|			|	
-|WWhy Algorithms		    | ksco		 |   Y           |	andyRon	|			|	
-|Big-O Notation		        | ksco		 |   Y           |	andyRon	|			|	
-|Algorithm Design		    | andyRon	 |   Y           |	andyRon	|			|	
-|Stack  					| andyRon    |   Y  		 |  andyRon | 			|
-|Queue  					| andyRon    |   Y  		 |  andyRon | 			|
-|Insertion Sort  			| andyRon    |   Y  		 |  andyRon | 			|
-|Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
-|Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
-|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
-|Linear Search  			| andyRon    |   Y  		 |  andyRon | 			|
-|Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
-|Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
-|Hash Table 				| andyRon    |   Y  		 |  andyRon | 			|
-|Count Occurrences 			| andyRon    |   Y  		 |  andyRon | 			|
-|Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | 			|
-|k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | 			|
-|Selection Sampling     	| andyRon    |   Y  		 |  andyRon | 			|
-|Union-Find			    	| andyRon    |   Y  		 |  andyRon | 			|
+> 注：本项目翻译自[Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。  
+> 欢迎有兴趣学习算法和数据结构，有时间的小伙伴一起参与翻译，欢迎issue，或者直接提交pull request。  
+> [翻译进度](Schedule.md)
 
 
 
+---------------------------------------------------------------
+以下是原项目的README.markdown翻译部分(译注：⏳表示还未翻译)
+---------------------------------------------------------------
 
 
-以下是正文翻译部分(译注：⏳表示还未翻译)
-------------------------------
 
-
-![Swift Algorithm Club](Images/SwiftAlgorithm-410-transp.png)
+![Swift算法俱乐部](Images/SwiftAlgorithm-410-transp.png)
 
 # 欢迎来到Swift算法俱乐部！
 
-在这里，你可以找到很多流行的算法和数据结构的具体实现，使用的是大家最喜欢的新语言 Swift，并对他们的工作原理配有详细的解释。
+在这里，你可以找到很多流行的算法和数据结构的具体实现，使用的是大家最喜欢的新语言Swift，并对他们的工作原理配有详细的解释。
 
-如果你是一个计算机学院的学生，为了考试想学习一下算法；又或者你是一个自学成才的程序员，想提高一下自身的理论姿势水平－－你真 TM 来对地方了！
+如果你是一个计算机学院的学生，为了考试想学习一下算法；又或者你是一个自学成才的程序员，想提高一下自身的理论姿势水平 —— 你真是来对地方了！
 
-这个项目的目的是**解释各种算法的工作方式**。所以我们主要关注代码的清晰性和可读性，而不是为了产出一个可复用的库，让读者可以直接拖进自己的工程使用。换句话说，绝大多数的代码都是可以用于实际的项目中的，不过需要你根据自己的项目需求进行一些修整。
+这个项目的目的是 **解释各种算法的工作方式**。所以我们主要关注代码的清晰性和可读性，而不是为了产出一个可复用的库，让读者可以直接拖进自己的工程使用。换句话说，绝大多数的代码都是可以用于实际的项目中的，不过需要你根据自己的项目需求进行一些调整。
 
 所有的代码都是兼容 **Xcode 9** 以及 **Swift 4** 的。如果 Swift 有更新，我们也会及时跟进。
 
-这个项目目前正在进行中。更多的算法将被加入，敬请期待。:-)
 
-:heart_eyes:**欢迎提供建议和贡献！**:heart_eyes:
+😍 **欢迎提供建议和贡献！** 😍
 
 ## 重要链接
 
@@ -56,12 +31,11 @@
 
 [为什么要学习算法？](Why%20Algorithms.markdown)－ 还在担心这不是你的菜吗？请读一下这篇文章。
 
-[大O表示法](Big-O%20Notation.markdown)－ 我们经常会听到这样的话：“这个算法是 O(n) 的”。如果你不知道这是啥意思，请读读这篇文章。
+[大O表示法](Big-O%20Notation.markdown)－ 我们经常会听到这样的话：“这个算法是 **O(n)** 的”。如果你不知道这是啥意思，请读读这篇文章。
 
 [算法设计技巧](Algorithm%20Design.markdown)－ 怎样设计自己的算法？
-<!--
-[欢迎参与贡献](How%20to%20Contribute.markdown)－ 通过留下issue反馈，或者提交pull request。
--->
+
+欢迎参与贡献 － 通过留下issue反馈，或者提交pull request。
 
 ## 从哪开始？
 
@@ -70,7 +44,7 @@
 - [栈](Stack/README_zh.md)
 - [队列](Queue/README_zh.md)
 - [插入排序](Insertion%20Sort/README_zh.md)
-- [二分搜索](Binary%20Search/README_zh.md)和[二分搜索树](Binary%20Search%20Tree/README_zh.md)
+- [二分搜索](Binary%20Search/README_zh.md) 和 [二分搜索树](Binary%20Search%20Tree/README_zh.md)
 - [归并排序](Merge%20Sort/README_zh.md)
 - [Boyer-Moore字符串搜索](Boyer-Moore-Horspool/README_zh.md)
 
@@ -78,22 +52,22 @@
 
 ### 搜索算法
 
-- [线性搜索](Linear%20Search/README_zh.md)－从数组中查找某个元素。
-- [二分搜索](Binary%20Search/README_zh.md)－从已排序的数组中快速查找元素。
-- [统计出现次数](Count%20Occurrences/README_zh.md)－统计某个值在数组中的出现次数。
-- [查找最大／最小值](Select%20Minimum%20Maximum)－找到数组中的最大／最小值。
-- [第K大元素](Kth%20Largest%20Element/)－找到数组中的第 **K** 大元素，例如中位数。
-- [选取样本](Selection%20Sampling/)－随机地从集合中选取一些元素作为样本。
-- [并查集](Union-Find/)－保持一些不相交的集合，帮助你快速合并它们。
+- [线性搜索](Linear%20Search/README_zh.md)	从数组中查找某个元素。
+- [二分搜索](Binary%20Search/README_zh.md)	从已排序的数组中快速查找元素。
+- [统计出现次数](Count%20Occurrences/README_zh.md)	统计某个值在数组中的出现次数。
+- [查找最大／最小值](Select%20Minimum%20Maximum)	找到数组中的最大／最小值。
+- [第K大元素](Kth%20Largest%20Element/)	找到数组中的第 **K** 大元素，例如中位数。
+- [选取样本](Selection%20Sampling/)	随机地从集合中选取一些元素作为样本。
+- [并查集](Union-Find/)	保持一些不相交的集合，帮助你快速合并它们。
 
 ### 字符串搜索算法
 
-- [⏳Brute-Force 算法](Brute-Force%20String%20Search/)－一个简单粗暴的方法。
-- [⏳Boyer-Moore 算法](Boyer-Moore/)－一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
-- [⏳Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/) 一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
-- [⏳Rabin-Karp 算法] 使用哈希的快速搜索
-- [⏳最长公共子序列算法](Longest%20Common%20Subsequence/)－找到两个字符串中的最长公共子序列。
-- [⏳Z-Algorithm](Z-Algorithm/) Finds all instances of a pattern in a String, and returns the indexes of where the pattern starts within the String.
+- [⏳Brute-Force 算法](Brute-Force%20String%20Search/)	一个简单粗暴的方法。
+- [⏳Boyer-Moore 算法](Boyer-Moore/)	一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
+- [⏳Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/)	一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
+- [⏳Rabin-Karp 算法]	使用哈希的快速搜索
+- [⏳最长公共子序列算法](Longest%20Common%20Subsequence/)	找到两个字符串中的最长公共子序列。
+- [⏳Z-Algorithm](Z-Algorithm/)	在String中查找模式的所有实例，并返回模式在String中开始的索引。
 
 ### 排序算法
 
@@ -127,14 +101,14 @@
 
 ### 压缩算法
 
-- [⏳变动长度编码法(RLE)](Run-Length%20Encoding/)。将重复的值存储为一个单字节及其计数。
-- [⏳哈夫曼编码](Huffman%20Coding/)。将常见的元素使用更小的单位存储。
+- [⏳变动长度编码法(RLE)](Run-Length%20Encoding/)	将重复的值存储为一个单字节及其计数。
+- [⏳哈夫曼编码](Huffman%20Coding/)	将常见的元素使用更小的单位存储。
 
 ### 杂项
 
-- [⏳洗牌算法](Shuffle/)－随机搅乱数组中的内容。
-- [⏳梳排序](Comb%20Sort/). An improve upon the Bubble Sort algorithm.
-- [⏳凸包算法](Convex%20Hull/).
+- [⏳洗牌算法](Shuffle/)	随机搅乱数组中的内容。
+- [⏳梳排序](Comb%20Sort/)	冒泡排序算法的改进。
+- [⏳凸包算法](Convex%20Hull/)
 - [⏳Miller-Rabin素性检测](Miller-Rabin%20Primality%20Test/). Is the number a prime number?
 - [⏳MinimumCoinChange](MinimumCoinChange/). A showcase for dynamic programming.
 
@@ -170,8 +144,8 @@
 
 ### 数组变体
 
-- [⏳二维数组](Array2D/)－固定尺寸的二维数组，可用于棋盘游戏。
-- [⏳比特集](Bit%20Set/)－**n** 位大小固定尺度的序列。
+- [二维数组](Array2D/README_zh.md)－固定尺寸的二维数组，可用于棋盘游戏。
+- [比特集](Bit%20Set/README_zh.md)－**n** 位大小固定尺度的序列。
 - [⏳固定长度数组](Fixed%20Size%20Array/) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
 - [⏳有序数组](Ordered%20Array/)－一个永远有序的数组。
 - [⏳Rootish Array Stack](Rootish%20Array%20Stack/). A space and time efficient variation on Swift arrays.
@@ -227,6 +201,7 @@
 - [⏳最短路径算法](Shortest%20Path%20%28Unweighted%29/)－作用对象为无权值树。
 - [⏳最小生成树](Minimum%20Spanning%20Tree%20%28Unweighted%29/)－作用对象为无权值树。
 - [⏳任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/)
+- [⏳Dijkstra's shortest path algorithm](Dijkstra%20Algorithm/)
 
 ## 智力题
 
@@ -241,30 +216,19 @@
 - [⏳Egg Drop Problem](Egg%20Drop%20Problem/)
 - [⏳Encoding and Decoding Binary Tree](Encode%20and%20Decode%20Tree/)
 
-## 学无止境！
 
-请参阅以下书籍获取更多内容：
+## 贡献者
 
-- [Introduction to Algorithms](https://mitpress.mit.edu/books/introduction-algorithms) by Cormen, Leiserson, Rivest, Stein
-- [The Algorithm Design Manual](http://www.algorist.com) by Skiena
-- [Elements of Programming Interviews](http://elementsofprogramminginterviews.com) by Aziz, Lee, Prakash
-- [Algorithms](http://www.cs.princeton.edu/~rs/) by Sedgewick
+Swift算法俱乐部最初是由Matthijs Hollemans](https://github.com/hollance) 创建。 
 
-下面的书籍均可在网上**免费**阅读：
+现在主要是[Vincent Ngo](https://www.raywenderlich.com/u/jomoka) 和 [Kelvin Lau](https://github.com/kelvinlauKL) 维护。
 
-- [Algorithms](http://www.beust.com/algorithms.pdf) by Dasgupta, Papadimitriou, Vazirani
-- [Algorithms, Etc.](http://jeffe.cs.illinois.edu/teaching/algorithms/) by Erickson
-- [Algorithms + Data Structures = Programs](http://www.ethoberon.ethz.ch/WirthPubl/AD.pdf) by Wirth
-- Algorithms and Data Structures: The Basic Toolbox by Mehlhorn and Sanders
-- [Wikibooks: Algorithms and Implementations](https://en.wikibooks.org/wiki/Algorithm_Implementation)
-
-其它关于算法的资源：
-
-- [EKAlgorithms](https://github.com/EvgenyKarkan/EKAlgorithms)－非常棒的使用 Objective-C 编写的算法集合。
-- [@lorentey](https://github.com/lorentey/)－使用 Swift 实现的产品级质量的常用算法和数据结构实现。
-- [Rosetta Code](http://rosettacode.org)－提供了很多中语言的算法实现。
-- [AlgorithmVisualizer](http://jasonpark.me/AlgorithmVisualizer/)－在浏览器中的图形化算法演示。
+Swift算法俱乐部是来自[raywenderlich.com](https://www.raywenderlich.co)社区的[许多数算法成员](https://github.com/rwenderlich/swift-algorithm-club/graphs/contributors)的一起合作努力的成果。
 
 ## 许可(License)
 
-本项目(包括[原项目](https://github.com/raywenderlich/swift-algorithm-club))都是基于 MIT 协议的，请随意使用！
+所有内容均根据MIT开源许可条款获得许可。
+
+通过在此发布或通过此论坛提交任何pull request，即表示您同意您提交或创建的所有内容（包括代码和文本）均受此许可证的约束。 Razeware，LLC和其他人将拥有许可中描述的有关此内容的所有权利。 可以在[此处](https://github.com/raywenderlich/swift-algorithm-club/blob/master/LICENSE.txt)找到许可的准确条款。
+
+[![Build Status](https://travis-ci.org/raywenderlich/swift-algorithm-club.svg?branch=master)](https://travis-ci.org/raywenderlich/swift-algorithm-club)
