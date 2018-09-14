@@ -9,7 +9,7 @@
 |What are Algorithms		| ksco		 |   Y           |	andyRon	|	Y		|	
 |Why Algorithms		    	| ksco		 |   Y           |	andyRon	|	Y		|	
 |Big-O Notation		        | ksco		 |   Y           |	andyRon	|	Y		|	
-|Algorithm Design		    | andyRon	 |   Y           |	andyRon	|			|
+|Algorithm Design		    | andyRon	 |   Y           |	andyRon	|	Y		|
 
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
