@@ -15,7 +15,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|	
 |Stack  					| andyRon    |   Y  		 |  andyRon |  Y		|
-|Queue  					| andyRon    |   Y  		 |  andyRon | 			|
+|Queue  					| andyRon    |   Y  		 |  andyRon |  Y		|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|

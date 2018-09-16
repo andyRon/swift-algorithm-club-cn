@@ -1,66 +1,75 @@
-
-// last checked with Xcode 9.0b4
-#if swift(>=4.0)
-print("Hello, Swift 4!")
-#endif
-
 /*
-  Queue
-
-  A queue is a list where you can only insert new items at the back and
-  remove items from the front. This ensures that the first item you enqueue
-  is also the first item you dequeue. First come, first serve!
-
-  A queue gives you a FIFO or first-in, first-out order. The element you
-  inserted first is also the first one to come out again. It's only fair!
-
-  In this implementation, enqueuing is an O(1) operation, dequeuing is O(n).
-*/
+ Queue
+ 
+ 队列可以保证元素存入和取出的顺序是先进先出(first-in first-out, FIFO)
+ 
+ In this implementation, enqueuing is an O(1) operation, dequeuing is O(n).
+ */
 
 public struct Queue<T> {
-  fileprivate var array = [T]()
-
-  public var isEmpty: Bool {
-    return array.isEmpty
-  }
-
-  public var count: Int {
-    return array.count
-  }
-
-  public mutating func enqueue(_ element: T) {
-    array.append(element)
-  }
-
-  public mutating func dequeue() -> T? {
-    if isEmpty {
-      return nil
-    } else {
-      return array.removeFirst()
+    fileprivate var array = [T?]()
+    fileprivate var head = 0
+    
+    public var isEmpty: Bool {
+        return count == 0
     }
-  }
-
-  public var front: T? {
-    return array.first
-  }
+    
+    public var count: Int {
+        return array.count - head
+    }
+    
+    public mutating func enqueue(_ element: T) {
+        array.append(element)
+    }
+    
+    public mutating func dequeue() -> T? {
+        guard head < array.count, let element = array[head] else { return nil }
+        
+        array[head] = nil
+        head += 1
+        // 周期性地清理无用空间
+        let percentage = Double(head)/Double(array.count)
+        if array.count > 50 && percentage > 0.25 {
+            array.removeFirst(head)
+            head = 0
+        }
+        return element
+    }
+    
+    public var front: T? {
+        if isEmpty {
+            return nil
+        } else {
+            return array[head]
+        }
+    }
 }
 
-// Create a queue and put some elements on it already.
-var queueOfNames = Queue(array: ["Carl", "Lisa", "Stephanie", "Jeff", "Wade"])
+var q = Queue<String>()
+q.array
 
-// Adds an element to the end of the queue.
-queueOfNames.enqueue("Mike")
+q.enqueue("🍎")
+q.enqueue("🍌")
+q.enqueue("🍐")
+q.enqueue("🍑")
+q.array
+q.count
 
-// Queue is now ["Carl", "Lisa", "Stephanie", "Jeff", "Wade", "Mike"]
-print(queueOfNames.array)
+q.dequeue()
+q.array
+q.count
 
-// Remove and return the first element in the queue. This returns "Carl".
-queueOfNames.dequeue()
+q.dequeue()
+q.array
+q.count
 
-// Return the first element in the queue.
-// Returns "Lisa" since "Carl" was dequeued on the previous line.
-queueOfNames.front
+q.enqueue("🍇")
+q.array
+q.count
 
-// Check to see if the queue is empty.
-// Returns "false" since the queue still has elements in it.
-queueOfNames.isEmpty
+q.front
+
+q.isEmpty
+
+
+
