@@ -314,7 +314,7 @@ Therefore, the time complexity for the best, worst, and average case will always
 因此，最佳，最差和平均情况的时间复杂度将始终为 **O(n log n)**。
 
 A disadvantage of the merge-sort algorithm is that it needs a temporary "working" array equal in size to the array being sorted. It is not an **in-place** sort, unlike for example [quicksort](../Quicksort/).
-归并排序算法的一个缺点是它需要一个临时的“工作”数组，其大小与被排序的数组相同。 它不是**原地**排序，不像例如[quicksort](../Quicksort/README_zh.md)。
+归并排序算法的一个缺点是它需要一个临时的“工作”数组，其大小与被排序的数组相同。 它不是**原地**排序，不像例如[quicksort](../Quicksort/)。
 
 Most implementations of the merge-sort algorithm produce a **stable** sort. This means that array elements that have identical sort keys will stay in the same order relative to each other after sorting. This is not important for simple values such as numbers or strings, but it can be an issue when sorting more complex objects.
 归并排序算法的大多数实现产生**稳定的**排序。这意味着具有相同排序键的数组元素在排序后将保持相对于彼此的相同顺序。这对于数字或字符串等简单值并不重要，但在排序更复杂的对象时可能会出现问题。

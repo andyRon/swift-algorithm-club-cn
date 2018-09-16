@@ -56,7 +56,7 @@ Of course, if you were looking for the k-th *smallest* element, you'd use `a[k-1
 ## 更快的解决方案
 
 There is a clever algorithm that combines the ideas of [binary search](../Binary%20Search/) and [quicksort](../Quicksort/) to arrive at an **O(n)** solution.
-有一种聪明的算法结合了[二元搜索](../Binary％20Search/README_zh.md)和[快速排序](../Quicksort/README_zh.md)的思想来达到**O(n)**解决方案。
+有一种聪明的算法结合了[二元搜索](../Binary％20Search/)和[快速排序](../Quicksort/)的思想来达到**O(n)**解决方案。
 
 Recall that binary search splits the array in half over and over again, to quickly narrow in on the value you're searching for. That's what we'll do here too.
 回想一下，二分搜索会一次又一次地将数组分成两半，以便快速缩小您要搜索的值。 这也是我们在这里所做的。
@@ -154,7 +154,7 @@ To keep things readable, the functionality is split into three inner functions:
 为了保持可读性，功能分为三个内部功能：
 
 - `randomPivot()` picks a random number and puts it at the end of the current partition (this is a requirement of the Lomuto partitioning scheme, see the discussion on [quicksort](../Quicksort/) for more details).
-- `randomPivot()`选择一个随机数并将其放在当前分区的末尾（这是Lomuto分区方案的要求，有关详细信息，请参阅[快速排序](../Quicksort/README_zh.md)上的讨论）。
+- `randomPivot()`选择一个随机数并将其放在当前分区的末尾（这是Lomuto分区方案的要求，有关详细信息，请参阅[快速排序](../Quicksort/)上的讨论）。
 
 - `randomizedPartition()` is Lomuto's partitioning scheme from quicksort. When this completes, the randomly chosen pivot is in its final sorted position in the array. It returns the array index of the pivot.
 - `randomizedPartition()`是Lomuto的快速排序分区方案。 完成后，随机选择的枢轴位于数组中的最终排序位置。 它返回数据透视表的数组索引。

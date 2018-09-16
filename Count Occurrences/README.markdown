@@ -5,10 +5,10 @@ Goal: Count how often a certain value appears in an array.
 目标：计算某个值在数组中出现的频率。
 
 The obvious way to do this is with a [linear search](../Linear%20Search/) from the beginning of the array until the end, keeping count of how often you come across the value. That is an **O(n)** algorithm.
-显而易见的方法是从数组的开头直到结束的[线性搜索](../Linear％20Search/README_zh.md)，计算您遇到该值的频率。 这是一个 **O(n)** 算法。
+显而易见的方法是从数组的开头直到结束的[线性搜索](../Linear％20Search/)，计算您遇到该值的频率。 这是一个 **O(n)** 算法。
 
 However, if the array is sorted you can do it much faster, in **O(log n)** time, by using a modification of [binary search](../Binary%20Search/).
-但是，如果对数组进行排序，则可以通过使用[二分搜索](../Binary％20Search/README_zh.md)的修改，在**O(logn)**时间内更快地执行此操作。
+但是，如果对数组进行排序，则可以通过使用[二分搜索](../Binary％20Search/)的修改，在**O(logn)**时间内更快地执行此操作。
 
 Let's say we have the following array:
 假设我们有以下数组：
@@ -65,7 +65,7 @@ func countOccurrencesOfKey(_ key: Int, inArray a: [Int]) -> Int {
 ```
 
 Notice that the helper functions `leftBoundary()` and `rightBoundary()` are very similar to the [binary search](../Binary%20Search/) algorithm. The big difference is that they don't stop when they find the search key, but keep going.
-请注意，辅助函数`leftBoundary()`和`rightBoundary()`与[二分搜索](../Binary％20Search/README_zh.md)算法非常相似。最大的区别在于，当他们找到搜索键时，他们不会停止，而是继续前进。
+请注意，辅助函数`leftBoundary()`和`rightBoundary()`与[二分搜索](../Binary％20Search/)算法非常相似。最大的区别在于，当他们找到搜索键时，他们不会停止，而是继续前进。
 
 To test this algorithm, copy the code to a playground and then do:
 要测试此算法，请将代码复制到 playground，然后执行以下操作：

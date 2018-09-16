@@ -6,10 +6,10 @@
 
 
 A binary search tree is a special kind of [binary tree](../Binary%20Tree/) (a tree in which each node has at most two children) that performs insertions and deletions such that the tree is always sorted.
-二叉搜索树是一种特殊的[二叉树](../Binary％20Tree/README_zh.md)（每个节点最多有两个子节点的树），它执行插入和删除，以便始终对树进行排序。
+二叉搜索树是一种特殊的[二叉树](../Binary％20Tree/)（每个节点最多有两个子节点的树），它执行插入和删除，以便始终对树进行排序。
 
 For more information about a tree, [read this first](../Tree/).
-有关树的更多信息，[请先阅读](../Tree/README_zh.md)。
+有关树的更多信息，[请先阅读](../Tree/)。
 
 ## "Always sorted" property
 ## “始终排序”属性
@@ -79,7 +79,7 @@ Here is an example for searching the value `5`:
 ![搜索树](Images/Searching.png)
 
 Searching is fast using the structure of the tree. It runs in **O(h)** time. If you have a well-balanced tree with a million nodes, it only takes about 20 steps to find anything in this tree. (The idea is very similar to [binary search](../Binary%20Search) in an array.)
-使用树的结构搜索很快。 它在 **O(h)** 时间内运行。 如果你有一个具有一百万个节点的均衡树，那么在这棵树中只需要大约20步就可以找到任何东西。（这个想法与数组中的[二分搜索](../Binary％20Search/README_zh.md)非常相似）
+使用树的结构搜索很快。 它在 **O(h)** 时间内运行。 如果你有一个具有一百万个节点的均衡树，那么在这棵树中只需要大约20步就可以找到任何东西。（这个想法与数组中的[二分搜索](../Binary％20Search/)非常相似）
 
 ## Traversing the tree
 ## 遍历树

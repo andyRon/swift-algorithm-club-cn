@@ -41,20 +41,20 @@
 
 如果你之前没有接触过算法和数据结构，你可以从下面这些简单易懂的算法开始看起：
 
-- [栈](Stack/README_zh.md)
-- [队列](Queue/README_zh.md)
-- [插入排序](Insertion%20Sort/README_zh.md)
-- [二分搜索](Binary%20Search/README_zh.md) 和 [二分搜索树](Binary%20Search%20Tree/README_zh.md)
-- [归并排序](Merge%20Sort/README_zh.md)
-- [Boyer-Moore字符串搜索](Boyer-Moore-Horspool/README_zh.md)
+- [栈](Stack/)
+- [队列](Queue/)
+- [插入排序](Insertion%20Sort/)
+- [二分搜索](Binary%20Search/) 和 [二分搜索树](Binary%20Search%20Tree/)
+- [归并排序](Merge%20Sort/)
+- [Boyer-Moore字符串搜索](Boyer-Moore-Horspool/)
 
 ## 算法列表
 
 ### 搜索算法
 
-- [线性搜索](Linear%20Search/README_zh.md)	从数组中查找某个元素。
-- [二分搜索](Binary%20Search/README_zh.md)	从已排序的数组中快速查找元素。
-- [统计出现次数](Count%20Occurrences/README_zh.md)	统计某个值在数组中的出现次数。
+- [线性搜索](Linear%20Search/)	从数组中查找某个元素。
+- [二分搜索](Binary%20Search/)	从已排序的数组中快速查找元素。
+- [统计出现次数](Count%20Occurrences/)	统计某个值在数组中的出现次数。
 - [查找最大／最小值](Select%20Minimum%20Maximum)	找到数组中的最大／最小值。
 - [第K大元素](Kth%20Largest%20Element/)	找到数组中的第 **K** 大元素，例如中位数。
 - [选取样本](Selection%20Sampling/)	随机地从集合中选取一些元素作为样本。
@@ -62,9 +62,9 @@
 
 ### 字符串搜索算法
 
-- [暴力字符串搜索算法](Brute-Force%20String%20Search/README_zh.md)	一个简单粗暴的方法。
-- [Boyer-Moore算法](Boyer-Moore-Horspool/README_zh.md)	一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
-- [Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/README_zh.md)	一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
+- [暴力字符串搜索算法](Brute-Force%20String%20Search/)	一个简单粗暴的方法。
+- [Boyer-Moore算法](Boyer-Moore-Horspool/)	一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
+- [Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/)	一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
 - [Rabin-Karp 算法]	使用哈希的快速搜索
 - [最长公共子序列算法](Longest%20Common%20Subsequence/)	找到两个字符串中的最长公共子序列。
 - [⏳Z-Algorithm](Z-Algorithm/)	在String中查找模式的所有实例，并返回模式在String中开始的索引。
@@ -75,14 +75,14 @@
 
 基本的排序算法：
 
-- [插入排序](Insertion%20Sort/README_zh.md)
-- [选择排序](Selection%20Sort/README_zh.md)
+- [插入排序](Insertion%20Sort/)
+- [选择排序](Selection%20Sort/)
 - [⏳希尔排序](Shell%20Sort/)
 
 快速的排序算法：
 
-- [快速排序](Quicksort/README_zh.md)
-- [归并排序](Merge%20Sort/README_zh.md)
+- [快速排序](Quicksort/)
+- [归并排序](Merge%20Sort/)
 - [⏳堆排序](Heap%20Sort/)
 
 混合排序算法：
@@ -144,16 +144,16 @@
 
 ### 数组变体
 
-- [二维数组](Array2D/README_zh.md)－固定尺寸的二维数组，可用于棋盘游戏。
-- [比特集](Bit%20Set/README_zh.md)－**n** 位大小固定尺度的序列。
+- [二维数组](Array2D/)－固定尺寸的二维数组，可用于棋盘游戏。
+- [比特集](Bit%20Set/)－**n** 位大小固定尺度的序列。
 - [⏳固定长度数组](Fixed%20Size%20Array/) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
 - [⏳有序数组](Ordered%20Array/)－一个永远有序的数组。
 - [⏳Rootish Array Stack](Rootish%20Array%20Stack/). A space and time efficient variation on Swift arrays.
 
 ### 队列
 
-- [栈](Stack/README_zh.md)－后进先出！
-- [队列](Queue/README_zh.md)－先进先出！
+- [栈](Stack/)－后进先出！
+- [队列](Queue/)－先进先出！
 - [⏳双端队列](Deque/)
 - [⏳优先队列](Priority%20Queue)－一个保持最重要的元素总是在最前面的队列。
 - [⏳有限优先队列](Bounded%20Priority%20Queue)－元素最大数受限制的优先队列。 :construction:
@@ -183,7 +183,7 @@
 
 ### 哈希
 
-- [哈希表](Hash%20Table/README_zh.md)－允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
+- [哈希表](Hash%20Table/)－允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
 - ⏳哈希函数
 
 ### 集合

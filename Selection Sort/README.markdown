@@ -10,7 +10,7 @@ You are given an array of numbers and need to put them in the right order. The s
 	[ ...sorted numbers... | ...unsorted numbers... ]
 
 This is similar to [insertion sort](../Insertion%20Sort/), but the difference is in how new numbers are added to the sorted portion.
-这类似于[插入排序](../Insertion％20Sort/README_zh.md)，但区别在于如何将新数字添加到已排序部分。
+这类似于[插入排序](../Insertion％20Sort/)，但区别在于如何将新数字添加到已排序部分。
 
 It works as follows:
 它的工作原理如下：
@@ -152,9 +152,9 @@ The source file [SelectionSort.swift](SelectionSort.swift) has a version of this
 The selection sort is easy to understand but it performs slow as **O(n^2)**. It is worse than [insertion sort](../Insertion%20Sort/) but better than [bubble sort](../Bubble%20Sort/). Finding the lowest element in the rest of the array is slow, especially since the inner loop will be performed repeatedly.
 
 The [Heap sort](../Heap%20Sort/) uses the same principle as selection sort but has a fast method for finding the minimum value in the rest of the array. The heap sort' performance is **O(n log n)**.
-选择排序很容易理解，但执行速度慢 **O(n^2)**。 它比[插入排序](../Insertion％20Sort/README_zh.md)更糟，但优于[冒泡排序](../Bubble％20Sort/README_zh.md)。 查找数组其余部分中的最低元素很慢，特别是因为内部循环将重复执行。
+选择排序很容易理解，但执行速度慢 **O(n^2)**。 它比[插入排序](../Insertion％20Sort/)更糟，但优于[冒泡排序](../Bubble％20Sort/)。 查找数组其余部分中的最低元素很慢，特别是因为内部循环将重复执行。
 
-[堆排序](../Heap％20Sort/README_zh.md)使用与选择排序相同的原则，但有一种快速方法可以在数组的其余部分中查找最小值。 堆排序性能是 **O(nlogn)**。
+[堆排序](../Heap％20Sort/)使用与选择排序相同的原则，但有一种快速方法可以在数组的其余部分中查找最小值。 堆排序性能是 **O(nlogn)**。
 
 ## 扩展阅读
 

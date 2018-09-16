@@ -59,7 +59,7 @@ This looks at each character in the source string in turn. If the character equa
 这将依次查看源字符串中的每个字符。 如果字符等于搜索模式的第一个字符，则内部循环检查模式的其余部分是否匹配，如果未找到匹配项，则外循环将从中断处继续。 重复此过程直到找到完全匹配或到达源字符串的结尾。
 
 The brute-force approach works OK, but it's not very efficient (or pretty). It should work fine on small strings, though. For a smarter algorithm that works better with large chunks of text, check out [Boyer-Moore](../Boyer-Moore-Horspool) string search.
-暴力方法运行正常，但效率不高（或漂亮）。 不过，它应该可以在小字符串上正常工作。 对于使用大块文本更好的智能算法，请查看[Boyer-Moore](../Boyer-Moore-Horspool/README_zh.md)字符串搜索。
+暴力方法运行正常，但效率不高（或漂亮）。 不过，它应该可以在小字符串上正常工作。 对于使用大块文本更好的智能算法，请查看[Boyer-Moore](../Boyer-Moore-Horspool/)字符串搜索。
 
 *Written for Swift Algorithm Club by Matthijs Hollemans*
 

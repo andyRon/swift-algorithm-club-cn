@@ -18,7 +18,7 @@ numbers.indexOf(43)  // returns 15
 ```
 
 The built-in `indexOf()` function performs a [linear search](../Linear%20Search/). In code that looks something like this:
-内置的`indexOf()`函数实现的是[线性搜索](../Linear%20Search/README_zh.md)。代码看样子如下：
+内置的`indexOf()`函数实现的是[线性搜索](../Linear%20Search/)。代码看样子如下：
 
 ```swift
 func linearSearch<T: Equatable>(_ a: [T], _ key: T) -> Int? {
