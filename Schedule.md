@@ -36,6 +36,18 @@
 |Selection Sampling     	| andyRon    |   Y  		 |  andyRon | 			|
 |Union-Find			    	| andyRon    |   Y  		 |  andyRon | 			|
 
+
+### 字符串搜索算法
+
+| 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
+|---------------------------|------------|:-------------:|----------|:---------:|
+|Brute-Force String Search  | andyRon    |   Y  		 |   		| 			|
+|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
+|Knuth-Morris-Pratt 		| andyRon    |   Y  		 |   		| 			|
+|Rabin-Karp 				| andyRon    |     		  	 |   		| 			|
+|Longest Common Subsequence | andyRon    |     		  	 |   		| 			|
+|Z-Algorithm 				| andyRon    |     		  	 |   		| 			|
+
 ### 排序
 
 
@@ -65,8 +77,8 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-|   Stack 					|    		 |               |	    	|			|
-|   Queue 					|    		 |               |	    	|			|
+|   Stack 					| andyRon  	 |     Y         |	    	|			|
+|   Queue 					| andyRon    |     Y         |	    	|			|
 |   Deque 					|    		 |               |	    	|			|
 |   Priority Queue 			|    		 |               |	    	|			|
 |Bounded Priority Queue    	|    		 |               |	    	|			|
