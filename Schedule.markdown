@@ -14,7 +14,7 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|	
-|Stack  					| andyRon    |   Y  		 |  andyRon | 			|
+|Stack  					| andyRon    |   Y  		 |  andyRon |  Y		|
 |Queue  					| andyRon    |   Y  		 |  andyRon | 			|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
@@ -44,8 +44,8 @@
 |Brute-Force String Search  | andyRon    |   Y  		 |   		| 			|
 |Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
 |Knuth-Morris-Pratt 		| andyRon    |   Y  		 |   		| 			|
-|Rabin-Karp 				| andyRon    |     		  	 |   		| 			|
-|Longest Common Subsequence | andyRon    |     		  	 |   		| 			|
+|Rabin-Karp 				| andyRon    |   Y  		 |   		| 			|
+|Longest Common Subsequence | andyRon    |   Y  		 |   		| 			|
 |Z-Algorithm 				| andyRon    |     		  	 |   		| 			|
 
 ### 排序

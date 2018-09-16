@@ -65,8 +65,8 @@
 - [暴力字符串搜索算法](Brute-Force%20String%20Search/README_zh.md)	一个简单粗暴的方法。
 - [Boyer-Moore算法](Boyer-Moore-Horspool/README_zh.md)	一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
 - [Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/README_zh.md)	一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
-- [⏳Rabin-Karp 算法]	使用哈希的快速搜索
-- [⏳最长公共子序列算法](Longest%20Common%20Subsequence/)	找到两个字符串中的最长公共子序列。
+- [Rabin-Karp 算法]	使用哈希的快速搜索
+- [最长公共子序列算法](Longest%20Common%20Subsequence/)	找到两个字符串中的最长公共子序列。
 - [⏳Z-Algorithm](Z-Algorithm/)	在String中查找模式的所有实例，并返回模式在String中开始的索引。
 
 ### 排序算法
