@@ -1,10 +1,12 @@
 # 栈
 
-栈类似于数组，但是限制了存取操作的灵活性。栈只允许使用者从栈顶**压入(push)**元素；从栈顶**弹出(pop)**元素；**取得(peek)**栈顶元素，但不弹出。
+> 这个话题已经有个辅导[文章](https://www.raywenderlich.com/149213/swift-algorithm-club-swift-stack-data-structure)
+
+栈类似于数组，但是限制了存取操作的灵活性。栈只允许使用者从栈顶 **压入(push)** 元素；从栈顶 **弹出(pop)** 元素；**取得(peek)** 栈顶元素，但不弹出。
 
 这样的限制有什么意义呢？在很多算法的实现中，你可能需要将某些对象放到一个临时的列表中，之后再将其取出。通常加入和取出元素的顺序非常重要。
 
-栈可以保证元素存入和取出的顺序是后进先出(last-in first-out, LIFO)的。栈中弹出的元素总是你最后放进去的那个。另外一个非常类似的数据结构是[队列](../Queue/)，它是一个先进先出(first-in, first-out, FIFO)的结构。
+栈可以保证元素存入和取出的顺序是后进先出(last-in first-out, LIFO)的。栈中弹出的元素总是你最后放进去的那个。另外一个非常类似的数据结构是[队列](../Queue/README_zh.md)，它是一个先进先出(first-in, first-out, FIFO)的结构。
 
 举例来说，我们先将一个数字压入栈中：
 
@@ -70,4 +72,5 @@ public struct Stack<T> {
 
 关于栈的有趣知识：每次你调用函数或方法，CPU都会将函数返回地址压入到运行栈中。当这个函数执行结束的时候，CPU将返回地址从栈中取出，并据此返回到函数被调用的位置。所以，如果不断地调用太多的函数(例如死递归函数)，就会得到一个所谓的“栈溢出(stack overflow)” 错误，因为CPU运行栈没有空间了。
 
-*作者：Matthijs Hollemans；译者：KSCO*
+*作者：Matthijs Hollemans；译者：KSCO*  
+*校队：[Andy Ron](https://github.com/andyRon)*
