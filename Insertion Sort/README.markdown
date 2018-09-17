@@ -1,5 +1,7 @@
 # 插入排序
 
+![插入排序动画](https://upload-images.jianshu.io/upload_images/1678135-356b8d2db83067f0.gif?imageMogr2/auto-orient/strip)
+
 目标：把数组从低到高（或从高到低）排序
 
 您将获得按正确的顺序排列一系列数字。插入排序算法的工作原理如下:
@@ -250,5 +252,5 @@ insertionSort(objects) { $0.priority < $1.priority }
 [插入排序的维基百科](https://en.wikipedia.org/wiki/Insertion_sort)
 
 *作者：Matthijs Hollemans*   
-*翻译：[Andy Ron](https://github.com/andyRon)*
+*翻译：[Andy Ron](https://github.com/andyRon)*  
 *校队：[Andy Ron](https://github.com/andyRon)*

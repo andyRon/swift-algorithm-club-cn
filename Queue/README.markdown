@@ -92,11 +92,15 @@ queue.enqueue("Tim")
 
 则数组可能看起来想下面这样
 
+```
   [ "Ada", "Steve", "Tim", xxx, xxx, xxx ]
+```
 
 `xxx` 代表已经申请，但还没有使用的内存。在尾部添加一个新的元素就会用到下一块未被使用的内存：
 
+```
   [ "Ada", "Steve", "Tim", "Grace", xxx, xxx ]
+```
 
 这只是简单的拷贝内存的工作，只需要固定的常量时间。
 
@@ -108,13 +112,16 @@ queue.enqueue("Tim")
 
 在我们的例子中，将 `"Ada"` 出队会使得 `"Steve"` 接替 `"Ada"` 的位置；`"Tim"` 接替 `"Steve"` 的位置；`"Grace"` 接替 `"Tim"` 的位置：
 
+
+```
   出队前   [ "Ada", "Steve", "Tim", "Grace", xxx, xxx ]
                      /       /      /
                     /       /      /
                    /       /      /
                   /       /      /
   出队后   [ "Steve", "Tim", "Grace", xxx, xxx, xxx ]
- 
+``` 
+
 在内存中移动这些元素的时间复杂度永远都是 **O(n)**，所以我们实现的简单队列对于入队操作的效率是很高的，但对于出队操作的效率却较为低下。
 
 ## 更加高效的队列
@@ -123,15 +130,21 @@ queue.enqueue("Tim")
 
 我们的想法如下：每当我们将一个元素出队，我们不再将剩下的元素向前移位（慢），而是将其标记为空（快）。在将 `"Ada"` 出队后，数组如下：
 
+```
   [ xxx, "Steve", "Tim", "Grace", xxx, xxx ]
+```
 
 `"Steve"` 出队后，数组如下：
 
+```
   [ xxx, xxx, "Tim", "Grace", xxx, xxx ]
+```
 
 这些在前端空出来的位子永远都不会再次使用，所以这是些被浪费的空间。解决方法是将剩下的元素往前移动来填补这些空位：
 
+```
   [ "Tim", "Grace", xxx, xxx, xxx, xxx ]
+```
 
 这就需要移动内存，所以这是一个 **O(n)** 操作，但因为这个操作只是偶尔发生，所以出队操作平均时间复杂度为 **O(1)**
 
@@ -185,13 +198,17 @@ public struct Queue<T> {
 
 数组从这样：
 
+```
   [ "Ada", "Steve", "Tim", "Grace", xxx, xxx ]
     head
+```
 
 变成这样：
 
+```
   [ xxx, "Steve", "Tim", "Grace", xxx, xxx ]
           head
+```
 
 这就像在某个超市，在那里排队结账的人保持不动，而收银员从头往队尾移动来挨个结账。
 
@@ -209,9 +226,7 @@ public struct Queue<T> {
 
 > **注意：**  50这个数字只是我凭空捏造的一个数字，在实际的项目中，你应该根据项目本身来选定一个合情合理的值。
 
-To test this in a playground, do:
-
-如果想在 Playground 中测试，可以参考下面的代码：
+在 Playground 中测试：
 
 ```swift
 var q = Queue<String>()

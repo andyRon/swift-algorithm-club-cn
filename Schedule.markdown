@@ -16,7 +16,7 @@
 |---------------------------|------------|:-------------:|----------|:---------:|	
 |Stack  					| andyRon    |   Y  		 |  andyRon |  Y		|
 |Queue  					| andyRon    |   Y  		 |  andyRon |  Y		|
-|Insertion Sort  			| andyRon    |   Y  		 |  andyRon | 			|
+|Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
 |Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
