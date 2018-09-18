@@ -170,7 +170,6 @@ if a[midIndex] > key {
 
 这可能看起来像很多工作，但实际上只需要四个步骤就能找到数组中的*搜索键*，因为`log_2（19）= 4.23`。通过线性搜索，它将花费14个步骤。
 
-What would happen if we were to search for `42` instead of `43`? In that case, we can't split up the array any further. The `range.upperBound` becomes smaller than `range.lowerBound`. That tells the algorithm the search key is not in the array and it returns `nil`.
 如果我们要搜索`42`而不是`43`会发生什么？在这种情况下，最后我们不能再进一步拆分数组。 `range.upperBound`变得小于`range.lowerBound`。这告诉算法搜索键不在数组中，它返回`nil`。
 
 > **注意：** 二分搜索许多执行会计算 `midIndex = (lowerBound + upperBound) / 2`。这包含了一个在非常大的数组中会出现的细微bug，因为`lowerBound + upperBound`可能溢出一个整数可以容纳的最大数。这种情况不太可能发生在64位CPU上，但绝对可能在32位机器上发生。

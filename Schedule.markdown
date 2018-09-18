@@ -1,4 +1,10 @@
-# 进度
+# 说明
+
+初次翻译时保留一段英文+一段中文，校对后去除英文。
+
+
+
+# 翻译进度
 
 > 部分翻译来自[ksco/swift-algorithm-club-cn](https://github.com/ksco/swift-algorithm-club-cn)
 

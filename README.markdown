@@ -1,6 +1,6 @@
 > 注：本项目翻译自[Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。  
 > 欢迎有兴趣学习算法和数据结构，有时间的小伙伴一起参与翻译，欢迎issue，或者直接提交pull request。  
-> [翻译进度](Schedule.md)
+> [说明和翻译进度](Schedule.md)
 
 
 
