@@ -166,10 +166,10 @@
 
 ### 树
 
-- [⏳树](Tree/)－通用目的的树形结构。
-- [⏳二叉树](Binary%20Tree/)－一种节点最多有两个孩子节点的树形结构。
-- [⏳二叉搜索树(BST)](Binary%20Search%20Tree/)－以某种方式组织自己的节点的二叉树，以求较快的查询速度。
-- [⏳AVL 树](AVL%20Tree/)－一种通过旋转来维持平衡的二叉搜索树。 :construction:
+- [树](Tree/)－通用目的的树形结构。
+- [二叉树](Binary%20Tree/)－一种节点最多有两个孩子节点的树形结构。
+- [二叉搜索树(BST)](Binary%20Search%20Tree/)－以某种方式组织自己的节点的二叉树，以求较快的查询速度。
+- [⏳AVL树](AVL%20Tree/)－一种通过旋转来维持平衡的二叉搜索树。 :construction:
 - [⏳红黑树](Red-Black%20Tree/). A self balancing binary search tree.
 - [⏳伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
 - [⏳线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.

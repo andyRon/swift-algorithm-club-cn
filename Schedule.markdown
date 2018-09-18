@@ -17,7 +17,7 @@
 |Stack  					| andyRon    |   Y  		 |  andyRon |  Y		|
 |Queue  					| andyRon    |   Y  		 |  andyRon |  Y		|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
-|Binary Search  			| andyRon    |   Y  		 |  andyRon | 			|
+|Binary Search  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
 |Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
 
@@ -106,8 +106,9 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Tree  					| andyRon    |  Y            |	    	|			|
-| Binary Tree  				|    		 |               |	    	|			|
-| Binary Search Tree  		|    		 |               |	    	|			|
+| Binary Tree  				| andyRon    |  Y            |	    	|			|
+| Binary Search Tree  		| andyRon    |  Y            |	    	|			|
+| AVL Tree 					|    		 |               |	    	|			|
 | Red-Black Tree   			|    		 |               |	    	|			|
 | Splay Tree   				|    		 |               |	    	|			|
 | Threaded Binary Tree   	|    		 |               |	    	|			|
@@ -139,7 +140,7 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-| Graph   					| andyRon    |  Y             |	    	|			|
+| Graph   					| andyRon    |  Y            |	    	|			|
 | Breadth-First Search   	| andyRon    |               |	    	|			|
 | Depth-First Search   		| andyRon    |               |	    	|			|
 | Dijkstra's algorithm   	|    		 |               |	    	|			|
