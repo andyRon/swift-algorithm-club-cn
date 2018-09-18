@@ -34,8 +34,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 |Linear Search  			| andyRon    |   Y  		 |  andyRon | 			|
-|Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
-|Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
+|Binary Search  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Count Occurrences 			| andyRon    |   Y  		 |  andyRon | 			|
 |Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | 			|
 |k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | 			|
@@ -58,7 +57,10 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-|    						|    		 |               |	    	|			|
+|Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
+|Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
+|Shell Sort    				|    		 |               |	    	|			|
+|Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
 |    						|    		 |               |	    	|			|
 
 

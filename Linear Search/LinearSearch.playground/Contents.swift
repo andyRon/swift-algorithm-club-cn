@@ -1,9 +1,4 @@
-//: Playground - noun: a place where people can play
 
-// last checked with Xcode 9.0b4
-#if swift(>=4.0)
-print("Hello, Swift 4!")
-#endif
 
 func linearSearch<T: Equatable>(_ array: [T], _ object: T) -> Int? {
     for (index, obj) in array.enumerated() where obj == object {
@@ -11,7 +6,13 @@ func linearSearch<T: Equatable>(_ array: [T], _ object: T) -> Int? {
     }
     return nil
 }
+/*
+ 使用尾随闭包简写
+ */
+func linearSearch1<T: Equatable>(_ array: [T], _ object: T) -> Int? {
+    return array.index { $0 == object }
+}
 
-let array = [5, 2, 4, 7]
-linearSearch(array, 2) 	// returns 1
-linearSearch(array, 3) 	// returns nil
+linearSearch([2,5,3,12,7,8],  12)
+
+linearSearch1([2,5,3,12,7,8],  7)
