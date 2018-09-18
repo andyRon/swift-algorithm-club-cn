@@ -6,10 +6,10 @@ Goal: Quickly find an element in an array.
 
 
 Let's say you have an array of numbers and you want to determine whether a specific number is in that array, and if so, at which index.
-假设你有一个数字数组，你想确定一个特定的数字是否在该数组中，如果在，那么获得那个数字的索引。
+假设你有一个数字数组，你想确定一个特定的数字是否在该数组中，如果在，那么获得这个数字的索引。
 
 In most cases, Swift's `indexOf()` function is good enough for that:
-对于上面的要求，Swift的`indexOf()`函数很容易达成：
+对于上面的情况，Swift的`indexOf()`函数足够完成：
 
 ```swift
 let numbers = [11, 59, 3, 2, 53, 17, 31, 7, 19, 67, 47, 13, 37, 61, 29, 43, 5, 41, 23]
@@ -18,7 +18,7 @@ numbers.indexOf(43)  // returns 15
 ```
 
 The built-in `indexOf()` function performs a [linear search](../Linear%20Search/). In code that looks something like this:
-内置的`indexOf()`函数实现的是[线性搜索](../Linear%20Search/)。代码看样子如下：
+内置的`indexOf()`函数实现的是[线性搜索](../Linear%20Search/)。代码大概是：
 
 ```swift
 func linearSearch<T: Equatable>(_ a: [T], _ key: T) -> Int? {
@@ -39,7 +39,7 @@ linearSearch(numbers, 43)  // returns 15
 ```
 
 So what's the problem? `linearSearch()` loops through the entire array from the beginning, until it finds the element you're looking for. In the worst case, the value isn't even in the array and all that work is done for nothing.
-所以有什么问题？ `linearSearch（）`从头开始遍历整个数组，直到找到你正在寻找的元素。 在最坏的情况下，数值甚至不在数组中，所有工作都是无效的。
+有什么问题呢？ `linearSearch（）`从头开始遍历整个数组，直到找到你正在寻找的元素。 在最坏的情况是数值不在数组中，那么之前的遍历就浪费。
 
 On average, the linear search algorithm needs to look at half the values in the array. If your array is large enough, this starts to become very slow!
 平均而言，线性搜索算法需要查看数组中一半的值。 如果您的数组足够大，这将开始变得非常慢！

@@ -46,12 +46,22 @@
 |Knuth-Morris-Pratt 		| andyRon    |   Y  		 |   		| 			|
 |Rabin-Karp 				| andyRon    |   Y  		 |   		| 			|
 |Longest Common Subsequence | andyRon    |   Y  		 |   		| 			|
-|Z-Algorithm 				| andyRon    |     		  	 |   		| 			|
+|Z-Algorithm 				| andyRon    |   Y  		 |   		| 			|
 
 ### 排序
 
+| 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
+|---------------------------|------------|:-------------:|----------|:---------:|
+|    						|    		 |               |	    	|			|
+|    						|    		 |               |	    	|			|
+
 
 ### 压缩
+
+| 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
+|---------------------------|------------|:-------------:|----------|:---------:|
+| 变动长度编码法(RLE)   		|    		 |               |	    	|			|
+| 哈夫曼编码   			    |    		 |               |	    	|			|
 
 ### 杂项
 
@@ -80,7 +90,7 @@
 |   Stack 					| andyRon  	 |     Y         |	    	|			|
 |   Queue 					| andyRon    |     Y         |	    	|			|
 |   Deque 					|    		 |               |	    	|			|
-|   Priority Queue 			|    		 |               |	    	|			|
+|   Priority Queue 			| andyRon    |               |	    	|			|
 |Bounded Priority Queue    	|    		 |               |	    	|			|
 |  Ring Buffer				|    		 |               |	    	|			|
 
@@ -95,7 +105,7 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-| Tree  					|    		 |               |	    	|			|
+| Tree  					| andyRon    |  Y            |	    	|			|
 | Binary Tree  				|    		 |               |	    	|			|
 | Binary Search Tree  		|    		 |               |	    	|			|
 | Red-Black Tree   			|    		 |               |	    	|			|
@@ -129,6 +139,11 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
+| Graph   					| andyRon    |  Y             |	    	|			|
+| Breadth-First Search   	| andyRon    |               |	    	|			|
+| Depth-First Search   		| andyRon    |               |	    	|			|
+| Dijkstra's algorithm   	|    		 |               |	    	|			|
+|    						|    		 |               |	    	|			|
 |    						|    		 |               |	    	|			|
 |    						|    		 |               |	    	|			|
 

@@ -67,7 +67,7 @@
 - [Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/)	一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
 - [Rabin-Karp 算法]	使用哈希的快速搜索
 - [最长公共子序列算法](Longest%20Common%20Subsequence/)	找到两个字符串中的最长公共子序列。
-- [⏳Z-Algorithm](Z-Algorithm/)	在String中查找模式的所有实例，并返回模式在String中开始的索引。
+- [Z-Algorithm](Z-Algorithm/)	在String中查找模式的所有实例，并返回模式在String中开始的索引。
 
 ### 排序算法
 
@@ -170,16 +170,19 @@
 - [⏳二叉树](Binary%20Tree/)－一种节点最多有两个孩子节点的树形结构。
 - [⏳二叉搜索树(BST)](Binary%20Search%20Tree/)－以某种方式组织自己的节点的二叉树，以求较快的查询速度。
 - [⏳AVL 树](AVL%20Tree/)－一种通过旋转来维持平衡的二叉搜索树。 :construction:
-- ⏳红黑树
-- ⏳伸展树
-- ⏳线索二叉树
+- [⏳红黑树](Red-Black%20Tree/). A self balancing binary search tree.
+- [⏳伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
+- [⏳线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
 - [⏳线段树](Segment%20Tree/)－能够快速地对某区间进行计算。
+  - [⏳Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)
 - ⏳k-d 树
+- [⏳Sparse Table](Sparse%20Table/). Another take on quickly computing a function over a portion of an array, but this time we'll make it even quicker!.
 - [⏳堆](Heap/)－存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
 - ⏳斐波那契堆
-- ⏳字典树(Trie)
-- ⏳B 树
-- [⏳基数树](Radix%20Tree/) :construction:
+- [⏳字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
+- [⏳B 树](B-Tree/). A self-balancing search tree, in which nodes can have more than two children.
+- [⏳QuadTree](QuadTree/). A tree with 4 children.
+- [⏳Octree](Octree/). A tree with 8 children.
 
 ### 哈希
 
@@ -190,13 +193,13 @@
 
 - [⏳布隆过滤器](Bloom%20Filter/)－一个常量内存数据结构，用于概率性的检测某个元素是否在集合中。
 - [⏳哈希集合](Hash%20Set/)－使用哈希表实现的集合。
-- ⏳多重集
+- [⏳多重集](Multiset/). A set where the number of times an element is added matters. (Also known as a bag.)
 - [⏳有序集](Ordered%20Set/)－很看重元素顺序的集合。
 
 ### 图
 
-- [⏳图](Graph/)
-- [⏳广度优先搜索(BFS)](Breadth-First%20Search/)
+- [图](Graph/)
+- [广度优先搜索(BFS)](Breadth-First%20Search/)
 - [⏳深度优先搜索(DFS)](Depth-First%20Search/)
 - [⏳最短路径算法](Shortest%20Path%20%28Unweighted%29/)－作用对象为无权值树。
 - [⏳最小生成树](Minimum%20Spanning%20Tree%20%28Unweighted%29/)－作用对象为无权值树。

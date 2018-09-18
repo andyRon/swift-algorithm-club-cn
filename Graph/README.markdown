@@ -2,7 +2,7 @@
 # 图
 
 > This topic has been tutorialized [here](https://www.raywenderlich.com/152046/swift-algorithm-club-graphs-adjacency-list)
-> 这个话题已经有个辅导[文章]https://www.raywenderlich.com/152046/swift-algorithm-club-graphs-adjacency-list)
+> 这个话题已经有个辅导[文章](https://www.raywenderlich.com/152046/swift-algorithm-club-graphs-adjacency-list)
 
 
 A graph looks like the following picture:
