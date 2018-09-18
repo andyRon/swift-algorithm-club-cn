@@ -1,39 +1,29 @@
 # Trees
-# 树
 
 > This topic has been tutorialized [here](https://www.raywenderlich.com/138190/swift-algorithm-club-swift-tree-data-structure)
-> 这个话题已经有个辅导[文章](https://www.raywenderlich.com/138190/swift-algorithm-club-swift-tree-data-structure)
 
 
 A tree represents hierarchical relationships between objects. This is a tree:
-树表示对象之间的层次关系。 这是一棵树：
 
 ![A tree](Images/Tree.png)
 
 A tree consists of nodes, and these nodes are linked to one another.
-树由节点组成，这些节点彼此连接。
 
 Nodes have links to their children and usually to their parent as well. The children are the nodes below a given node; the parent is the node above. A node always has just one parent but can have multiple children.
-节点可以链接到他们的子节点，也可以链接到他们的父节点。 子节点是给定节点下的节点; 父是上面的节点。 节点始终只有一个父节点，但可以有多个子节点。
 
 ![A tree](Images/ParentChildren.png)
 
 A node without a parent is the *root* node. A node without children is a *leaf* node.
-没有父节点的节点是 *root*节点。 没有子节点的节点是 *leaf* 节点。
 
 The pointers in a tree do not form cycles. This is not a tree:
-树中的指针不形成循环。 这不是树：
 
 ![Not a tree](Images/Cycles.png)
 
 Such a structure is called a [graph](../Graph/). A tree is really a very simple form of a graph. (In a similar vein, a [linked list](../Linked%20List/) is a simple version of a tree. Think about it!)
-这种结构称为[图](../Graph/)。 树实际上是一种非常简单的图形形式。 （类似地，[链表](../Linked％20List/)是树的简单版本。想一想！）
 
 This article talks about a general-purpose tree. That's a tree without any kind of restrictions on how many children each node may have, or on the order of the nodes in the tree.
-本文讨论了一个通用树。 通用树对每个节点可能有多少个子节点或树中节点的顺序没有任何限制。
 
 Here's a basic implementation in Swift:
-这是Swift中的基本实现：
 
 ```swift
 public class TreeNode<T> {
@@ -54,10 +44,8 @@ public class TreeNode<T> {
 ```
 
 This describes a single node from the tree. It has a value of generic type `T`, a reference to a `parent` node, and an array of child nodes.
-这描述了树中的单个节点。 它具有泛型类型`T`的值，对`parent`节点的引用，以及子节点数组。
 
 It will be useful to add a `description` method so you can print the tree:
-添加`description`方法以便打印树是很有用的：
 
 ```swift
 extension TreeNode: CustomStringConvertible {
@@ -72,7 +60,6 @@ extension TreeNode: CustomStringConvertible {
 ```
 
 To see this in action in a playground:
-要在 playground 看到这个：
 
 ```swift
 let tree = TreeNode<String>(value: "beverages")
@@ -113,20 +100,16 @@ sodaNode.addChild(bitterLemonNode)
 ```
 
 If you print out the value of `tree`, you'll get:
-如果你打印出`tree`的值，你会得到：
 
 	beverages {hot {tea {black, green, chai}, coffee, cocoa}, cold {soda {ginger ale, bitter lemon}, milk}}
 
 That corresponds to the following structure:
-这对应于以下结构：
 
 ![Example tree](Images/Example.png)
 
 The `beverages` node is the root because it has no parent. The leaves are `black`, `green`, `chai`, `coffee`, `cocoa`, `ginger ale`, `bitter lemon`, `milk` because they don't have any child nodes.
-`beverages`节点是根节点，因为它没有父节点。 叶子是`黑色`，`绿色`，`柴`，`咖啡`，`可可`，`姜汁`，`苦柠檬`，`牛奶`，因为它们没有任何子节点。
 
 For any node you can look at the `parent` property and work your way back up to the root:
-对于任何节点，您可以查看`parent`属性并按照自己的方式返回到根目录：
 
 ```swift
 teaNode.parent           // this is the "hot" node
@@ -134,25 +117,18 @@ teaNode.parent!.parent   // this is the root
 ```
 
 We often use the following definitions when talking about trees:
-在谈论树时，我们经常使用以下定义：
 
 - **Height of the tree.** This is the number of links between the root node and the lowest leaf. In our example the height of the tree is 3 because it takes three jumps to go from the root to the bottom.
-- **树的高度**。 这是根节点和最低叶子之间的链接数。 在我们的示例中，树的高度为3，因为从根到底需要三次跳转。
 
 - **Depth of a node.** The number of links between this node and the root node. For example, the depth of `tea` is 2 because it takes two jumps to reach the root. (The root itself has depth 0.)
-- **节点的深度。** 此节点与根节点之间的链接数。 例如，`tea` 的深度为2，因为需要两次跳跃才能到达根部。 （根本身的深度为0.）
 
 There are many different ways to construct trees. For example, sometimes you don't need to have a `parent` property at all. Or maybe you only need to give each node a maximum of two children -- such a tree is called a [binary tree](../Binary%20Tree/). A very common type of tree is the [binary search tree](../Binary%20Search%20Tree/) (or BST), a stricter version of a binary tree where the nodes are ordered in a particular way to speed up searches.
-构建树木的方法有很多种。 例如，有时您根本不需要 `parent` 属性。 或者，您可能只需要为每个节点提供最多两个子节点 - 这样的树称为[二叉树](../Binary％20Tree/)。 一种非常常见的树类型是[二叉搜索树](../Binary％20Search％20Tree/)（或BST），它是二进制树的更严格版本，其中节点以特定方式排序以加速搜索。
 
 The general purpose tree I've shown here is great for describing hierarchical data, but it really depends on your application what kind of extra functionality it needs to have.
-我在这里展示的通用树非常适合描述分层数据，但它实际上取决于您的应用程序需要具备哪种额外功能。
 
 Here's an example of how you could use the `TreeNode` class to determine if the tree contains a particular value. You first look at the node's own `value` property. If there's no match, then you look at all your children in turn. Of course, those children are also `TreeNodes` so they will repeat the same process recursively: first look at their own value and then at their children. And their children will also do the same thing again, and so on... Recursion and trees go hand-in-hand.
-这是一个如何使用`TreeNode`类来确定树是否包含特定值的示例。 首先看一下节点自己的`value`属性。 如果没有匹配，那么你依次看看你所有的孩子。 当然，那些孩子也是`TreeNodes`，所以他们将递归地重复相同的过程：首先看看他们自己的价值，然后看看他们的孩子。 他们的孩子也会再次做同样的事情，等等...递归和树木齐头并进。
 
 Here's the code:
-这是代码：
 
 ```swift
 extension TreeNode where T: Equatable {
@@ -171,7 +147,6 @@ extension TreeNode where T: Equatable {
 ```
 
 And an example of how to use this:
-如何使用它的示例：
 
 ```swift
 tree.search("cocoa")    // returns the "cocoa" node
@@ -188,16 +163,11 @@ It's also possible to describe a tree using nothing more than an array. The indi
 	4 = coffee				
 
 Then we can describe the tree with the following array:
-也可以使用数组来描述树。 然后，数组中的索引创建不同节点之间的链接。 例如，如果我们有：
 
 	[ -1, 0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 6, 6 ]
 
 Each entry in the array is a pointer to its parent node. The item at index 3, `tea`, has the value 1 because its parent is `hot`. The root node points to `-1` because it has no parent. You can only traverse such trees from a node back to the root but not the other way around.
-数组中的每个条目都是指向其父节点的指针。 索引3处的项目`tea`，其值为1，因为其父项为“hot”。 根节点指向“-1”，因为它没有父节点。 您只能将这些树从一个节点遍历到根节点，而不是相反。
 
 By the way, sometimes you see algorithms using the term *forest*. Unsurprisingly, that is the name given to a collection of separate tree objects. For an example of this, see [union-find](../Union-Find/).
-顺便说一句，有时您会看到使用术语 *forest* 的算法。 不出所料，这是给予单独树对象集合的名称。 有关此示例，请参阅[union-find](../Union-Find/)。
 
 *Written for Swift Algorithm Club by Matthijs Hollemans*
-*作者：Matthijs Hollemans*  
-*翻译：[Andy Ron](https://github.com/andyRon)*
