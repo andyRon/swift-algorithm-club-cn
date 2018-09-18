@@ -292,7 +292,7 @@ Let's write a method that lets you insert a new node at any index in the list.
 }
 ```
 
-As with node(atIndex :) method, `insert(_: at:)` method also branches depending on whether the given index is 0 or not.
+As with node(atIndex :) method, insert(_: at:) method also branches depending on whether the given index is 0 or not.
 First let's look at the former case. Suppose we have the following list and the new node(C).
 
              +---------+     +---------+
