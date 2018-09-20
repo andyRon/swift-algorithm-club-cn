@@ -33,8 +33,8 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-|Linear Search  			| andyRon    |   Y  		 |  andyRon | 			|
-|Binary Search  			| andyRon    |   Y  		 |  andyRon |  Y		|
+|Linear Search  			| andyRon    |   Y  		 |  andyRon | Y			|
+|Binary Search  			| andyRon    |   Y  		 |  andyRon | Y			|
 |Count Occurrences 			| andyRon    |   Y  		 |  andyRon | 			|
 |Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | 			|
 |k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | 			|
@@ -149,8 +149,8 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Graph   					| andyRon    |  Y            |	    	|			|
-| Breadth-First Search   	| andyRon    |               |	    	|			|
-| Depth-First Search   		| andyRon    |               |	    	|			|
+| Breadth-First Search   	| andyRon    |  Y            |	    	|			|
+| Depth-First Search   		| andyRon    |  Y            |	    	|			|
 | Dijkstra's algorithm   	|    		 |               |	    	|			|
 |    						|    		 |               |	    	|			|
 |    						|    		 |               |	    	|			|
