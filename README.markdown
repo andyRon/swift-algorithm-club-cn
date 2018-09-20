@@ -77,7 +77,7 @@
 
 - [插入排序](Insertion%20Sort/)
 - [选择排序](Selection%20Sort/)
-- [⏳希尔排序](Shell%20Sort/)
+- [希尔排序](Shell%20Sort/)
 
 快速的排序算法：
 

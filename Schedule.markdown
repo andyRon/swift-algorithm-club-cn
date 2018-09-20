@@ -59,7 +59,7 @@
 |---------------------------|------------|:-------------:|----------|:---------:|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
-|Shell Sort    				|    		 |               |	    	|			|
+|Shell Sort    				| andyRon    |   Y           |	    	|			|
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
 |    						|    		 |               |	    	|			|
 
