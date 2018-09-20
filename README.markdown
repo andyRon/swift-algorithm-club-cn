@@ -83,7 +83,7 @@
 
 - [快速排序](Quicksort/)
 - [归并排序](Merge%20Sort/)
-- [⏳堆排序](Heap%20Sort/)
+- [堆排序](Heap%20Sort/)
 
 混合排序算法：
 - [⏳内省排序](Introsort/)

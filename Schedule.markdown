@@ -61,7 +61,14 @@
 |Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Shell Sort    				| andyRon    |   Y           |	    	|			|
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
-|    						|    		 |               |	    	|			|
+|Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
+|Heap Sort    				| andyRon    |   Y           |	    	|			|
+|Introsort    				|    		 |               |	    	|			|
+|Counting Sort    			|    		 |               |	    	|			|
+|Radix Sort    				|    		 |               |	    	|			|
+|Topological Sort    		|    		 |               |	    	|			|
+|Bubble Sort    			|    		 |               |	    	|			|
+|Slow Sort    				|    		 |               |	    	|			|
 
 
 ### 压缩
