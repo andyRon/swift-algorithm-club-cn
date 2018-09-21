@@ -63,7 +63,7 @@
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
 |Heap Sort    				| andyRon    |   Y           |	    	|			|
-|Introsort    				|    		 |               |	    	|			|
+|Introsort    				| andyRon    |   Y           |	    	|			|
 |Counting Sort    			|    		 |               |	    	|			|
 |Radix Sort    				|    		 |               |	    	|			|
 |Topological Sort    		|    		 |               |	    	|			|
@@ -76,7 +76,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | 变动长度编码法(RLE)   		| andyRon    |  Y            |	    	|			|
-| 哈夫曼编码   			    | andyRon    |  Y             |	    	|			|
+| 哈夫曼编码   			    | andyRon    |  Y            |	    	|			|
 
 ### 杂项
 
