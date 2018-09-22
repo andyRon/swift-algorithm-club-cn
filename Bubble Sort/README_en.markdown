@@ -1,8 +1,6 @@
 # Bubble Sort
-# 冒泡排序
 
 Bubble sort is a sorting algorithm that is implemented by starting in the beginning of the array and swapping the first two elements only if the first element is greater than the second element. This comparison is then moved onto the next pair and so on and so forth. This is done until the array is completely sorted. The smaller items slowly “bubble” up to the beginning of the array.
-冒泡排序是一种排序算法，它通过从数组的开头开始并仅在第一个元素大于第二个元素时交换前两个元素来实现。 然后将该比较移动到下一对，依此类推等等。 这样做直到数组完全排序。 较小的项目慢慢地“冒泡”到数组的开头。
 
 ##### Runtime:
 - Average: O(N^2)
@@ -14,4 +12,3 @@ Bubble sort is a sorting algorithm that is implemented by starting in the beginn
 ### Implementation:
 
 The implementation will not be shown as the average and worst runtimes show that this is a very inefficient algorithm. However, having a grasp of the concept will help you understand the basics of simple sorting algorithms.
-由于平均和最差运行时间表明这是一种非常低效的算法，因此不会显示实现。 但是，掌握这个概念将有助于您理解简单排序算法的基础知识。

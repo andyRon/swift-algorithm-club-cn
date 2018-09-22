@@ -1,5 +1,4 @@
 # Slow Sort
-# 慢排序
 
 Goal: Sort an array of numbers from low to high (or high to low).
 
@@ -13,23 +12,9 @@ We can decompose the problem of sorting n numbers in ascending order into
  3. find the largest of those two maxima
 2. sorting the remaining ones
 
-目标：将数字数组从低到高（或从高到低）排序。
-
-您将获得一系列数字，需要按正确的顺序排列。 插入排序算法的工作原理如下：
-
-我们可以分解按升序排序n个数字的问题
-
-1.找到最大数字
-  1.找到前n/2个元素的最大值
-  2.找到剩余n/2个元素的最大值
-  3.找到这两个最大值中的最大值
-2.对其余的进行排序
-
 ## The code
-## 代码
 
 Here is an implementation of slow sort in Swift:
-这是Swift中慢速排序的实现：
 
 ```swift
 public func slowsort(_ i: Int, _ j: Int) {
@@ -49,7 +34,6 @@ public func slowsort(_ i: Int, _ j: Int) {
 ```
 
 ## Performance
-## 性能
 
 | Case  | Performance |
 |:-------------: |:---------------:|
@@ -58,7 +42,6 @@ public func slowsort(_ i: Int, _ j: Int) {
 |  Average | 	O(n^(log(n)/2))       | 
 
 ## See also
-## 扩展阅读
 
 [Slow Sort explanation in the Internet](http://c2.com/cgi/wiki?SlowSort)
 
