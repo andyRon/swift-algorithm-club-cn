@@ -1,23 +1,16 @@
 # Counting Sort
-# 计数排序
 
 Counting sort is an algorithm for sorting a collection of objects according to keys that are small integers. It operates by counting the number of objects that have each distinct key values, and using arithmetic on those counts to determine the positions of each key value in the output sequence.
-计数排序是一种根据小整数键对对象集合进行排序的算法。 它通过计算具有每个不同键值的对象的数量来操作，并对这些计数使用算术来确定输出序列中每个键值的位置。
 
 ## Example
-## 例子
 
 To understand the algorithm let's walk through a small example.
-为了理解算法，让我们来看一个小例子。
 
 Consider the array: `[ 10, 9, 8, 7, 1, 2, 7, 3 ]`
-考虑数组: `[ 10, 9, 8, 7, 1, 2, 7, 3 ]`
 
 ### Step 1:
-### 第一步：
 
 The first step is to count the total number of occurrences for each item in the array. The output for the first step would be a new array that looks as follows:
-第一步是计算数组中每个项目的总出现次数。 第一步的输出将是一个新的数组，如下所示：
 
 ```
 Index 0 1 2 3 4 5 6 7 8 9 10
@@ -25,7 +18,6 @@ Count 0 1 1 1 0 0 0 2 1 1 1
 ```
 
 Here is the code to accomplish this:
-这是完成此任务的代码：
 
 ```swift
   let maxElement = array.max() ?? 0
@@ -37,10 +29,8 @@ Here is the code to accomplish this:
 ```
 
 ### Step 2:
-### 第二步：
 
 In this step the algorithm tries to determine the number of elements that are placed before each element. Since, you already know the total occurrences for each element you can use this information to your advantage. The way it works is to sum up the previous counts and store them at each index.
-在此步骤中，算法尝试确定在每个元素之前放置的元素的数量。 因为，您已经知道每个元素的总出现次数，您可以使用此信息。 它的工作方式是总结先前的计数并将它们存储在每个索引中。
 
 The count array would be as follows:
 
@@ -59,13 +49,10 @@ The code for step 2 is:
 ```
 
 ### Step 3:
-### 第三步
 
 This is the last step in the algorithm. Each element in the original array is placed at the position defined by the output of step 2. For example, the number 10 would be placed at an index of 7 in the output array. Also, as you place the elements you need to reduce the count by 1 as those many elements are reduced from the array.
-这是算法的最后一步。 原始数组中的每个元素都放置在步骤2的输出定义的位置。例如，数字10将放在输出数组中的索引7处。 此外，当您放置元素时，您需要将计数减少1，因为从阵列中减少了许多元素。
 
 The final output would be:
-最终的输出是：
 
 ```
 Index  0 1 2 3 4 5 6 7
@@ -73,7 +60,6 @@ Output 1 2 3 7 7 8 9 10
 ```
 
 Here is the code for this final step:
-以下是此最后一步的代码：
 
 ```swift
   var sortedArray = [Int](repeating: 0, count: array.count)
@@ -85,15 +71,9 @@ Here is the code for this final step:
 ```
 
 ## Performance
-## 性能
 
 The algorithm uses simple loops to sort a collection. Hence, the time to run the entire algorithm is **O(n+k)** where **O(n)** represents the loops that are required to initialize the output arrays and **O(k)** is the loop required to create the count array.
-该算法使用简单循环对集合进行排序。 因此，运行整个算法的时间是**O(n+k)**其中**O(n)**表示初始化输出数组所需的循环，**O(k)**是创建计数数组所需的循环。
 
 The algorithm uses arrays of length **n + 1** and **n**, so the total space required is **O(2n)**. Hence for collections where the keys are scattered in a dense area along the number line it can be space efficient.
-该算法使用长度为**n + 1**和**n**的数组，因此所需的总空间为**O(2n)**。 因此，对于密钥沿着数字线分散在密集区域中的集合，它可以节省空间。
 
 *Written for Swift Algorithm Club by Ali Hafizji*
-
-*作者：Ali Hafizji*  
-*翻译：[Andy Ron](https://github.com/andyRon)*
