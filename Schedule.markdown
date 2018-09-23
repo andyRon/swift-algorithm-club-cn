@@ -35,7 +35,7 @@
 |---------------------------|------------|:-------------:|----------|:---------:|
 |Linear Search  			| andyRon    |   Y  		 |  andyRon | Y			|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon | Y			|
-|Count Occurrences 			| andyRon    |   Y  		 |  andyRon | 			|
+|Count Occurrences 			| andyRon    |   Y  		 |  andyRon | Y			|
 |Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | 			|
 |k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | 			|
 |Selection Sampling     	| andyRon    |   Y  		 |  andyRon | 			|
