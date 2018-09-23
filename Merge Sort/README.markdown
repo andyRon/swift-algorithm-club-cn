@@ -125,36 +125,42 @@ func merge(leftPile: [Int], rightPile: [Int]) -> [Int] {
 
 `merge()`函数如何工作的例子。假设我们有以两个个堆：`leftPile = [1,7,8]`和`rightPile = [3,6,9]`。 请注意，这两个堆都已单独排序 -- 合并排序总是如此的。 下面的步骤就将它们合并为一个更大的排好序的堆：
 
-	leftPile       rightPile       orderedPile
-	[ 1, 7, 8 ]    [ 3, 6, 9 ]     [ ]
+```
+  leftPile       rightPile       orderedPile
+  [ 1, 7, 8 ]    [ 3, 6, 9 ]     [ ]
     l              r
+```
 
 左侧索引（此处表示为`l`）指向左侧堆的第一个项目`1`。 右则索引`r`指向`3`。 因此，我们添加到`orderedPile`的第一项是`1`。 我们还将左侧索引`l`移动到下一个项。
 
-	leftPile       rightPile       orderedPile
-	[ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1 ]
+```
+  leftPile       rightPile       orderedPile
+  [ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1 ]
     -->l           r
-
+```
 现在`l`指向`7`但是`r`仍然处于`3`。 我们将最小的项`3`添加到有序堆中。 现在的情况是：
 
-	leftPile       rightPile       orderedPile
-	[ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3 ]
+```
+  leftPile       rightPile       orderedPile
+  [ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3 ]
        l           -->r
+```
 
 重复上面的过程。 在每一步中，我们从`leftPile`或`rightPile`中选择最小的项，并将该项添加到`orderedPile`中：
 
-	leftPile       rightPile       orderedPile
-	[ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3, 6 ]
+```
+  leftPile       rightPile       orderedPile
+  [ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3, 6 ]
        l              -->r
 
-	leftPile       rightPile       orderedPile
-	[ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3, 6, 7 ]
+  leftPile       rightPile       orderedPile
+  [ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3, 6, 7 ]
        -->l              r
 
-	leftPile       rightPile       orderedPile
-	[ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3, 6, 7, 8 ]
+  leftPile       rightPile       orderedPile
+  [ 1, 7, 8 ]    [ 3, 6, 9 ]     [ 1, 3, 6, 7, 8 ]
           -->l           r
-
+```
 现在，左堆中没有更多物品了。 我们只需从右边的堆中添加剩余的项目，我们就完成了。 合并的堆是`[1,3,6,7,8,9]`。
 
 请注意，此算法非常简单：它从左向右移动通过两个堆，并在每个步骤选择最小的项目。 这是有效的，因为我们保证每个堆都已经排序。
