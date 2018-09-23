@@ -24,7 +24,7 @@
 |Queue  					| andyRon    |   Y  		 |  andyRon |  Y		|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon |  Y		|
-|Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
+|Merge Sort  				| andyRon    |   Y  		 |  andyRon |  Y		|
 |Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
 
 ## 算法列表
@@ -57,11 +57,11 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-|Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
+|Insertion Sort  			| andyRon    |   Y  		 |  andyRon | Y		    | 
 |Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
 |Shell Sort    				| andyRon    |   Y           |	    	|			|
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
-|Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
+|Merge Sort  				| andyRon    |   Y  		 |  andyRon | Y			|
 |Heap Sort    				| andyRon    |   Y           |	    	|			|
 |Introsort    				| andyRon    |   Y           |	    	|			|
 |Counting Sort    			| andyRon    |   Y           |	    	|			|
