@@ -90,14 +90,14 @@
 
 特殊的排序算法
 
-- [⏳计数排序](Counting%20Sort/)
-- [⏳基数排序](Radix%20Sort/)
-- [⏳拓扑排序](Topological%20Sort/)
+- [计数排序](Counting%20Sort/)
+- [基数排序](Radix%20Sort/)
+- [拓扑排序](Topological%20Sort/)
 
 不好的排序算法（知道就行了，不要用！）：
 
-- [⏳冒泡排序](Bubble%20Sort/)
-- [⏳慢排序](Slow%20Sort/)
+- [冒泡排序](Bubble%20Sort/)
+- [慢排序](Slow%20Sort/)
 
 ### 压缩算法
 

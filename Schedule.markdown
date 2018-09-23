@@ -64,11 +64,11 @@
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | 			|
 |Heap Sort    				| andyRon    |   Y           |	    	|			|
 |Introsort    				| andyRon    |   Y           |	    	|			|
-|Counting Sort    			|    		 |               |	    	|			|
-|Radix Sort    				|    		 |               |	    	|			|
-|Topological Sort    		|    		 |               |	    	|			|
-|Bubble Sort    			|    		 |               |	    	|			|
-|Slow Sort    				|    		 |               |	    	|			|
+|Counting Sort    			| andyRon    |   Y           |	    	|			|
+|Radix Sort    				| andyRon    |   Y           |	    	|			|
+|Topological Sort    		| andyRon    |   Y           |	    	|			|
+|Bubble Sort    			| andyRon    |   Y           |	    	|			|
+|Slow Sort    				| andyRon    |   Y           |	    	|			|
 
 
 ### 压缩
