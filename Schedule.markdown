@@ -120,7 +120,7 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-| Tree  					| andyRon    |  Y            |	    	|			|
+| Tree  					| andyRon    |  Y            | andyRon	| Y			|
 | Binary Tree  				| andyRon    |  Y            |	    	|			|
 | Binary Search Tree  		| andyRon    |  Y            |	    	|			|
 | AVL Tree 					|    		 |               |	    	|			|

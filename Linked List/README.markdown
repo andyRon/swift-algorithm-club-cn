@@ -1,8 +1,11 @@
 # Linked List
+# 链表
 
 > This topic has been tutorialized [here](https://www.raywenderlich.com/144083/swift-algorithm-club-swift-linked-list-data-structure)
+> 这个主题已经有辅导[文章](https://www.raywenderlich.com/144083/swift-algorithm-club-swift-linked-list-data-structure)
 
 A linked list is a sequence of data items, just like an array. But where an array allocates a big block of memory to store the objects, the elements in a linked list are totally separate objects in memory and are connected through links:
+链表是一系列数据项，就像数组一样。 数组分配了一大块内存来存储对象，而链表中的元素在内存中是完全独立的对象，并通过链接连接：
 
 	+--------+    +--------+    +--------+    +--------+
 	|        |    |        |    |        |    |        |
@@ -11,6 +14,7 @@ A linked list is a sequence of data items, just like an array. But where an arra
 	+--------+    +--------+    +--------+    +--------+
 
 The elements of a linked list are referred to as *nodes*. The above picture shows a *singly linked list*, where each node only has a reference -- or a "pointer" -- to the next node. In a *doubly linked list*, shown below, nodes also have pointers to the previous node:
+链表的元素称为*nodes*。 上图显示了*单链表*，其中每个节点只有一个引用 - 或“指针” - 到下一个节点。 在*双向链表*中，如下所示，节点也有指向前一节点的指针：
 
 	+--------+    +--------+    +--------+    +--------+
 	|        |--->|        |--->|        |--->|        |
@@ -19,6 +23,7 @@ The elements of a linked list are referred to as *nodes*. The above picture show
 	+--------+    +--------+    +--------+    +--------+
 
 You need to keep track of where the list begins. That's usually done with a pointer called the *head*:
+您需要跟踪列表的开始位置。 这通常用一个名为*head*的指针完成：
 
 	         +--------+    +--------+    +--------+    +--------+
 	head --->|        |--->|        |--->|        |--->|        |---> nil
@@ -27,16 +32,22 @@ You need to keep track of where the list begins. That's usually done with a poin
 	         +--------+    +--------+    +--------+    +--------+
 
 It's also useful to have a reference to the end of the list, known as the *tail*. Note that the "next" pointer of the last node is `nil`, just like the "previous" pointer of the very first node.
+引用列表末尾也很有用，称为*tail*。 注意，最后一个节点的“下一个”指针是`nil`，就像第一个节点的“previous”指针一样。
 
 ## Performance of linked lists
+## 链表的性能
 
 Most operations on a linked list have **O(n)** time, so linked lists are generally slower than arrays. However, they are also much more flexible -- rather than having to copy large chunks of memory around as with an array, many operations on a linked list just require you to change a few pointers.
+链表上的大多数操作都有**O(n)**时间，因此链表通常比数组慢。 但是，它们也更加灵活 - 而不是像数组一样复制大块内存，链接列表上的许多操作只需要更改几个指针。
 
 The reason for the **O(n)** time is that you can't simply write `list[2]` to access node 2 from the list. If you don't have a reference to that node already, you have to start at the `head` and work your way down to that node by following the `next` pointers (or start at the `tail` and work your way back using the `previous` pointers).
+**O(n)**时间的原因是你不能简单地写`list[2]`来从列表中访问节点2。 如果你已经没有对该节点的引用，你必须从`head`开始，然后按照`next`指针（或者从`tail`开始并按照你的方式返回到那个节点） 使用`previous`指针）。
 
 But once you have a reference to a node, operations like insertion and deletion are really quick. It's just that finding the node is slow.
+但是一旦你有一个节点的引用，插入和删除等操作真的很快。 只是找到节点很慢。
 
 This means that when you're dealing with a linked list, you should insert new items at the front whenever possible. That is an **O(1)** operation. Likewise for inserting at the back if you're keeping track of the `tail` pointer.
+这意味着当您处理链接列表时，应尽可能在前面插入新项目。 这是**O(1)**操作。 如果你跟踪`tail`指针，同样插入后面。
 
 ## Singly vs doubly linked lists
 

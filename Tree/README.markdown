@@ -157,11 +157,11 @@ tree.search("bubbly")   // nil
 也可以使用数组来描述树。 数组中的索引表示不同的节点，然后，创建不同节点之间的连接。 例如，如果我们有：
 
 ```
-  0 = beverage		5 = cocoa		   9  = green
-  1 = hot			    6 = soda		   10 = chai
-  2 = cold		    7 = milk		   11 = ginger ale
-  3 = tea			    8 = black		   12 = bitter lemon
-  4 = coffee				
+0 = beverage    5 = cocoa   9  = green
+1 = hot         6 = soda    10 = chai
+2 = cold        7 = milk    11 = ginger ale
+3 = tea         8 = black   12 = bitter lemon
+4 = coffee        			
 ```
 那么我们可以使用以下数组描述树：
 
@@ -169,7 +169,7 @@ tree.search("bubbly")   // nil
 
 数组中的每个项的值都是指向其父节点的指针。索引3处的项`tea`，其值为1，因为其父项为`hot`。根节点指向`-1`，因为它没有父节点。您只能将这些树从一个节点遍历到根节点，而不是相反。
 
-顺便说一句，有时您会看到使用术语 *forest* 的算法。 显而易见，这是给予单独树对象集合的名称。 有关此示例，请参阅[union-find](../Union-Find/)。
+顺便说一句，有时您会看到使用术语 *forest* 的算法。 显而易见，这是给予单独树对象集合的名称。 有关此示例，请参阅 [union-find](../Union-Find/)。
 
 
 *作者：Matthijs Hollemans*  
