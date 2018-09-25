@@ -54,7 +54,6 @@ Swift推断数组的数据类型必须是`Int`，因为您指定了`0`作为数�
 var cookies = dim(9, dim(7, "yum"))
 ```
 
-The `dim()` function makes it easy to go into even more dimensions:
 `dim()`函数可以更容易地创建更多维度的数组：
 
 ```swift
