@@ -92,7 +92,7 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-|    Array2D				| andyRon 	 |     Y         |	    	|			|
+|    Array2D				| andyRon 	 |     Y         | andyRon	| Y			|
 |    Bit Set				| andyRon    |     Y         |	    	|			|
 | Fixed Size Array			|    		 |               |	    	|			|
 | Ordered Array				|    		 |               |	    	|			|
@@ -102,11 +102,11 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-|   Stack 					| andyRon  	 |     Y         |	    	|			|
-|   Queue 					| andyRon    |     Y         |	    	|			|
-|   Deque 					|    		 |               |	    	|			|
-|   Priority Queue 			| andyRon    |               |	    	|			|
-|Bounded Priority Queue    	|    		 |               |	    	|			|
+|   Stack 					| andyRon  	 |     Y         | andyRon	| Y			|
+|   Queue 					| andyRon    |     Y         | andyRon	| Y			|
+|   Deque 					| andyRon    |     Y         |	    	|			|
+|   Priority Queue 			| andyRon    |     Y         |	    	|			|
+|Bounded Priority Queue    	| andyRon    |     Y         |	    	|			|
 |  Ring Buffer				|    		 |               |	    	|			|
 
 ### 列表
