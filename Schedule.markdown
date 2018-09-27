@@ -132,7 +132,7 @@
 | Sparse Table   			|    		 |               |	    	|			|
 | Heap   					|    		 |               |	    	|			|
 | Trie   					|    		 |               |	    	|			|
-| B-Tree   					|    		 |               |	    	|			|
+| B-Tree   					| andyRon    |  Y            |	    	|			|
 | QuadTree   				|    		 |               |	    	|			|
 | Octree   					|    		 |               |	    	|			|
 
