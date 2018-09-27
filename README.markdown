@@ -156,12 +156,12 @@
 - [队列](Queue/)－先进先出！
 - [双端队列](Deque/)
 - [优先队列](Priority%20Queue)－一个保持最重要的元素总是在最前面的队列。
-- [⏳有限优先队列](Bounded%20Priority%20Queue)－元素最大数受限制的优先队列。 :construction:
+- [有限优先队列](Bounded%20Priority%20Queue)－元素最大数受限制的优先队列。 :construction:
 - [⏳环形缓冲区](Ring%20Buffer/)－一个语义上的固定大小的环形缓冲区，实际使用的是一维序列头尾相接实现。
 
 ### 列表
 
-- [⏳链表](Linked%20List/)－链接起来的数据序列。包含单向和双向链表。
+- [链表](Linked%20List/)－链接起来的数据序列。包含单向和双向链表。
 - [⏳跳跃列表](Skip-List/)
 
 ### 树
