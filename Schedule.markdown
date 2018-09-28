@@ -58,8 +58,8 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon | Y		    | 
-|Selection Sort  			| andyRon    |   Y  		 |  andyRon | 			|
-|Shell Sort    				| andyRon    |   Y           |	    	|			|
+|Selection Sort  			| andyRon    |   Y  		 |  andyRon | Y			|
+|Shell Sort    				| andyRon    |   Y           |	andyRon |			|
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | Y			|
 |Heap Sort    				| andyRon    |   Y           |	    	|			|
