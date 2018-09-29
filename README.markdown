@@ -171,7 +171,7 @@
 - [二叉搜索树(BST)](Binary%20Search%20Tree/)－以某种方式组织自己的节点的二叉树，以求较快的查询速度。
 - [AVL树](AVL%20Tree/)－一种通过旋转来维持平衡的二叉搜索树。 :construction:
 - [红黑树](Red-Black%20Tree/). A self balancing binary search tree.
-- [⏳伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
+- [伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
 - [⏳线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
 - [⏳线段树](Segment%20Tree/)－能够快速地对某区间进行计算。
   - [⏳Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)

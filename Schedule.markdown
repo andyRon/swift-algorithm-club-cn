@@ -125,7 +125,7 @@
 | Binary Search Tree  		| andyRon    |  Y            |	    	|			|
 | AVL Tree 					| andyRon    |  Y            |	    	|			|
 | Red-Black Tree   			| andyRon    |  Y            |	    	|			|
-| Splay Tree   				|    		 |               |	    	|			|
+| Splay Tree   				| andyRon    |  Y            |	    	|			|
 | Threaded Binary Tree   	|    		 |               |	    	|			|
 | Segment Tree   			|    		 |               |	    	|			|
 | Lazy Propagation   		|    		 |               |	    	|			|
