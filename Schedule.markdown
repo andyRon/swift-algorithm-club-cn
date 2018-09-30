@@ -107,7 +107,7 @@
 |   Deque 					| andyRon    |     Y         |	    	|			|
 |   Priority Queue 			| andyRon    |     Y         |	    	|			|
 |Bounded Priority Queue    	| andyRon    |     Y         |	    	|			|
-|  Ring Buffer				|    		 |               |	    	|			|
+|  Ring Buffer				| andyRon    |     Y         |	    	|			|
 
 ### 列表
 
