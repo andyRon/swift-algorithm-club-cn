@@ -158,6 +158,8 @@
 | Graph   					| andyRon    |  Y            |	    	|			|
 | Breadth-First Search   	| andyRon    |  Y            |	    	|			|
 | Depth-First Search   		| andyRon    |  Y            |	    	|			|
+|    						|    		 |               |	    	|			|
+| All-Pairs Shortest Paths  |    		 |               |	    	|			|
 | Dijkstra's algorithm   	|    		 |               |	    	|			|
 |    						|    		 |               |	    	|			|
 |    						|    		 |               |	    	|			|
