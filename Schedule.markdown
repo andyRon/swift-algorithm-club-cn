@@ -67,7 +67,7 @@
 |Counting Sort    			| andyRon    |   Y           |	    	|			|
 |Radix Sort    				| andyRon    |   Y           |	    	|			|
 |Topological Sort    		| andyRon    |   Y           |	    	|			|
-|Bubble Sort    			| andyRon    |   Y           |	    	|			|
+|Bubble Sort    			| andyRon    |   Y           | andyRon  | Y			|
 |Slow Sort    				| andyRon    |   Y           |	    	|			|
 
 

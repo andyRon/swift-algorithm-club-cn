@@ -1,17 +1,42 @@
-# Bubble Sort
-# 冒泡排序
+# 冒泡排序(Bubble Sort)
 
-Bubble sort is a sorting algorithm that is implemented by starting in the beginning of the array and swapping the first two elements only if the first element is greater than the second element. This comparison is then moved onto the next pair and so on and so forth. This is done until the array is completely sorted. The smaller items slowly “bubble” up to the beginning of the array.
-冒泡排序是一种排序算法，它通过从数组的开头开始并仅在第一个元素大于第二个元素时交换前两个元素来实现。 然后将该比较移动到下一对，依此类推等等。 这样做直到数组完全排序。 较小的项目慢慢地“冒泡”到数组的开头。
+
+冒泡排序是一种排序算法，它通过重复地走过过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来，这样做直到数组完全排序。 较小的项慢慢地“冒泡”到数组的开头。
+
 
 ##### Runtime:
-- Average: O(N^2)
-- Worst: O(N^2)
 
-##### Memory:
+- 平均: O(N^2)
+- 最差: O(N^2)
+
+##### 内存
+
 - O(1)
 
-### Implementation:
+### 实现
 
-The implementation will not be shown as the average and worst runtimes show that this is a very inefficient algorithm. However, having a grasp of the concept will help you understand the basics of simple sorting algorithms.
-由于平均和最差运行时间表明这是一种非常低效的算法，因此不会显示实现。 但是，掌握这个概念将有助于您理解简单排序算法的基础知识。
+平均和最差运行时间表明冒泡排序是一种非常低效的算法，因此不会显示实现。 但是，掌握这个概念将有助于您理解简单排序算法的基础知识。
+
+> 译注： [冒泡排序的动画](http://www.algomation.com/player?algorithm=5a1b2f0711aaf40400e46699)
+原文没有对冒泡排序实现，处于学习的目的，我自己实现了一下：
+
+```
+
+func bubbleSort(_ numbers:  [Int]) -> [Int]{
+    
+    var nums = numbers
+    let n = nums.count
+    for i in 0..<n {
+        for j in 0..<(n - 1 - i) {
+            if nums[j] > nums[j + 1] {
+                nums.swapAt(j, j + 1)
+            }
+        }
+    }
+    return nums
+}
+
+let nums = [3,42,1,5,34,20,9]
+bubbleSort(nums)
+
+```
