@@ -146,8 +146,8 @@
 
 - [二维数组](Array2D/)－固定尺寸的二维数组，可用于棋盘游戏。
 - [比特集](Bit%20Set/)－**n** 位大小固定尺度的序列。
-- [⏳固定长度数组](Fixed%20Size%20Array/) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
-- [⏳有序数组](Ordered%20Array/)－一个永远有序的数组。
+- [固定长度数组](Fixed%20Size%20Array/) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
+- [有序数组](Ordered%20Array/)－一个永远有序的数组。
 - [⏳Rootish Array Stack](Rootish%20Array%20Stack/). A space and time efficient variation on Swift arrays.
 
 ### 队列
