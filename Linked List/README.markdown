@@ -14,7 +14,7 @@ A linked list is a sequence of data items, just like an array. But where an arra
 	+--------+    +--------+    +--------+    +--------+
 
 The elements of a linked list are referred to as *nodes*. The above picture shows a *singly linked list*, where each node only has a reference -- or a "pointer" -- to the next node. In a *doubly linked list*, shown below, nodes also have pointers to the previous node:
-链表的元素称为*nodes*。 上图显示了*单链表*，其中每个节点只有一个引用 - 或“指针” - 到下一个节点。 在*双向链表*中，如下所示，节点也有指向前一节点的指针：
+链表的元素称为*节点*。 上图显示了*单链表*，其中每个节点只有一个引用 - 或叫做“指针” - 到下一个节点。 在*双向链表*中，如下所示，节点还有指向前一个节点的指针：
 
 	+--------+    +--------+    +--------+    +--------+
 	|        |--->|        |--->|        |--->|        |
@@ -32,16 +32,16 @@ You need to keep track of where the list begins. That's usually done with a poin
 	         +--------+    +--------+    +--------+    +--------+
 
 It's also useful to have a reference to the end of the list, known as the *tail*. Note that the "next" pointer of the last node is `nil`, just like the "previous" pointer of the very first node.
-引用列表末尾也很有用，称为*tail*。 注意，最后一个节点的“下一个”指针是`nil`，就像第一个节点的“previous”指针一样。
+引用列表末尾也很有用，称为*tail*。 注意，最后一个节点的“下一个”指针是`nil`，第一个节点的“前一个”指针也是`nil`。
 
 ## Performance of linked lists
 ## 链表的性能
 
 Most operations on a linked list have **O(n)** time, so linked lists are generally slower than arrays. However, they are also much more flexible -- rather than having to copy large chunks of memory around as with an array, many operations on a linked list just require you to change a few pointers.
-链表上的大多数操作都有**O(n)**时间，因此链表通常比数组慢。 但是，它们也更加灵活 - 而不是像数组一样复制大块内存，链接列表上的许多操作只需要更改几个指针。
+链表上的大多数操作都有**O(n)**时间，因此链表通常比数组慢。但是，它们也更加灵活 —— 而不是像数组一样复制大块内存，链接列表上的许多操作只需要更改几个指针。
 
 The reason for the **O(n)** time is that you can't simply write `list[2]` to access node 2 from the list. If you don't have a reference to that node already, you have to start at the `head` and work your way down to that node by following the `next` pointers (or start at the `tail` and work your way back using the `previous` pointers).
-**O(n)**时间的原因是你不能简单地写`list[2]`来从列表中访问节点2。 如果你已经没有对该节点的引用，你必须从`head`开始，然后按照`next`指针（或者从`tail`开始并按照你的方式返回到那个节点） 使用`previous`指针）。
+**O(n)**时间的原因是你不能简单地写`list[2]`来从（链表）列表中访问节点2。 如果你已经没有对该节点的引用，你必须从`head`开始，然后按照`next`指针逐个访问（或者从`tail`开始，使用`previous`指针，逐个访问并找到指定节点）。
 
 But once you have a reference to a node, operations like insertion and deletion are really quick. It's just that finding the node is slow.
 但是一旦你有一个节点的引用，插入和删除等操作真的很快。 只是找到节点很慢。
@@ -73,7 +73,7 @@ But to be honest, you hardly ever need to write your own linked list these days.
 
 使用链表的典型示例是需要[queue](../Queue/)时。 使用数组，从队列前面删除元素很慢，因为它需要向下移动内存中的所有其他元素。 但是通过链接列表，只需将`head`更改为指向第二个元素即可。 快多了。
 
-但说实话，这些天你几乎不需要编写自己的链表。 不过，了解它们的工作方式仍然很有用; 将对象链接在一起的原则也与[trees](../Tree/)和[graphs](../Graph/)一起使用。
+但说实话，这些天你几乎不需要编写自己的链表。 不过，了解它们的工作方式仍然很有用; 将对象链接在一起的原则也与[树](../Tree/)和[图](../Graph/)一起使用。
 
 ## The code
 ## 代码
@@ -97,7 +97,7 @@ This is a generic type, so `T` can be any kind of data that you'd like to store 
 这是一种泛型类型，因此`T`可以是您想要存储在节点中的任何类型的数据。 我们将在后面的示例中使用字符串。
 
 Ours is a doubly-linked list and each node has a `next` and `previous` pointer. These can be `nil` if there are no next or previous nodes, so these variables must be optionals. (In what follows, I'll point out which functions would need to change if this was just a singly- instead of a doubly-linked list.)
-我们是一个双向链表，每个节点都有一个`next`和`previous`指针。 如果没有下一个或前一个节点，则这些可以是`nil`，因此这些变量必须是选项。 （在下文中，我将指出哪些函数需要更改，如果这只是单个而不是双向链表。）
+我们是一个双向链表，每个节点都有一个`next`和`previous`指针。 如果没有下一个或前一个节点，则这些可以是`nil`，因此这些变量必须是可选项。 （在下文中，我将指出哪些函数需要更改，如果这只是单个而不是双向链表。）
 
 > **Note:** To avoid ownership cycles, we declare the `previous` pointer to be weak. If you have a node `A` that is followed by node `B` in the list, then `A` points to `B` but also `B` points to `A`. In certain circumstances, this ownership cycle can cause nodes to be kept alive even after you deleted them. We don't want that, so we make one of the pointers `weak` to break the cycle.
 > **注意：** 为避免所有权周期，我们声明`previous`指针为弱。 如果列表中有一个节点`A`后面跟着节点`B`，那么`A`指向`B`，而`B`指向`A`。 在某些情况下，即使在删除节点后，此所有权周期也可能导致节点保持活动状态。 我们不希望这样，所以我们使其中一个指针`weak`来打破循环。
@@ -160,7 +160,7 @@ If you're new to Swift, you've probably seen `if let` but maybe not `if var`. It
 如果你是Swift的新手，你可能已经看过`if let`但也许不是`if var`。 它做了同样的事情 - 它解开`head`可选项并将结果放入一个名为`node`的新局部变量中。 区别在于`node`不是常量而是实际变量，因此我们可以在循环内更改它。
 
 The loop also does some Swift magic. The `while let next = node.next` bit keeps looping until `node.next` is nil. You could have written this as follows:
-循环也做了一些Swift魔法。 `while let next = node.next`位保持循环，直到`node.next`为零。 您可以写如下：
+循环也做了一些Swift魔法。 `while let next = node.next`位保持循环，直到`node.next`为`nil`。 您可以写如下：
 
 ```swift
       var node: Node? = head
@@ -205,6 +205,7 @@ list.last!.value     // "Hello"
 ```
 
 The list looks like this:
+这个列表看上去是：
 
 	         +---------+
 	head --->|         |---> nil
@@ -213,6 +214,7 @@ The list looks like this:
 	         +---------+
 
 Now add a second node:
+增加第二个节点：
 
 ```swift
 list.append("World")
@@ -221,6 +223,7 @@ list.last!.value     // "World"
 ```
 
 And the list looks like:
+现在列表看上去是：
 
 	         +---------+    +---------+
 	head --->|         |--->|         |---> nil
@@ -297,6 +300,7 @@ This means that the given index is out of bounds and it causes a crash.
 这意味着给定的索引超出范围并导致崩溃。
 
 Try it out:
+测试一下：
 
 ```swift
 list.nodeAt(0)!.value    // "Hello"
@@ -334,27 +338,28 @@ Let's write a method that lets you insert a new node at any index in the list.
 让我们编写一个方法，允许您在列表中的任何索引处插入新节点。
 
 ```swift
-  public func insert(_ node: Node, atIndex index: Int) {
-   let newNode = node
-   if index == 0 {
-     newNode.next = head                      
-     head?.previous = newNode
-     head = newNode
-   } else {
-     let prev = self.node(atIndex: index-1)
-     let next = prev.next
-
-     newNode.previous = prev
-     newNode.next = prev.next
-     prev.next = newNode
-     next?.previous = newNode
-   }
-}
+    public func insert(_ node: Node, at index: Int) {
+        let newNode = node
+        if index == 0 {
+            newNode.next = head
+            head?.previous = newNode
+            head = newNode
+        } else {
+            let prev = self.node(at: index-1)
+            let next = prev.next
+            
+            newNode.previous = prev
+            newNode.next = prev.next
+            prev.next = newNode
+            next?.previous = newNode
+        }
+    }
 ```
 
 As with node(atIndex :) method, `insert(_: at:)` method also branches depending on whether the given index is 0 or not.
 First let's look at the former case. Suppose we have the following list and the new node(C).
-首先让我们来看看前一种情况。 假设我们有以下列表和新节点（C）。
+与`node(at:)`方法一样，`insert(_:at:)`方法也会根据索引参数是否为0进行判断。
+首先让我们来看看前一种情况（译注：也就是`index == 0`，插入最前面的情况）。 假设我们有以下列表和新节点（C）。
 
              +---------+     +---------+
     head --->|         |---->|         |-----//----->
@@ -384,7 +389,7 @@ Now put the new node before the first node. In this way:
 
 
 Finally, replace the head with the new node.
-最后，用新节点替换头部。
+最后，用新节点作为头部。
 
     head = new
     
@@ -399,7 +404,7 @@ Finally, replace the head with the new node.
 However, when the given index is greater than 0, it is necessary to get the node previous and next index and insert between them.
 You can also obtain the previous and next node using node(atIndex:) as follows:
 但是，当给定索引大于0时，必须获取节点的上一个和下一个索引并在它们之间插入。
-您还可以使用node（atIndex :)获取上一个和下一个节点，如下所示：
+您还可以使用`node(at:)`获取上一个和下一个节点，如下所示：
 
              +---------+         +---------+     +---------+    
     head --->|         |---//--->|         |---->|         |----
@@ -432,19 +437,20 @@ Now insert new node between the prev and the next.
 
 
 Try it out:
+测试：
 
 ```swift
-list.insert("Swift", atIndex: 1)
+list.insert(LinedListNode(value: "Swift"), at: 1)
 list[0]     // "Hello"
 list[1]     // "Swift"
-list[2]     // "World"
+list[2]     // "World
 ```
 
 Also try adding new nodes to the front and back of the list, to verify that this works properly.
 > **Note:** The `node(atIndex:)` and `insert(_: atIndex:)` functions can also be used with a singly linked list because we don't depend on the node's `previous` pointer to find the previous element.
 
 还可以尝试在列表的正面和背面添加新节点，以验证其是否正常工作。
-> **注意：** `node(atIndex:)` 和 `insert(_: atIndex:)`函数也可以与单链表一起使用，因为我们不依赖于节点的`previous`指针来查找 前一个元素。
+> **注意：** `node(at:)` 和 `insert(_:at:)`函数也可以与单链表一起使用，因为我们不依赖于节点的`previous`指针来查找前一个元素。
 
 What else do we need? Removing nodes, of course! First we'll do `removeAll()`, which is really simple:
 我们还需要什么？ 当然要删除节点！ 首先我们要做`removeAll()`，这很简单：
@@ -487,43 +493,42 @@ Don't forget the `head` pointer! If this was the first node in the list then `he
 
 当我们将此节点从列表中取出时，我们将断开指向上一个节点和下一个节点的链接。 要使列表再次完整，我们必须将前一个节点连接到下一个节点。
 
-不要忘记`head`指针！ 如果这是列表中的第一个节点，则需要更新`head`以指向下一个节点。 （同样，当你有一个尾指针，这是最后一个节点）。 当然，如果没有剩余的节点，`head`应该变为零。
+不要忘记`head`指针！ 如果这是列表中的第一个节点，则需要更新`head`以指向下一个节点。 （同样，当你有一个尾指针，这是最后一个节点）。 当然，如果没有剩余的节点，`head`应该变为`nil`。
 
 Try it out:
 尝试一下：
 
 ```swift
-list.remove(list.first!)   // "Hello"
+list.remove(node: list.first!)   // "Hello"
 list.count                     // 2
 list[0]                        // "Swift"
 list[1]                        // "World"
 ```
 
 If you don't have a reference to the node, you can use `removeLast()` or `removeAt()`:
-如果你没有对节点的引用，你可以使用`removeLast（）`或 `removeAt（）`：
+如果你没有对节点的引用，你可以使用`removeLast()`或 `removeAt()`：
 
 ```swift
-  public func removeLast() -> T {
-    assert(!isEmpty)
-    return remove(node: last!)
-  }
-
-  public func removeAt(_ index: Int) -> T {
-    let node = nodeAt(index)
-    assert(node != nil)
-    return remove(node: node!)
-  }
+    public func removeLast() -> T {
+        assert(!isEmpty)
+        return remove(node: last!)
+    }
+    
+    public func remove(at index: Int) -> T {
+        let node = self.node(at: index)
+        return remove(node: node)
+    }
 ```
 
 All these removal functions also return the value from the removed element.
-所有这些删除函数也返回已删除元素的值。
+所有这些删除函数都返回已删除元素的值。
 
 ```swift
 list.removeLast()              // "World"
 list.count                     // 1
 list[0]                        // "Swift"
 
-list.removeAt(0)          // "Swift"
+list.remove(at: 0)          // "Swift"
 list.count                     // 0
 ```
 
@@ -549,6 +554,7 @@ extension LinkedList: CustomStringConvertible {
 ```
 
 This will print the list like so:
+这将如下形式打印列表：
 
 	[Hello, Swift, World]
 
@@ -558,7 +564,7 @@ How about reversing a list, so that the head becomes the tail and vice versa? Th
 ```swift
   public func reverse() {
     var node = head
-    tail = node // If you had a tail pointer
+    tail = node           // If you had a tail pointer
     while let currentNode = node {
       node = currentNode.next
       swap(&currentNode.next, &currentNode.previous)
@@ -577,21 +583,22 @@ This loops through the entire list and simply swaps the `next` and `previous` po
 	         +--------+    +--------+    +--------+    +--------+
 
 Arrays have `map()` and `filter()` functions, and there's no reason why linked lists shouldn't either.
-数组有`map()`和`filter()`函数，并且没有理由说链接列表也不应该。
+数组有`map()`和`filter()`函数，那么没有理由说链接列表没有。
 
 ```swift
-  public func map<U>(transform: T -> U) -> LinkedList<U> {
-    let result = LinkedList<U>()
-    var node = head
-    while node != nil {
-      result.append(transform(node!.value))
-      node = node!.next
+    public func map<U>(transform: (T) -> U) -> LinkedList<U> {
+        let result = LinkedList<U>()
+        var node = head
+        while node != nil {
+            result.append(transform(node!.value))
+            node = node!.next
+        }
+        return result
     }
-    return result
-  }
 ```
 
 You can use it like this:
+使用如下：（译注：创建一个新列表，用来存放之前列表中字符串的长度）
 
 ```swift
 let list = LinkedList<String>()
@@ -599,27 +606,29 @@ list.append("Hello")
 list.append("Swifty")
 list.append("Universe")
 
-let m = list.map { s in s.characters.count }
+let m = list.map { s in s.count }
 m  // [5, 6, 8]
 ```
 
 And here's filter:
+`filter()`函数：
 
 ```swift
-  public func filter(predicate: T -> Bool) -> LinkedList<T> {
-    let result = LinkedList<T>()
-    var node = head
-    while node != nil {
-      if predicate(node!.value) {
-        result.append(node!.value)
-      }
-      node = node!.next
+    public func filter(predicate: (T) -> Bool) -> LinkedList<T> {
+        let result = LinkedList<T>()
+        var node = head
+        while node != nil {
+            if predicate(node!.value) {
+                result.append(node!.value)
+            }
+            node = node!.next
+        }
+        return result
     }
-    return result
-  }
 ```
 
 And a silly example:
+一个简单的使用例子：（译注：筛选出列表中字符串长度大于5的元素并组成新的列表）
 
 ```swift
 let f = list.filter { s in s.count > 5 }
@@ -745,5 +754,6 @@ When processing lists, you can often use recursion: process the first element an
 
 *Originally written by Matthijs Hollemans for Ray Wenderlich's Swift Algorithm Club*
 
-*作者：Matthijs Hollemans*    
+*作者：Matthijs Hollemans*      
 *翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  
