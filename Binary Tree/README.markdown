@@ -196,6 +196,6 @@ tree.traversePostOrder { s in
 }
 ```
 
-*Written for Swift Algorithm Club by Matthijs Hollemans*
-*作者：Matthijs Hollemans*
-*译者：[Andy Ron](https://github.com/andyRon)*
+*作者：Matthijs Hollemans*  
+*翻译：[Andy Ron](https://github.com/andyRon)*
+*校对：[Andy Ron](https://github.com/andyRon)*

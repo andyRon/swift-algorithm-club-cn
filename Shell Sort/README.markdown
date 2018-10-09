@@ -1,11 +1,10 @@
-# Shell Sort
-# 希尔排序
+# 希尔排序(Shell Sort)
 
 Shell sort is based on [insertion sort](../Insertion%20Sort/) as a general way to improve its performance, by breaking the original list into smaller sublists which are then individually sorted using insertion sort.
-希尔排序基于[插入排序](../Insertion％20Sort/)作为提高其性能的一般方法，方法是将原始列表分成较小的子列表，然后使用插入排序对其进行单独排序。
+希尔排序是[插入排序](../Insertion%20Sort/)的一种更高效的改进版本，方法是将原始列表分成较小的子列表，然后使用插入排序对其进行单独排序。
 
 [There is a nice video created at Sapientia University](https://www.youtube.com/watch?v=CmPA7zE8mx0) which shows the process as a Hungarian folk dance.
-在Sapientia大学创建了一个很好的[视频](https://www.youtube.com/watch?v=CmPA7zE8mx0）)，显示了匈牙利民间舞蹈的过程。
+Sapientia大学创建了一个很好的[视频](https://www.youtube.com/watch?v=CmPA7zE8mx0）)，显示了匈牙利民间舞蹈的过程。（译注：类似希尔排序的过程）
 
 ## How it works
 ## 怎么运行的
@@ -22,7 +21,6 @@ The idea is that by moving the elements over large gaps, the array becomes parti
 Once a pass has been completed, the gap is made smaller and a new pass starts.  This repeats until the gap has size 1, at which point the algorithm functions just like  insertion sort. But since the data is already fairly well sorted by then, the final pass can be very quick.
 传球完成后，差距变小，新传球开始。 这将重复，直到间隙大小为1，此时算法的功能就像插入排序一样。 但是由于数据已经很好地排序，所以最后的传递可以非常快。
 
-## An example
 ## 例子
 
 Suppose we want to sort the array `[64, 20, 50, 33, 72, 10, 23, -1, 4]` using shell sort.
@@ -51,13 +49,13 @@ The first pass is as follows. We have `n = 4`, so we make four sublists:
 	sublist 3:  [ xx, xx, xx, 33, xx, xx, xx, -1, xx ]
 
 As you can see, each sublist contains only every 4th item from the original array. The items that are not in a sublist are marked with `xx`. So the first sublist is `[ 64, 72, 4 ]` and the second is `[ 20, 10 ]`, and so on. The reason we use this "gap" is so that we don't have to actually make new arrays. Instead, we interleave them in the original array.
-如您所见，每个子列表仅包含原始数组中的每第4个项目。 不在子列表中的项目标有`xx`。 所以第一个子列表是`[64,72,4]`，第二个子列表是`[20,10]`，依此类推。 我们使用这个“空隙”的原因是我们不必实际制作新的数组。 相反，我们将它们交织在原始数组中。
+如您所见，每个子列表仅包含原始数组中的每第4个项目。 不在子列表中的项目标用`xx`表示。 所以第一个子列表是`[64,72,4]`，第二个子列表是`[20,10]`，依此类推。 我们使用这个“空隙”的原因是我们不必实际制作新的数组。 相反，我们将它们交织在原始数组中。
 
 We now call `insertionSort()` once on each sublist.
 我们现在在每个子列表上调用一次`insertionSort()`。
 
 This particular version of [insertion sort](../Insertion%20Sort/) sorts from the back to the front. Each item in the sublist is compared against the others. If they're in the wrong order, the value is swapped and travels all the way down until we reach the start of the sublist.
-[插入排序](../Insertion％20Sort/)的这个特定版本从后面到前面排序。子列表中的每个项目都与其他项目进行比较。如果它们的顺序错误，则交换值并一直向下移动，直到我们到达子列表的开头。
+[插入排序](../Insertion%20Sort/)的这个特定版本从后面到前面排序。子列表中的每个项目都与其他项目进行比较。如果它们的顺序错误，则交换值并一直向下移动，直到我们到达子列表的开头。
 
 So for sublist 0, we swap `4` with `72`, then swap `4` with `64`. After sorting, this sublist looks like:
 因此对于子列表0，我们将`4`与`72`交换，然后将`4`与`64`交换。 排序后，此子列表如下所示：
@@ -65,18 +63,19 @@ So for sublist 0, we swap `4` with `72`, then swap `4` with `64`. After sorting,
     sublist 0:  [ 4, xx, xx, xx, 64, xx, xx, xx, 72 ]
 
 The other three sublists after sorting:
+排序后的其他三个子列表：
 
 	sublist 1:  [ xx, 10, xx, xx, xx, 20, xx, xx, xx ]
 	sublist 2:  [ xx, xx, 23, xx, xx, xx, 50, xx, xx ]
 	sublist 3:  [ xx, xx, xx, -1, xx, xx, xx, 33, xx ]
     
 The total array looks like this now:
-排序后的其他三个子列表：
+完整的数组看上去是：
 
 	[ 4, 10, 23, -1, 64, 20, 50, 33, 72 ]
 
 It's not entirely sorted yet but it's more sorted than before. This completes the first pass.
-它还没有完全分类，但它比以前更加分类。 这完成了第一次通过。
+它还没有完全排序，但它比以前更加排序。 这完成了第一次通过。
 
 In the second pass, we divide the gap size by two:
 在第二轮中，我们将间隙大小除以2：
@@ -114,7 +113,7 @@ A gap size of 1 means we only have a single sublist, the array itself, and once 
 	[ -1, 4, 10, 20, 23, 33, 50, 64, 72 ]
 
 The performance of shell sort is **O(n^2)** in most cases or **O(n log n)** if you get lucky. This algorithm produces an unstable sort; it may change the relative order of elements with equal values.
-在大多数情况下，希尔排序的性能为**O(n^2)**，如果幸运，则为 **O(nlogn)**。 该算法产生不稳定的排序; 它可能会改变具有相等值的元素的相对顺序。
+在大多数情况下，希尔排序的性能为**O(n^2)**，如果幸运，则为 **O(nlogn)**。 该算法是不稳定的排序; 它可能会改变具有相等值的元素的相对顺序。
   
 ## The gap sequence
 ## 间隙序列
@@ -145,7 +144,6 @@ This is an old Commodore 64 BASIC version of shell sort that Matthijs used a lon
 	61300 GOTO 61220
 	61310 RETURN
 
-## The Code:
 ## 代码
 
 Here is an implementation of Shell Sort in Swift:
@@ -167,14 +165,12 @@ public func shellSort(_ list: inout [Int]) {
 shellSort(&arr)
 ```
 
-## See also
 ## 扩展阅读
 
 
 [希尔排序的维基百科](https://en.wikipedia.org/wiki/Shellsort)
 
-[Shell sort at Rosetta code](http://rosettacode.org/wiki/Sorting_algorithms/Shell_sort)
+[Rosetta code的希尔排序](http://rosettacode.org/wiki/Sorting_algorithms/Shell_sort)（译注：大概70种不同语言实现希尔排序😅😓）
 
-*Written for Swift Algorithm Club by [Mike Taghavi](https://github.com/mitghi) and Matthijs Hollemans*
 *作者：[Mike Taghavi](https://github.com/mitghi)，Matthijs Hollemans*  
 *翻译：[Andy Ron](https://github.com/andyRon)*
