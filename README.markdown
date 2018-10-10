@@ -177,7 +177,7 @@
   - [⏳Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)
 - ⏳k-d 树
 - [⏳Sparse Table](Sparse%20Table/). Another take on quickly computing a function over a portion of an array, but this time we'll make it even quicker!.
-- [⏳堆](Heap/)－存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
+- [堆](Heap/)－存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
 - ⏳斐波那契堆
 - [⏳字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
 - [B 树](B-Tree/). A self-balancing search tree, in which nodes can have more than two children.

@@ -121,7 +121,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Tree  					| andyRon    |  Y            | andyRon	| Y			|
-| Binary Tree  				| andyRon    |  Y            |	    	|			|
+| Binary Tree  				| andyRon    |  Y            | andyRon	| Y			|
 | Binary Search Tree  		| andyRon    |  Y            |	    	|			|
 | AVL Tree 					| andyRon    |  Y            |	    	|			|
 | Red-Black Tree   			| andyRon    |  Y            |	    	|			|
@@ -130,7 +130,7 @@
 | Segment Tree   			|    		 |               |	    	|			|
 | Lazy Propagation   		|    		 |               |	    	|			|
 | Sparse Table   			|    		 |               |	    	|			|
-| Heap   					|    		 |               |	    	|			|
+| Heap   					| andyRon    |  Y            |	    	|			|
 | Trie   					|    		 |               |	    	|			|
 | B-Tree   					| andyRon    |  Y            |	    	|			|
 | QuadTree   				|    		 |               |	    	|			|
