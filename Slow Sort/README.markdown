@@ -1,35 +1,21 @@
-# Slow Sort
-# 慢排序
+# 慢排序（Slow Sort）
 
-Goal: Sort an array of numbers from low to high (or high to low).
-
-You are given an array of numbers and need to put them in the right order. The insertion sort algorithm works as follows:
-
-We can decompose the problem of sorting n numbers in ascending order into
-
-1. find the maximum of the numbers
- 1. find the maximum of the first n/2 elements
- 2. find the maximum of the remaining n/2 elements
- 3. find the largest of those two maxima
-2. sorting the remaining ones
 
 目标：将数字数组从低到高（或从高到低）排序。
 
-您将获得一系列数字，需要按正确的顺序排列。 插入排序算法的工作原理如下：
+您将获得一系列数字，需要按正确的顺序排列。 插入排序算法【？？】的工作原理如下：
 
 我们可以分解按升序排序n个数字的问题
 
-1.找到最大数字
-  1.找到前n/2个元素的最大值
-  2.找到剩余n/2个元素的最大值
-  3.找到这两个最大值中的最大值
-2.对其余的进行排序
+1. 找到最大数字  
+    1. 找到前n/2个元素的最大值  
+    2. 找到剩余n/2个元素的最大值  
+    3. 找到这两个最大值中的最大值  
+2. 对其余的进行排序  
 
-## The code
 ## 代码
 
-Here is an implementation of slow sort in Swift:
-这是Swift中慢速排序的实现：
+这是慢速排序在Swift中的实现：
 
 ```swift
 public func slowsort(_ i: Int, _ j: Int) {
@@ -48,20 +34,21 @@ public func slowsort(_ i: Int, _ j: Int) {
 }
 ```
 
-## Performance
 ## 性能
 
-| Case  | Performance |
+| Case  | 性能 |
 |:-------------: |:---------------:|
-| Worst       |  slow |
-| Best      | 	O(n^(log(n)/(2+e))))        |
-|  Average | 	O(n^(log(n)/2))       | 
+| 最差       |  slow |
+| 最好      | 	O(n^(log(n)/(2+e))))        |
+| 平均 | 	O(n^(log(n)/2))       | 
 
-## See also
 ## 扩展阅读
 
-[Slow Sort explanation in the Internet](http://c2.com/cgi/wiki?SlowSort)
+[慢排序的详细说明](http://c2.com/cgi/wiki?SlowSort)
 
-*Written for Swift Algorithm Club by Lukas Schramm*
+
+*作者：Lukas Schramm*  
+*翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  
 
 (used the Insertion Sort Readme as template)

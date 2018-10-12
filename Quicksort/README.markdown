@@ -1,11 +1,9 @@
-# Quicksort
-# 快速排序
+# 快速排序（Quicksort）
 
-Goal: Sort an array from low to high (or high to low).
 目标：将数组从低到高（或从高到低）排序。
 
 Quicksort is one of the most famous algorithms in history. It was invented way back in 1959 by Tony Hoare, at a time when recursion was still a fairly nebulous concept.
-Quicksort是历史上最着名的算法之一。 它是由Tony Hoare于1959年发明的，当时递归仍然是一个相当模糊的概念。
+快速排序是历史上最着名的算法之一。 它是由Tony Hoare于1959年发明的，当时递归仍然是一个相当模糊的概念。
 
 Here's an implementation in Swift that should be easy to understand:
 这是Swift中的一个实现，应该很容易理解：
@@ -23,7 +21,8 @@ func quicksort<T: Comparable>(_ a: [T]) -> [T] {
 }
 ```
 
-Put this code in a playground and test it like so:
+> 译注：pivot 中心点，枢轴
+
 将此代码放在playground 进行测试：
 
 ```swift
@@ -32,15 +31,14 @@ quicksort(list)
 ```
 
 Here's how it works. When given an array, `quicksort()` splits it up into three parts based on a "pivot" variable. Here, the pivot is taken to be the element in the middle of the array (later on you'll see other ways to choose the pivot).
-这是它的工作原理。 给定一个数组时，`quicksort()`根据“pivot”变量将它分成三部分。这里，枢轴被视为数组中间的元素（稍后您将看到选择枢轴的其他方法）。
+谈一谈工作原理。 给定一个数组时，`quicksort()`根据“中心点”变量将它分成三部分。这里，中心点被视为数组中间的元素（稍后您将看到选择中心点的其他方法）。
 
 All the elements less than the pivot go into a new array called `less`. All the elements equal to the pivot go into the `equal` array. And you guessed it, all elements greater than the pivot go into the third array, `greater`. This is why the generic type `T` must be `Comparable`, so we can compare the elements with `<`, `==`, and `>`.
-比枢轴小的所有元素都进入一个名为`less`的新数组。 所有等于pivot的元素都进入`equal`数组。 你猜对了，所有比枢轴更大的元素进入第三个数组，“更大”。 这就是泛型类型`T`必须是`Comparable`的原因，所以我们可以将元素与`<`，`==`和`>`进行比较。
+比中间元素小的所有元素都进入一个名为`less`的新数组。 所有等于中间元素都进入`equal`数组。你猜对了，所有比枢轴更大的元素进入第三个数组，`greater`。 这就是泛型类型`T`必须是`Comparable`的原因，因为我们需要将元素与`<`，`==`和`>`进行比较。
 
 Once we have these three arrays, `quicksort()` recursively sorts the `less` array and the `greater` array, then glues those sorted subarrays back together with the `equal` array to get the final result.
-一旦我们有了这三个数组，`quicksort()`递归地对`less`数组和`more`数组进行排序，然后将那些已排序的子数组与`equal`数组粘合在一起，得到最终结果。
+一旦我们有了这三个数组，`quicksort()`递归地对`less`数组和`more`数组进行排序，然后将那些已排序的子数组与`equal`数组组合在一起，得到最终结果。
 
-## An example
 ## 一个例子
 
 Let's walk through the example. The array is initially:
@@ -49,17 +47,17 @@ Let's walk through the example. The array is initially:
 	[ 10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26 ]
 
 First, we pick the pivot element. That is `8` because it's in the middle of the array. Now we split the array into the less, equal, and greater parts:
-首先，我们选择枢轴元素。 那是`8`因为它在数组的中间。 现在我们将数组拆分为更少，相等和更大的部分：
+首先，我们选择中间元素。 那是`8`因为它在数组的中间。 现在我们将数组拆分为更少，相等和更大的部分：
 
 	less:    [ 0, 3, 2, 1, 5, -1 ]
 	equal:   [ 8, 8 ]
 	greater: [ 10, 9, 14, 27, 26 ]
 
 This is a good split because `less` and `greater` roughly contain the same number of elements. So we've picked a good pivot that chopped the array right down the middle.
-这是一个很好的分裂，因为`less`和`greater`大致包含相同数量的元素。 所以我们选择了一个很好的枢轴，将数组从中间切下来。
+这是一个很好的分裂，因为`less`和`greater`大致包含相同数量的元素。 所以我们选择了一个很好的中心点，将数组从中间切下来。
 
 Note that the `less` and `greater` arrays aren't sorted yet, so we call `quicksort()` again to sort those two subarrays. That does the exact same thing: pick a pivot and split the subarray into three even smaller parts.
-请注意，`less`和`greater`数组尚未排序，因此我们再次调用`quicksort()`来排序这两个子数组。这完全相同：选择一个枢轴并将子数组分成三个甚至更小的部分。
+请注意，`less`和`greater`数组尚未排序，因此我们再次调用`quicksort()`来排序这两个子数组。这完全相同：选择一个中间元素并将子数组分成三个甚至更小的部分。
 
 Let's just take a look at the `less` array:
 我们来看看`less`数组：
@@ -67,51 +65,51 @@ Let's just take a look at the `less` array:
 	[ 0, 3, 2, 1, 5, -1 ]
 
 The pivot element is the one in the middle, `1`. (You could also have picked `2`, it doesn't matter.) Again, we create three subarrays around the pivot:
-枢轴元素是中间的`1`（你也可以选择`2`，这没关系）。再次，我们围绕枢轴创建了三个子数组：
+中间元素是中间的`1`（你也可以选择`2`，这没关系）。再次，我们围绕中间元素创建了三个子数组：
 
 	less:    [ 0, -1 ]
 	equal:   [ 1 ]
 	greater: [ 3, 2, 5 ]
 
 We're not done yet and `quicksort()` again is called recursively on the `less` and `greater` arrays. Let's look at `less` again:
-我们还没有完成，并且`quicksort（）`再次在`less`和`more`数组上被递归调用。 让我们再看一下`less`：
+我们还没有完成，需要`quicksort()`再次在`less`和`more`数组上被递归调用。 让我们再看一下`less`：
 
 	[ 0, -1 ]
 
 As pivot we pick `-1`. Now the subarrays are:
-作为枢轴我们选择`-1`。 现在的子数组是：
+这次中间元素我们选择`-1`。 现在的子数组是：
 
 	less:    [ ]
 	equal:   [ -1 ]
 	greater: [ 0 ]
 
 The `less` array is empty because there was no value smaller than `-1`; the other arrays contain a single element each. That means we're done at this level of the recursion, and we go back up to sort the previous `greater` array.
-`less`数组是空的，因为没有小于`-1`的值; 其他数组各包含一个元素。 这意味着我们已经完成了递归的这个级别，并且我们返回以对先前的`more`数组进行排序。
+`less`数组是空的，因为没有小于`-1`的值; 其他数组各包含一个元素。 这意味着我们已经完成了递归，现在我们返回以对前一个`greater`数组进行排序。
 
 That `greater` array was:
-`less`数组是:
+`greater`数组是:
 
 	[ 3, 2, 5 ]
 
 This works just the same way as before: we pick the middle element `2` as the pivot and fill up the subarrays:
-这与以前的工作方式相同：我们选择中间元素`2`作为枢轴并填充子数组：
+这与以前的工作方式相同：我们选择中间元素`2`作为中间元素，子数组为：
 
 	less:    [ ]
 	equal:   [ 2 ]
 	greater: [ 3, 5 ]
 
 Note that here it would have been better to pick `3` as the pivot -- we would have been done sooner. But now we have to recurse into the `greater` array again to make sure it is sorted. This is why picking a good pivot is important. When you pick too many "bad" pivots, quicksort actually becomes really slow. More on that below.
-请注意，在这里选择`3`作为支点会更好 -- 我们会早点完成。 但是现在我们必须再次递归到`more`数组以确保它被排序。这就是选择好的支点很重要的原因。当你选择太多“坏”支点时，快速排序实际上变得非常慢。 更多关于以下内容。
+请注意，在这里选择`3`作为支点会更好 -- 我们会早点完成。 但是现在我们必须再次递归到`greater`数组以确保它被排序。这就是选择好的支点很重要的原因。当你选择太多“坏”支点时，快速排序实际上变得非常慢。 更多关于以下内容。
 
 When we partition the `greater` subarray, we find:
-当我们对`more`子数组进行分区时，我们发现：
+当我们对`greater`子数组进行分区时，我们发现：
 
 	less:    [ 3 ]
 	equal:   [ 5 ]
 	greater: [ ]
 
 And now we're done at this level of the recursion because we can't split up the arrays any further.
-现在我们已经完成了递归的这个级别，因为我们无法进一步拆分数组。
+现在我们已经完成了这层递归，因为我们无法进一步拆分数组。
 
 This process repeats until all the subarrays have been sorted. In a picture:
 重复此过程，直到所有子数组都已排序。 例子图：
@@ -124,10 +122,10 @@ Now if you read the colored boxes from left to right, you get the sorted array:
 	[ -1, 0, 1, 2, 3, 5, 8, 8, 9, 10, 14, 26, 27 ]
 
 This shows that `8` was a good initial pivot because it appears in the middle of the sorted array too.
-这表明`8`是一个很好的初始枢轴，因为它也出现在排序数组的中间。
+这表明`8`是一个很好的初始支点，因为它也出现在排好序数组的中间。
 
 I hope this makes the basic principle clear of how quicksort works. Unfortunately, this version of quicksort isn't very quick, because we `filter()` the same array three times. There are more clever ways to split up the array.
-我希望这使得基本原理清楚地表明quicksort的工作原理。 不幸的是，这个版本的quicksort不是很快，因为我们`filter()`相同的数组三次。 有更聪明的方法来分割阵列。
+我希望这已经清楚地表明快速排序的工作原理了。 不幸的是，这个版本的quicksort不是很快，因为我们`filter()`相同的数组三次。 有更聪明的方法来分割数组。
 
 ## Partitioning
 ## 分区
