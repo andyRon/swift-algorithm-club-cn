@@ -1,5 +1,4 @@
 # Threaded Binary Tree
-# 线索二叉树
 
 A threaded binary tree is a special kind of [binary tree](../Binary%20Tree/) (a
 tree in which each node has at most two children) that maintains a few extra
@@ -8,16 +7,11 @@ explore the general structure of threaded binary trees, as well as
 [the Swift implementation](ThreadedBinaryTree.swift) of a fully functioning
 threaded binary tree.
 
-线程二叉树是一种特殊的[二叉树](../Binary%20Tree/)(每个节点最多有两个子节点的树)，其中保留了一些额外的节点变量允许廉价和快速**按顺序遍历**树。 我们会探索线程二叉树的一般结构，以及[Swift实现](ThreadedBinaryTree.swift)功能齐全线程二叉树。
-
 If you don't know what a tree is or what it is for, then
 [read this first](../Tree/).
 
-如果您不知道树是什么或它是什么，那么[先读这个](../Tree/)。
-
 
 ## In-order traversal
-## 有序遍历
 
 The main motivation behind using a threaded binary tree over a simpler and
 smaller standard binary tree is to increase the speed of an in-order traversal
@@ -28,11 +22,8 @@ trees are also binary search trees.  The idea is to visit all the left children
 of a node first, then visit the node itself, and then visit the right children
 last.
 
-使用线程二叉树而不是更简单的主要动机较小的标准二叉树是为了提高有序遍历的速度树的 二叉树的有序遍历访问了节点中的节点它们的存储顺序，与a的基本顺序相匹配[二叉搜索树](../Binary%20Search%20Tree/)。 这意味着大多数线程二进制树也是二叉搜索树。 这个想法是访问所有左边的孩子首先是节点，然后访问节点本身，然后访问正确的子节点持续。
-
 An in-order traversal of any binary tree generally goes as follows (using Swift
 syntax):
-任何二叉树的有序遍历通常如下（使用Swift语法）：
 
 ```swift
 func traverse(n: Node?) {
@@ -49,24 +40,17 @@ Where `n` is a a node in the tree (or `nil`), each node stores its children as
 action on it.  We would call this function by passing to it the root of the
 tree we wish to traverse.
 
-其中`n`是树中的节点（或`nil`），每个节点将其子节点存储为`left`和`right`，以及“访问”一个节点可能意味着执行任何所需的采取行动。 我们通过传递给它的根来调用这个函数我们希望穿越的树。
-
 While simple and understandable, this algorithm uses stack space proportional
 to the height of the tree due to its recursive nature.  If the tree has **n**
 nodes, this usage can range anywhere from **O(log n)** for a fairly balanced
 tree, to **O(n)** to a very unbalanced tree.
 
-虽然简单易懂，但该算法使用堆栈空间比例由于其递归性质而达到树的高度。 如果树有**n**节点，这个用法的范围可以从**O(log n)**到相当平衡的范围树，**O(n)**到非常不平衡的树。
-
 A threaded binary tree fixes this problem.
-线索二叉树修复了这个问题。
 
 > For more information about in-order traversals [see here](../Binary%20Tree/).
-> 有关有序遍历的更多信息[请参阅此处](../Binary%20Tree/)。
 
 
 ## Predecessors and successors
-## 前身和继承人
 
 An in-order traversal of a tree yields a linear ordering of the nodes.  Thus
 each node has both a **predecessor** and a **successor** (except for the first
@@ -76,8 +60,6 @@ stores the node's predecessor (if it exists), and each right child that would
 normally be `nil` instead stores the node's successor (if it exists).  This is
 what separates threaded binary trees from standard binary trees.
 
-树的有序遍历产生节点的线性排序。 从而每个节点都有**前任**和**后继**（第一个除外）和最后的节点，分别只有后继者或前任者。 在一个线程化的二叉树，每个左边的孩子通常都是`nil`存储节点的前任（如果存在），以及每个正确的子节点通常是`nil`而是存储节点的后继（如果存在）。 这是什么将线程二叉树与标准二叉树分开。
-
 There are two types of threaded binary trees:  **single threaded** and **double
 threaded**:
 - A single threaded tree keeps track of **either** the in-order predecessor
@@ -85,18 +67,10 @@ threaded**:
 - A double threaded tree keeps track of **both** the in-order predecessor
   **and** successor (left **and** right).
 
-有两种类型的线程二叉树：**单线程**和**双螺纹**：
-- 单线程树跟踪**或者有序的前任
-   **或**继任者（左**或**右）。
-- 双线程树跟踪**两个**有序的前身
-   **和**继承人（左**和**右）。
-
 Using a single or double threaded tree depends on what we want to accomplish.
 If we only need to traverse the tree in one direction (either forward or
 backward), then we use a single threaded tree.  If we want to traverse in both
 directions, then we use a double threaded tree.
-
-使用单线程或双线程树取决于我们想要完成的任务。如果我们只需要在一个方向上遍历树（向前或向后），然后我们使用单线程树。 如果我们想要在两者中遍历方向，然后我们使用双线程树。
 
 It is important to note that each node stores either its predecessor or its
 left child, and either its successor or its right child.  The nodes do not
@@ -104,18 +78,13 @@ need to keep track of both.  For example, in a double threaded tree, if a node
 has a right child but no left child, it will track its predecessor in place of
 its left child.
 
-重要的是要注意每个节点存储其前任或其前导离开了孩子，无论是继任者还是正确的孩子。 节点没有需要跟踪两者。 例如，在双线程树中，如果是节点有一个合适的孩子，但没有留下孩子，它将跟踪其前身代替它的左孩子。
-
 Here is an example valid "full" threaded binary tree:
-这是一个有效的“完整”线程二叉树示例：
 
 ![Full](Images/Full.png)
 
 While the following threaded binary tree is not "full," it is still valid.  The
 structure of the tree does not matter as long as it follows the definition of a
 binary search tree:
-
-虽然以下线程二叉树不是“完整”，但它仍然有效。该树的结构无关紧要，只要它遵循a的定义二叉搜索树：
 
 ![Partial](Images/Partial.png)
 
@@ -128,8 +97,6 @@ exists, and to its in-order predecessor if it does not.  The right leaving edge
 goes to the node's right child if it exists, and to its in-order successor if
 it does not.  The exceptions are the left-most node and the right-most node,
 which do not have a predecessor or successor, respectively.
-
-实线表示父母和孩子之间的联系，而虚线表示线条表示“线程”。 重要的是要注意孩子和孩子线程边缘相互作用。 除根之外的每个节点都有一个进入边缘（从其父节点）和两个离开边缘：一个在左边，一个在右边。 左边的边缘到达节点的左边的子节点存在，如果不存在，则存在于其有序的前任中。 正确的离开边缘如果它存在，则转到节点的右子节点，如果存在则转到它的有序后继节点它不是。 最左边的节点和最右边的节点是例外，它们分别没有前任或后继者。
 
 
 ## Representation
@@ -147,30 +114,18 @@ this class represents a node with six member variables:  `value`, `parent`,
 - `leftThread: ThreadedBinaryTree?` is the in-order predecessor of this node
 - `rightThread: ThreadedBinaryTree?` is the in-order successor of this node
 
-在我们详细介绍线程二叉树的方法之前，我们应该这样做首先解释树本身是如何表示的。 这个数据的核心结构是`ThreadedBinaryTree <T：Comparable>`类。 每个实例这个类代表一个有六个成员变量的节点：`value`，`parent`，`left`，`right`，`leftThread`和`rightThread`。 仅在所有这些中`value`是必需的。 其他五个是Swift *选项*（它们可能是`nil`）。
-- `value：T`是该节点的值（例如1,2，A，B等）
-- `parent：ThreadedBinaryTree？`是这个节点的父节点
-- `left：ThreadedBinaryTree？`是这个节点的左子节点
-- `right：ThreadedBinaryTree？`是这个节点的正确子节点
-- `leftThread：ThreadedBinaryTree？`是这个节点的有序前身
-- `rightThread：ThreadedBinaryTree？`是这个节点的有序继承者
-
 As we are storing both `leftThread` and `rightThread`, this is a double
 threaded tree. Now we are ready to go over some of the member functions in our
 `ThreadedBinaryTree` class.
 
-因为我们存储了`leftThread`和`rightThread`，所以这是双倍的线程树。 现在我们准备好了解一下我们的一些成员函数`ThreadedBinaryTree`类。
 
 ## Traversal algorithm
-## 遍历算法
 
 Let's start with the main reason we're using a threaded binary tree.  It is now
 very easy to find the in-order predecessor and the in-order successor of any
 node in the tree.  If the node has no `left`/`right` child, we can simply
 return the node's `leftThread`/`rightThread`.  Otherwise, it is trivial to move
 down the tree and find the correct node.
-
-让我们从使用线程二叉树的主要原因开始。 就是现在很容易找到有序的前任和任何的有序继承者树中的节点。 如果节点没有`left` /`right`子节点，我们可以简单地说返回节点的`leftThread` /`rightThread`。 否则，移动是微不足道的在树下找到正确的节点。
 
 ```swift
   func predecessor() -> ThreadedBinaryTree<T>? {
@@ -193,20 +148,14 @@ down the tree and find the correct node.
 return the largest/smallest node in a given sub-tree.  See
 [the implementation](ThreadedBinaryTree.swift) for more detail.
 
-> 注意：`maximum()`和`minimum()`是`ThreadedBinaryTree`的方法返回给定子树中的最大/最小节点。 看到[实现](ThreadedBinaryTree.swift)了解更多细节。
-
 Because these are `ThreadedBinaryTree` methods, we can call
 `node.predecessor()` or `node.successor()` to obtain the predecessor or
 successor of any `node`, provided that `node` is a `ThreadedBinaryTree` object.
-
-因为这些是`ThreadedBinaryTree`方法，我们可以调用`node.predecessor()`或`node.successor()`来获取前一个或任何`node`的后继者，只要`node`是`ThreadedBinaryTree`对象。
 
 Because predecessors and/or successors are tracked, an in-order traversal of a
 threaded binary tree is much more efficient than the recursive algorithm
 outlined above.  We use these predecessor/successor attributes to great effect
 in this new algorithm for both forward and backward traversals:
-
-因为跟踪前辈和/或后继者，所以有序遍历a线程二叉树比递归算法更有效概述如上。 我们使用这些前任/后继属性产生了很大的效果在这个用于前向和后向遍历的新算法中：
 
 ```swift
     public func traverseInOrderForward(_ visit: (T) -> Void) {
@@ -241,12 +190,8 @@ a function that executes on each node as they are visited.  This function can
 be anything you want, as long as it accepts `T` (the type of the values of the
 nodes of the tree) and has no return value.
 
-再一次，这是一个`ThreadedBinaryTree`的方法，所以我们通过它来调用它`node.traverseInorderForward（visitFunction）`。 请注意，我们可以指定在访问每个节点时执行的函数。 这个功能可以是你想要的任何东西，只要它接受`T`（值的类型树的节点）并且没有返回值。
-
 Let's walk through a forward traversal of a tree by hand to get a better idea
 of how a computer would do it.  For example, take this simple threaded tree:
-
-让我们手动通过树的向前遍历来获得更好的主意计算机将如何做到这一点。 例如，采用这个简单的线程树：
 
 ![Base](Images/Base.png)
 
@@ -263,18 +208,12 @@ node has a `rightThread` that leads to `nil`, which signals that we have
 completed the traversal!  We visited the nodes in order **2, 5, 7, 9, 12**,
 which intuitively makes sense, as that is their natural increasing order.
 
-我们从树的根开始，**9**。 请注意，我们还没有`visit(9)`。从那里我们想要进入树中的`minimum()`节点，即**2** in
-这个案例。 然后我们``visit(2)``并看到它有一个`rightThread`，因此我们立即知道它的`successor()`是什么。 我们按照线程** ** **，没有任何离开的线程。 因此，在我们`visit(5)`之后，我们去了到`right`子树中的`minimum()`节点，即 **7**。 然后我们`visit(7)`并看到它有一个`rightThread`，我们按照它来回到**9**。 *现在*我们`visit(9)`，并注意到它没有`rightThread`，我们转到`right`子树中的`minimum()`节点，即** 12**。 这个节点有一个`rightThread`，它会导致`nil`，它表示我们有完成了遍历！ 我们按顺序访问节点 **2,5,7,9,12**，直觉上有意义，因为这是他们自然增长的顺序。
-
 A backward traversal would be very similar, but you would replace `right`,
 `rightThread`, `minimum()`, and `successor()` with `left`, `leftThread`,
 `maximum()`, and `predecessor()`.
 
-向后遍历将非常相似，但你会替换`right`，`rightThread`，`minimum()`和`successor()`with`left`，`leftThread`，`maximum()`和`predecessor()`。
-
 
 ## Insertion and deletion
-## 插入和删除
 
 The quick in-order traversal that a threaded binary trees gives us comes at a
 small cost.  Inserting/deleting nodes becomes more complicated, as we have to
@@ -285,23 +224,15 @@ if you want to know the finer details).  Please note that this requires
 knowledge of binary search trees, so make sure you have
 [read this first](../Binary%20Search%20Tree/).
 
-线程二叉树给我们的快速有序遍历来自于成本很低。 正如我们必须的那样，插入/删除节点变得更加复杂不断管理`leftThread`和`rightThread`变量。 而不是通过一些无聊的代码，最好用一个例子解释一下（虽然你可以阅读[实现](ThreadedBinaryTree.swift)如果你想知道更精细的细节）。 请注意，这需要二进制搜索树的知识，所以请确保你有[首先阅读](../Binary%20Search%20Tree/)。
-
 > Note: we do allow duplicate nodes in this implementation of a threaded binary
 > tree.  We break ties by defaulting insertion to the right.
 
-> 注意：我们在这个线程二进制实现中允许重复节点
-> 树。 我们通过默认插入右边来打破关系。
-
 Let's start with the same tree that we used for the above traversal example:
-让我们从我们用于上述遍历示例的相同树开始：
 
 ![Base](Images/Base.png)
 
 Suppose we insert **10** into this tree.  The resulting graph would look like
 this, with the changes highlighted in red:
-
-假设我们在这棵树中插入**10**。 结果图看起来像这个，更改以红色突出显示：
 
 ![Insert1](Images/Insert1.png)
 
@@ -317,25 +248,19 @@ on the `left`, and **10** has no children of its own, we can safely set
 (now outdated) `leftThread`.  Finally we set **12**'s `leftThread = nil`, as it
 now has a `left` child.
 
-如果你已完成家庭作业并熟悉二元搜索树，那么放置此节点不应该让您感到惊讶。 新的方法是我们如何维护节点之间的线程。 所以我们知道我们要插入**10**作为**12**的`left`孩子。 我们要做的第一件事是将**12**的`left`孩子设置为** 10 **，并将** 10 **的“父母”设置为**12**。 因为正在插入** 10 **在`left`，**10**没有自己的孩子，我们可以安全地设置**10**的`rightThread`到它的`parent` **12**。 怎么样**10**`leftThread`？ 因为我们知道**10** < **12**，而 **10**是唯一的`left`孩子的 **12**，我们可以安全地将 **10**的`leftThread`设置为 **12**（现在已经过时了）`leftThread`。 最后我们将**12**的`leftThread = nil`设置为现在有一个`left`的孩子。
-
 Let's now insert another node, **4**, into the tree:
-现在让我们在树中插入另一个节点**4**：
 
 ![Insert2](Images/Insert2.png)
 
 While we are inserting **4** as a `right` child, it follows the exact same
 process as above, but mirrored (swap `left` and `right`).  For the sake of
 completeness, we'll insert one final node, **15**:
-虽然我们将**4**作为“正确”的孩子插入，但它遵循完全相同的原则如上所述，但是镜像（交换`left`和`right`）。 为了完整性，我们将插入一个最终节点，**15**：
 
 ![Insert3](Images/Insert3.png)
 
 Now that we have a fairly crowded tree, let's try removing some nodes.
 Compared to insertion, deletion is a little more complicated.  Let's start with
 something simple, like removing **7**, which has no children:
-
-现在我们有一个相当拥挤的树，让我们尝试删除一些节点。与插入相比，删除更复杂一些。 让我们开始吧简单的东西，比如删除没有孩子的**7**：
 
 ![Remove1](Images/Remove1.png)
 
@@ -344,12 +269,9 @@ case, because **7** is a `right` child and has no children itself, we can
 simply set the `rightThread` of **7**'s `parent`(**5**) to **7**'s (now
 outdated) `rightThread`. Then we can just set **7**'s `parent`, `left`,
 `right`, `leftThread`, and `rightThread` to `nil`, effectively removing it from
-the tree. We also set the parent's `rightChild` to `nil`, which completes the deletion of this right child.
-
-在我们离开**7**之前，我们必须进行一些清理工作。 在这因为**7**是一个“正确”的孩子而且本身没有孩子，我们可以只需将**7**的 `parent`（**5**）的`rightThread`设置为**7**（现在过时的）`rightThread`。 然后我们可以设置**7**的`parent`，`left`，`right`，`leftThread`和`rightThread`到`nil`，有效地将其删除那个树。 我们还将父的`rightChild`设置为`nil`，这样就完成了删除这个正确的孩子。 
+the tree. We also set the parent's `rightChild` to `nil`, which completes the deletion of this right child. 
 
 Let's try something a little harder.  Say we remove **5** from the tree:
-让我们尝试一点点努力。 假设我们从树中删除**5**：
 
 ![Remove2](Images/Remove2.png)
 
@@ -360,15 +282,10 @@ accomplish this, we of course set **2**'s `parent` to **9** and set **9**'s
 we are removing **5**, so it needs to change.  It is now important to
 understand two important properties of threaded binary trees:
 
-这有点棘手，因为**5**有一些孩子，我们必须处理用。 核心思想是用第一个孩子 **2** 取代 **5**。 至实现这一点，我们当然将** 2 **的“父母”设置为**9**并设置 **9** `left`孩子到 **2**。 请注意，**4**的`rightThread`曾经是 **5**，但是我们正在删除**5**，所以它需要改变。 现在重要的是了解线程二叉树的两个重要属性：
-
 1. For the rightmost node **m** in the `left` subtree of any node **n**,
 **m**'s `rightThread` is **n**.
 2. For the leftmost node **m** in the `right` subtree of any node **n**,
 **m**'s `leftThread` is **n**.
-
-1.对于任何节点**n**的`left`子树中最右边的节点**m**，**m**的`rightThread`是**n**。
-2.对于任何节点**n**的`right`子树中最左边的节点**m**，**m**的`leftThread`是 **n**。
 
 Note how these properties held true before the removal of **5**, as **4** was
 the rightmost node in **5**'s `left` subtree.  In order to maintain this
@@ -377,12 +294,8 @@ rightmost node in **9**'s `left` subtree.  To completely remove **5**, all we
 now have to do is set **5**'s `parent`, `left`, `right`, `leftThread`, and
 `rightThread` to `nil`.
 
-注意在移除**5**之前这些属性是如何保持为真的，因为**4**是**5**的`left`子树中最右边的节点。 为了维持这一点属性，我们必须将**4**的`rightThread`设置为**9**，因为**4**现在是**9**的`left`子树中最右边的节点。 要彻底删除**5**，我们所有人现在要做的就是设置**5**的`parent`，`left`，`right`，`leftThread`，以及`rightThread`到`nil`。
-
 How about we do something crazy?  What would happen if we tried to remove
 **9**, the root node?  This is the resulting tree:
-
-我们做些疯狂的事情怎么样？ 如果我们试图删除会发生什么**9**，根节点？ 这是结果树：
 
 ![Remove3](Images/Remove3.png)
 
@@ -391,16 +304,8 @@ different approach than the above examples.  The basic idea is to replace the
 node that we want to remove with the leftmost node in its `right`  subtree,
 which we call the replacement node.
 
-每当我们想要删除一个有两个孩子的节点时，我们会稍微采取一些措施
-与上述例子不同的方法。 基本的想法是取代
-我们想要在其“right”子树中用最左边的节点删除的节点，
-我们称之为替换节点。
-
 > Note: we could also replace the node with the rightmost node in its `left`
 > subtree.  Choosing left or right is mostly an arbitrary decision.
-
->注意：我们也可以用“left”中最右边的节点替换节点
->子树。 选择左或右主要是一个随意的决定。
 
 Once we find the replacement node, **10** in this case, we remove it from the
 tree using the algorithms outlined above.  This ensures that the edges in the
@@ -411,12 +316,8 @@ above.  In this case, **12**'s `leftThread` is now **10**. Node **9** is no
 longer needed, so we can finish the removal process by setting all of its
 variables to `nil`.
 
-一旦我们找到替换节点，在这种情况下 **10**，我们将其从中移除树使用上面概述的算法。 这确保了边缘`right`子树保持正确。 从那里很容易更换**9**和**10**，因为我们只需要更新边缘，留下**10**。 现在我们所有的一切为了保持概述的两个属性，do完成了线程以上。 在这种情况下，**12**的`leftThread`现在是 **10**。 节点 **9**是没有的需要更长时间，所以我们可以通过设置所有它来完成删除过程变量为`nil`。
-
 In order to illustrate how to remove a node that has only a `right` child,
 we'll remove one final node, **12** from the tree:
-
-为了说明如何删除只有`right`子节点的节点，我们将从树中删除一个最终节点**12**：
 
 ![Remove4](Images/Remove4.png)
 
@@ -424,20 +325,14 @@ The process to remove **12** is identical to the process we used to remove
 **5**, but mirrored.  **5** had a `left` child, while **12** has a `right`
 child, but the core algorithm is the same.
 
-删除**12**的过程与我们过去删除的过程相同**5**，但镜像。 **5**有一个`left`孩子，而**12**有`right`孩子，但核心算法是一样的。
-
 And that's it!  This was just a quick overview of how insertion and deletion
 work in threaded binary trees, but if you understood these examples, you should
 be able to insert or remove any node from any tree you want.  More detail can
 of course be found in
 [the implementation](ThreadedBinaryTree.swift).
 
-就是这样！ 这只是对插入和删除方式的快速概述在线程二叉树中工作，但如果您理解这些示例，则应该能够从您想要的任何树插入或删除任何节点。 更多细节可以
-当然可以找到[实现](ThreadedBinaryTree.swift)。
-
 
 ## Miscellaneous methods
-## 杂项方法
 
 There are many other smaller operations that a threaded binary tree can do,
 such as `searching()` for a node in the tree, finding the `depth()` or
@@ -446,19 +341,13 @@ such as `searching()` for a node in the tree, finding the `depth()` or
 Many of these methods are inherent to binary search trees as well, so you can
 find [further documentation here](../Binary%20Search%20Tree/).
 
-线程二叉树可以执行许多其他较小的操作，例如`search()`表示树中的节点，找到`depth()`或`height()`你可以检查[实现](ThreadedBinaryTree.swift) 获取完整的技术细节。其中许多方法也是二叉搜索树所固有的，所以你可以找到[此处的进一步文档](../Binary%20Search%20Tree/)。
 
 ## See also
-## 扩展阅读
 
-[线索二叉树的维基百科](https://en.wikipedia.org/wiki/Threaded_binary_tree)
+[Threaded Binary Tree on Wikipedia](https://en.wikipedia.org/wiki/Threaded_binary_tree)
 
 *Written for the Swift Algorithm Club by
 [Jayson Tung](https://github.com/JFTung)*
 *Migrated to Swift 3 by Jaap Wijnen*
 
 *Images made using www.draw.io*
-
-*作者：[Jayson Tung](https://github.com/JFTung)，Jaap Wijnen*   
-*图片来自   www.draw.io *
-*翻译：[Andy Ron](https://github.com/andyRon)*
