@@ -172,7 +172,7 @@
 - [AVL树](AVL%20Tree/)－一种通过旋转来维持平衡的二叉搜索树。 :construction:
 - [红黑树](Red-Black%20Tree/). A self balancing binary search tree.
 - [伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
-- [⏳线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
+- [线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
 - [⏳线段树](Segment%20Tree/)－能够快速地对某区间进行计算。
   - [⏳Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)
 - ⏳k-d 树
@@ -182,7 +182,7 @@
 - [⏳字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
 - [B 树](B-Tree/). A self-balancing search tree, in which nodes can have more than two children.
 - [⏳QuadTree](QuadTree/). A tree with 4 children.
-- [⏳Octree](Octree/). A tree with 8 children.
+- [八叉树](Octree/). A tree with 8 children.
 
 ### 哈希
 

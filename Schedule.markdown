@@ -136,7 +136,7 @@
 | Trie   					|    		 |               |	    	|			|
 | B-Tree   					| andyRon    |  Y            |	    	|			|
 | QuadTree   				|    		 |               |	    	|			|
-| Octree   					|    		 |               |	    	|			|
+| Octree   					| andyRon    |  Y            |	    	|			|
 
 ### 哈希
 
