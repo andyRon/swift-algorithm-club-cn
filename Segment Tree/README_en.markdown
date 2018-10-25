@@ -1,5 +1,4 @@
 # Segment Tree
-# 线段树
 
 > For an example on lazy propagation, see this [article](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation).
 
