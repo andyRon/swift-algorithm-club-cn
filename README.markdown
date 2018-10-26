@@ -173,7 +173,7 @@
 - [红黑树](Red-Black%20Tree/). A self balancing binary search tree.
 - [伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
 - [线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
-- [⏳线段树](Segment%20Tree/)－能够快速地对某区间进行计算。
+- [线段树](Segment%20Tree/)－能够快速地对某区间进行计算。
   - [⏳Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)
 - ⏳k-d 树
 - [⏳Sparse Table](Sparse%20Table/). Another take on quickly computing a function over a portion of an array, but this time we'll make it even quicker!.

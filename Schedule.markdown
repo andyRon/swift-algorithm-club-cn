@@ -131,8 +131,8 @@
 | AVL Tree 					| andyRon    |  Y            |	    	|			|
 | Red-Black Tree   			| andyRon    |  Y            |	    	|			|
 | Splay Tree   				| andyRon    |  Y            |	    	|			|
-| Threaded Binary Tree   	|    		 |               |	    	|			|
-| Segment Tree   			|    		 |               |	    	|			|
+| Threaded Binary Tree   	| andyRon    |  Y            |	    	|			|
+| Segment Tree   			| andyRon    |  Y            |	    	|			|
 | Lazy Propagation   		|    		 |               |	    	|			|
 | Sparse Table   			|    		 |               |	    	|			|
 | Heap   					| andyRon    |  Y            |	    	|			|
