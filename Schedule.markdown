@@ -133,7 +133,7 @@
 | Splay Tree   				| andyRon    |  Y            |	    	|			|
 | Threaded Binary Tree   	| andyRon    |  Y            |	    	|			|
 | Segment Tree   			| andyRon    |  Y            |	    	|			|
-| Lazy Propagation   		|    		 |               |	    	|			|
+|   Lazy Propagation   		| andyRon    |  Y            |	    	|			|
 | Sparse Table   			|    		 |               |	    	|			|
 | Heap   					| andyRon    |  Y            |	    	|			|
 | Trie   					|    		 |               |	    	|			|
