@@ -134,7 +134,7 @@
 | Threaded Binary Tree   	| andyRon    |  Y            |	    	|			|
 | Segment Tree   			| andyRon    |  Y            |	    	|			|
 |   Lazy Propagation   		| andyRon    |  Y            |	    	|			|
-| Sparse Table   			|    		 |               |	    	|			|
+| Sparse Table   			| andyRon    |  Y            |	    	|			|
 | Heap   					| andyRon    |  Y            |	    	|			|
 | Trie   					|    		 |               |	    	|			|
 | B-Tree   					| andyRon    |  Y            |	    	|			|
