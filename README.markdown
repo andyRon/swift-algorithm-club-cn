@@ -179,7 +179,7 @@
 - [ST(稀疏表)算法](Sparse%20Table/). Another take on quickly computing a function over a portion of an array, but this time we'll make it even quicker!.
 - [堆](Heap/)－存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
 - ⏳斐波那契堆
-- [⏳字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
+- [字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
 - [B 树](B-Tree/). A self-balancing search tree, in which nodes can have more than two children.
 - [⏳QuadTree](QuadTree/). A tree with 4 children.
 - [八叉树](Octree/). A tree with 8 children.

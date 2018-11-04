@@ -136,7 +136,7 @@
 |   Lazy Propagation   		| andyRon    |  Y            |	    	|			|
 | Sparse Table   			| andyRon    |  Y            |	    	|			|
 | Heap   					| andyRon    |  Y            |	    	|			|
-| Trie   					|    		 |               |	    	|			|
+| Trie   					| andyRon    |  Y            |	    	|			|
 | B-Tree   					| andyRon    |  Y            |	    	|			|
 | QuadTree   				|    		 |               |	    	|			|
 | Octree   					| andyRon    |  Y            |	    	|			|
