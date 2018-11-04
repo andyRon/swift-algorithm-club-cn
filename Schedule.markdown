@@ -138,7 +138,7 @@
 | Heap   					| andyRon    |  Y            |	    	|			|
 | Trie   					| andyRon    |  Y            |	    	|			|
 | B-Tree   					| andyRon    |  Y            |	    	|			|
-| QuadTree   				|    		 |               |	    	|			|
+| QuadTree   				| andyRon    |  Y            |	    	|			|
 | Octree   					| andyRon    |  Y            |	    	|			|
 
 ### 哈希

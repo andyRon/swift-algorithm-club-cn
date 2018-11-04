@@ -181,7 +181,7 @@
 - ⏳斐波那契堆
 - [字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
 - [B 树](B-Tree/). A self-balancing search tree, in which nodes can have more than two children.
-- [⏳QuadTree](QuadTree/). A tree with 4 children.
+- [四分树](QuadTree/). A tree with 4 children.
 - [八叉树](Octree/). A tree with 8 children.
 
 ### 哈希
