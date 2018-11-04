@@ -114,7 +114,7 @@
 
 ### 数学算法
 
-- [⏳最大公约数算法(GCD)](GCD/)－特殊福利：最小公倍数算法。
+- [最大公约数算法(GCD)](GCD/)－特殊福利：最小公倍数算法。
 - [⏳排列组合算法](Combinatorics/)－还记得高中学过俄组合数学吗？
 - [⏳调度场算法](Shunting%20Yard/)－用于将中缀表达式转换为后缀表达式的经典算法。
 - [⏳Karatsuba Multiplication](Karatsuba%20Multiplication/). Another take on elementary multiplication.
@@ -201,9 +201,11 @@
 - [图](Graph/)
 - [广度优先搜索(BFS)](Breadth-First%20Search/)
 - [深度优先搜索(DFS)](Depth-First%20Search/)
-
 - [⏳最短路径算法](Shortest%20Path%20%28Unweighted%29/)－作用对象为无权值树。
+- [⏳Single-Source Shortest Paths](Single-Source%20Shortest%20Paths%20(Weighted)/)
+
 - [⏳最小生成树](Minimum%20Spanning%20Tree%20%28Unweighted%29/)－作用对象为无权值树。
+- [⏳Minimum Spanning Tree](Minimum%20Spanning%20Tree/)
 
 - [⏳任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/)
 - [⏳Dijkstra's shortest path algorithm](Dijkstra%20Algorithm/)

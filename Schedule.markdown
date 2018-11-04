@@ -85,6 +85,11 @@
 
 ### 数学算法
 
+| 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
+|---------------------------|------------|:-------------:|----------|:---------:|
+| GCD	   					| andyRon    |  Y            |	    	|			|
+
+
 ### 机器学习
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
@@ -163,7 +168,10 @@
 | Graph   					| andyRon    |  Y            |	    	|			|
 | Breadth-First Search   	| andyRon    |  Y            |	    	|			|
 | Depth-First Search   		| andyRon    |  Y            |	    	|			|
-|    						|    		 |               |	    	|			|
+| Shortest Path   			|    		 |               |	    	|			|
+| Single-Source Shortest Paths|    		 |               |	    	|			|
+| Minimum Spanning Tree   	|    		 |               |	    	|			|
+| Minimum Spanning Tree(unweighted)|    		 |               |	    	|			|
 | All-Pairs Shortest Paths  |    		 |               |	    	|			|
 | Dijkstra's algorithm   	|    		 |               |	    	|			|
 |    						|    		 |               |	    	|			|
