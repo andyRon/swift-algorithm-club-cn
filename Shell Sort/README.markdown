@@ -169,15 +169,18 @@ shellSort(&arr)
 
 希尔排序是**将待排序的数组元素按下标的一定增量分组 ，分成多个子序列，然后对各个子序列进行直接插入排序算法排序；然后依次缩减增量再进行排序，直到增量为1时，进行最后一次直接插入排序，排序结束。**
 
-## 两个希尔排序的原理图
+## 希尔排序的原理图
 
-- 图片来源：[图解排序算法(二)之希尔排序](https://www.cnblogs.com/chengxiao/p/6104371.html)
+- 图片一来源：[图解排序算法(二)之希尔排序](https://www.cnblogs.com/chengxiao/p/6104371.html)
 ![](image/shell_sort_1.png)
 
 
-- 图片来源：[排序：希尔排序（算法）](https://www.jianshu.com/p/d730ae586cf3)
+- 图片二来源：[排序：希尔排序（算法）](https://www.jianshu.com/p/d730ae586cf3)
 ![](image/shell_sort_2.png)
 
+- 一个希尔排序的动画
+
+[Comparison Sorting Algorithms](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 
 ## 参考
 
