@@ -71,7 +71,6 @@
 
 要排序的下一个数字是`4`。 我们需要将它插入到已经排好序的`[3,5,8]`中。
 
-Here's one way to do this: Look at the previous element, `8`. 
 一种方法是：查看前一个元素`8`。
 
 	[ 3, 5, 8, 4 | 6 ]
