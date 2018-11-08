@@ -158,7 +158,7 @@
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Bloom Filter   			| andyRon    | Y             |	    	|			|
 | Hash Set   				| andyRon    | Y             |	    	|			|
-| Multiset   				|    		 |               |	    	|			|
+| Multiset   				| andyRon    | Y             |	    	|			|
 | Ordered Set   			|    		 |               |	    	|			|
 
 ### 图
