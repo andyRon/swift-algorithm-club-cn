@@ -1,4 +1,8 @@
+/*
+ 链表
+ */
 
+/// 节点
 public class LinedListNode<T> {
     var value: T
     var next: LinedListNode?
@@ -8,7 +12,7 @@ public class LinedListNode<T> {
         self.value = value
     }
 }
-
+/// 链表
 public class LinkedList<T> {
     public typealias Node = LinedListNode<T>
     
@@ -23,7 +27,7 @@ public class LinkedList<T> {
     public var first: Node? {
         return head
     }
-    
+    /// 遍历获得最后一个节点
     public var last: Node? {
         guard var node = head  else {
             return nil
@@ -34,7 +38,7 @@ public class LinkedList<T> {
         }
         return node
     }
-    
+    /// 在链表的末尾添加新的节点
     public func append(_ value: T) {
         let newNode = Node(value: value)
         if let lastNode = last {
@@ -44,7 +48,7 @@ public class LinkedList<T> {
             head = newNode
         }
     }
-    
+    /// 遍历计算链表中节点数
     public var count: Int {
         guard var node = head else {
             return 0
@@ -56,7 +60,7 @@ public class LinkedList<T> {
         }
         return count
     }
-    
+    /// 获取特定索引的节点
     public func node(at index: Int) -> Node {
         if index == 0 {
             return head!
@@ -71,12 +75,12 @@ public class LinkedList<T> {
             return node!
         }
     }
-    
+    /// 获取特定索引的节点的下标方法
     public subscript(index: Int) -> T {
         let node = self.node(at: index)
         return node.value
     }
-    
+    /// 在任何索引处插入节点
     public func insert(_ node: Node, at index: Int) {
         let newNode = node
         if index == 0 {
@@ -93,11 +97,11 @@ public class LinkedList<T> {
             next?.previous = newNode
         }
     }
-    
+    /// 删除所有节点
     public func removeAll() {
         head = nil
     }
-    
+    /// 删除指定节点
     public func remove(node: Node) -> T {
         let prev = node.previous
         let next = node.next
@@ -113,12 +117,12 @@ public class LinkedList<T> {
         node.next = nil
         return node.value
     }
-    
+    /// 删除最有一个节点
     public func removeLast() -> T {
         assert(!isEmpty)
         return remove(node: last!)
     }
-    
+    /// 删除指定索引节点
     public func remove(at index: Int) -> T {
         let node = self.node(at: index)
 //        assert(node != nil)
@@ -127,7 +131,7 @@ public class LinkedList<T> {
 }
 
 extension LinkedList: CustomStringConvertible {
-    
+    /// 可读的输出
     public var description: String {
         var s = "["
         var node = self.head
@@ -141,7 +145,7 @@ extension LinkedList: CustomStringConvertible {
 }
 
 extension LinkedList {
-    
+    /// 翻转链表
     public func reverse() {
         var node = head
         tail = head
@@ -206,9 +210,6 @@ extension LinkedList {
 //    public var endIndex: Index {
 //        <#code#>
 //    }
-//
-//
-//
 //}
 
 let list = LinkedList<String>()
