@@ -201,7 +201,7 @@
 - [图](Graph/)
 - [广度优先搜索(BFS)](Breadth-First%20Search/)
 - [深度优先搜索(DFS)](Depth-First%20Search/)
-- [⏳最短路径算法](Shortest%20Path%20%28Unweighted%29/)－作用对象为无权值树。
+- [最短路径算法](Shortest%20Path%20%28Unweighted%29/)－作用对象为无权值树。
 - [⏳Single-Source Shortest Paths](Single-Source%20Shortest%20Paths%20(Weighted)/)
 
 - [⏳最小生成树](Minimum%20Spanning%20Tree%20%28Unweighted%29/)－作用对象为无权值树。
