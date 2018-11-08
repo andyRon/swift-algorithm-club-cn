@@ -170,8 +170,8 @@
 | Depth-First Search   				| andyRon    |  Y            |	    	|			|
 | Shortest Path   					| andyRon    |  Y            |	    	|			|
 | Single-Source Shortest Paths		| andyRon    |  Y            |	    	|			|
-| Minimum Spanning Tree   			|    		 |               |	    	|			|
-| Minimum Spanning Tree(unweighted)	|    		 |               |	    	|			|
+| Minimum Spanning Tree   			| andyRon    |  Y            |	    	|			|
+| Minimum Spanning Tree(unweighted)	| andyRon    |  Y            |	    	|			|
 | All-Pairs Shortest Paths  		|    		 |               |	    	|			|
 | Dijkstra's algorithm   			|    		 |               |	    	|			|
 |    								|    		 |               |	    	|			|
