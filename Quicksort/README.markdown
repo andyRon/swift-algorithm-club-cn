@@ -1,4 +1,4 @@
-# 快速排序（Quicksort）
+# 快速排序(Quicksort)
 
 目标：将数组从低到高（或从高到低）排序。
 
@@ -21,7 +21,7 @@ func quicksort<T: Comparable>(_ a: [T]) -> [T] {
 }
 ```
 
-> 译注：pivot 中心点，枢轴
+> 译注：pivot 中心点，枢轴，基准。本文的pivot都翻译成“基准”。
 
 将此代码放在playground 进行测试：
 
@@ -590,12 +590,11 @@ Using Dutch flag partitioning makes for a more efficient quicksort if the array 
 > **Note:** The above implementation of `partitionDutchFlag()` uses a custom `swap()` routine for swapping the contents of two array elements. Unlike Swift's own `swap()`, this doesn't give an error when the two indices refer to the same array element. See [Quicksort.swift](Quicksort.swift) for the code.
 > **注意：** `partitionDutchFlag()`的上述实现使用自定义`swap（）`例程来交换两个数组元素的内容。 与Swift自己的`swap（）`不同，当两个索引引用相同的数组元素时，这不会产生错误。 请参阅[Quicksort.swift]（Quicksort.swift）获取代码。
 
-## See also
 ## 扩展阅读
 
 
 [快速排序的维基百科](https://en.wikipedia.org/wiki/Quicksort)
 
-*Written for Swift Algorithm Club by Matthijs Hollemans*
 *作者：Matthijs Hollemans*  
-*翻译：[Andy Ron](https://github.com/andyRon)*
+*翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  

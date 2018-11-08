@@ -1,7 +1,5 @@
-# Heap
-# 堆
+# 堆(Heap)
 
-> This topic has been tutorialized [here](https://www.raywenderlich.com/160631/swift-algorithm-club-heap-and-priority-queue-data-structure)
 > 这个话题已经有个辅导[文章](https://www.raywenderlich.com/160631/swift-algorithm-club-heap-and-priority-queue-data-structure)
 
 A heap is a [binary tree](../Binary%20Tree/) inside an array, so it does not use parent/child pointers. A heap is sorted based on the "heap property" that determines the order of the nodes in the tree.
@@ -27,7 +25,7 @@ There are two kinds of heaps: a *max-heap* and a *min-heap* which are different 
 有两种堆：*max-heap* 和 *min-heap*，它们与存储树节点的顺序不同。
 
 In a max-heap, parent nodes have a greater value than each of their children. In a min-heap, every parent node has a smaller value than its child nodes. This is called the "heap property", and it is true for every single node in the tree.
-在最大堆中，父节点的值大于其子节点。 在最小堆中，每个父节点的值都小于其子节点。 这称为“堆属性”，对于树中的每个节点都是如此。
+在*max-heap*中，父节点的值大于其子节点。 在*min-heap*中，每个父节点的值都小于其子节点。 这称为“堆属性”，对于树中的每个节点都是如此。
 
 An example:
 一个例子：
@@ -35,13 +33,13 @@ An example:
 ![A max-heap](Images/Heap1.png)
 
 This is a max-heap because every parent node is greater than its children. `(10)` is greater than `(7)` and `(2)`. `(7)` is greater than `(5)` and `(1)`.
-这是一个最大堆，因为每个父节点都大于其子节点。 `(10)`大于`(7)`和`(2)`。 `(7)`大于`(5)`和`(1)`。
+这是一个*max-heap*，因为每个父节点都大于其子节点。 `(10)`大于`(7)`和`(2)`。 `(7)`大于`(5)`和`(1)`。
 
 As a result of this heap property, a max-heap always stores its largest item at the root of the tree. For a min-heap, the root is always the smallest item in the tree. The heap property is useful because heaps are often used as a [priority queue](../Priority%20Queue/) to access the "most important" element quickly.
-作为此堆属性的结果，max-heap始终将其最大项存储在树的根中。 对于最小堆，根始终是树中的最小项。 堆属性很有用，因为堆通常用作[优先级队列](../Priority%20Queue/)来快速访问“最重要的”元素。
+作为此堆属性的结果，*max-heap*始终将其最大项存储在树的根中。 对于*min-heap*，根始终是树中的最小项。 堆属性很有用，因为堆通常用作[优先级队列](../Priority%20Queue/)来快速访问“最重要的”元素。
 
 > **Note:** The root of the heap has the maximum or minimum element, but the sort order of other elements are not predictable. For example, the maximum element is always at index 0 in a max-heap, but the minimum element isn’t necessarily the last one. -- the only guarantee you have is that it is one of the leaf nodes, but not which one.
-> **注意：** 堆的根具有最大或最小元素，但其他元素的排序顺序是不可预测的。例如，最大元素始终位于最大堆中的索引0处，但最小元素不一定是最后一个元素。 —— 唯一的保证是它是叶子节点之一，但不是哪一个。
+> **注意：** 堆的根具有最大或最小元素，但其他元素的排序顺序是不可预测的。例如，最大元素始终位于*max-heap*中的索引0处，但最小元素不一定是最后一个元素。 —— 唯一的保证是它是叶子节点之一，但不是哪一个。
 
 ## How does a heap compare to regular trees?
 ## 堆如何与常规树进行比较？
@@ -51,13 +49,13 @@ A heap is not a replacement for a binary search tree, and there are similarities
 
 
 **Order of the nodes.** In a [binary search tree (BST)](../Binary%20Search%20Tree/), the left child must be smaller than its parent, and the right child must be greater. This is not true for a heap. In a max-heap both children must be smaller than the parent, while in a min-heap they both must be greater.
-**节点的顺序。**在[二叉搜索树（BST）](../Binary%20Search%20Tree/)中，左子节点必须小于其父节点，右子节点必须更大。 堆不是这样。 在最大堆中，两个子节点必须小于父节点，而在最小堆中它们都必须更大。
+**节点的顺序。**在[二叉搜索树（BST）](../Binary%20Search%20Tree/)中，左子节点必须小于其父节点，右子节点必须更大。 堆不是这样。 在*max-heap*中，两个子节点必须小于父节点，而在*min-heap*中，子节点必须大于父节点。
 
 **Memory.** Traditional trees take up more memory than just the data they store. You need to allocate additional storage for the node objects and pointers to the left/right child nodes. A heap only uses a plain array for storage and uses no pointers.
 **内存。**传统的树比它们存储的数据占用更多的内存。 您需要为节点对象和指向左/右子节点的指针分配额外的存储空间。 堆只使用普通数组进行存储，不使用指针。
 
 **Balancing.** A binary search tree must be "balanced" so that most operations have **O(log n)** performance. You can either insert and delete your data in a random order or use something like an [AVL tree](../AVL%20Tree/) or [red-black tree](../Red-Black%20Tree/), but with heaps we don't actually need the entire tree to be sorted. We just want the heap property to be fulfilled, so balancing isn't an issue. Because of the way the heap is structured, heaps can guarantee **O(log n)** performance.
-**平衡。**二进制搜索树必须“平衡”，以便大多数操作具有**O(log n)**性能。 您可以按随机顺序插入和删除数据，也可以使用[AVL树](../AVL%20Tree/)或[红黑树](../Red-Black%20Tree/)，但 我们实际上并不需要对整个树进行排序。 我们只是希望实现堆属性，因此平衡不是问题。 由于堆的结构方式，堆可以保证 **O(log n)** 的性能。
+**平衡。** 二叉搜索树（BST）必须“平衡”，以便大多数操作具有**O(log n)**性能。 您可以按随机顺序插入和删除数据，也可以使用[AVL树](../AVL%20Tree/)或[红黑树](../Red-Black%20Tree/)，但 我们实际上并不需要对整个树进行排序。 我们只是希望实现堆属性，因此平衡不是问题。 由于堆的结构方式，堆可以保证 **O(log n)** 的性能。
 
 **Searching.** Whereas searching is fast in a binary tree, it is slow in a heap. Searching isn't a top priority in a heap since the purpose of a heap is to put the largest (or smallest) node at the front and to allow relatively fast inserts and deletes.
 **搜索。** 虽然在二叉树中搜索速度很快，但它在堆中速度很慢。 搜索不是堆中的最高优先级，因为堆的目的是将最大（或最小）节点放在前面并允许相对快速的插入和删除。
@@ -100,14 +98,22 @@ Let's use these formulas on the example. Fill in the array index and we should g
 | 5 | 3 | 1 | 7 | 8 |
 | 1 | 4 | 1 | 9 | 10 |
 
+| 节点 | 数组中的索引 | 父节点索引 | 左子节点索引 | 右子节点索引 |
+|------|-------------|--------------|------------|-------------|
+| 10 | 0 | -1 | 1 | 2 |
+| 7 | 1 | 0 | 3 | 4 |
+| 2 | 2 | 0 | 5 | 6 |
+| 5 | 3 | 1 | 7 | 8 |
+| 1 | 4 | 1 | 9 | 10 |
+
 Verify for yourself that these array indices indeed correspond to the picture of the tree.
 验证这些数组索引确实对应于树的图片。
 
 > **Note:** The root node `(10)` does not have a parent because `-1` is not a valid array index. Likewise, nodes `(2)`, `(5)`, and `(1)` do not have children because those indices are greater than the array size, so we always have to make sure the indices we calculate are actually valid before we use them.
-> **注意：** 根节点`(10)`没有父节点，因为`-1`不是有效的数组索引。 同样，节点`(2)`，`(5)`和`(1)`没有子节点，因为那些索引大于数组大小，所以我们总是要确保我们计算的索引实际上是有效的 我们用它们。
+> **注意：** 根节点`(10)`没有父节点，因为`-1`不是有效的数组索引。 同样，节点`(2)`，`(5)`和`(1)`没有子节点，因为那些索引大于数组大小，所以用它们之前我们总是要确保我们计算的索引实际上是有效的。
 
 Recall that in a max-heap, the parent's value is always greater than (or equal to) the values of its children. This means the following must be true for all array indices `i`:
-回想一下，在max-heap中，父级的值总是大于（或等于）其子级的值。 这意味着对于所有数组索引`i`必须满足以下条件：
+回想一下，在*max-heap*中，父节点的值总是大于（或等于）其子节点的值。 这意味着对于所有数组索引`i`必须满足以下条件：
 
 ```swift
 array[parent(i)] >= array[i]
@@ -151,15 +157,15 @@ Pop quiz! Let's say we have the array:
 	[ 10, 14, 25, 33, 81, 82, 99 ]
 
 Is this a valid heap? The answer is yes! A sorted array from low-to-high is a valid min-heap. We can draw this heap as follows:
-这是一个有效的堆吗？ 答案是肯定的！ 从低到高的排序数组是有效的最小堆。 我们可以按如下方式绘制这个堆：
+这是一个有效的堆吗？ 答案是肯定的！ 从低到高的排序数组是有效的*min-heap*。 我们可以按如下方式绘制这个堆：
 
 ![A sorted array is a valid heap](Images/SortedArray.png)
 
 The heap property holds for each node because a parent is always smaller than its children. (Verify for yourself that an array sorted from high-to-low is always a valid max-heap.)
-堆属性适用于每个节点，因为父节点始终小于其子节点。 （自己验证从高到低排序的数组始终是有效的最大堆。）
+堆属性适用于每个节点，因为父节点始终小于其子节点。 （自己验证从高到低排序的数组始终是有效的*max-heap*。）
 
 > **Note:** But not every min-heap is necessarily a sorted array! It only works one way. To turn a heap back into a sorted array, you need to use [heap sort](../Heap%20Sort/).
-> **注意：**但并非每个min-heap都必须是一个排序数组！ 它只适用于一种方式。 要将堆重新转换为已排序的数组，需要使用[heap sort](../Heap%20Sort/)。
+> **注意：**但并非每个*min-heap*都必须是一个排序数组！ 它只适用于一种方式。 要将堆重新转换为已排序的数组，需要使用[heap sort](../Heap%20Sort/)。
 
 ## More math!
 ## 更多数学！
@@ -168,10 +174,10 @@ In case you are curious, here are a few more formulas that describe certain prop
 如果你很好奇，这里有一些描述堆的某些属性的公式。 你不需要知道这些，但它们有时会派上用场。 随意跳过此部分！
 
 The *height* of a tree is defined as the number of steps it takes to go from the root node to the lowest leaf node, or more formally: the height is the maximum number of edges between the nodes. A heap of height *h* has *h + 1* levels.
-树的*height*定义为从根节点到最低叶节点所需的步数，或者更正式：高度是节点之间的最大边数。 高度*h*的堆具有*h + 1*级别。
+树的*height*定义为从根节点到最低叶节点所需的步数，或者更正式：*height*是节点之间的最大边数。 高度*h*的堆具有*h + 1*级别。
 
 This heap has height 3, so it has 4 levels:
-这个堆的高度为3，所以它有4个级别：
+这个堆的*height*为3，所以它有4个级别：
 
 ![Large heap](Images/LargeHeap.png)
 
@@ -211,9 +217,9 @@ There are two primitive operations necessary to make sure the heap is a valid ma
 
 Shifting up or down is a recursive procedure that takes **O(log n)** time.
 
-在插入或删除元素之后，有两个必要的基本操作来确保堆是有效的最大堆或最小堆：
+在插入或删除元素之后，有两个必要的基本操作来确保堆是有效的*max-heap*或*min-heap*：
 
-- `shiftUp()`：如果元素比其父元素更大（最大堆）或更小（最小堆），则需要与父元素交换。 这使它向上移动树。
+- `shiftUp()`：如果元素比其父元素更大（*max-heap*）或更小（*min-heap*），则需要与父元素交换。 这使它向上移动树。
 
 - `shiftDown()`。 如果元素比子元素小（max-heap）或更大（min-heap），则需要向下移动树。 此操作也称为“heapify”。
 
@@ -247,7 +253,7 @@ The heap also has a `peek()` function that returns the maximum (max-heap) or min
 
 - `removeAtIndex(index)`：就像`remove()`一样，除了它允许你从堆中删除任何项目，而不仅仅是root。如果新元素与其子元素无序，则调用`shiftDown()`;如果元素与其父元素无序，则调用`shiftUp()`。
 
-- `replace(index，value)`：为节点分配一个较小(最小堆）或较大(最大堆）的值。因为这会使heap属性失效，所以它使用`shiftUp()`来补丁。 (也称为“减少键”和“增加键”。）
+- `replace(index，value)`：为节点分配一个较小(*min-heap*）或较大(*max-heap*）的值。因为这会使heap属性失效，所以它使用`shiftUp()`来补丁。 (也称为“减少键”和“增加键”。）
 
 以上所有都需要时间**O(log n**因为向上或向下移动是昂贵的。还有一些操作需要更多时间：
 
@@ -257,7 +263,7 @@ The heap also has a `peek()` function that returns the maximum (max-heap) or min
 
 - [堆排序](../Heap％20Sort/)。由于堆是一个数组，我们可以使用它的唯一属性将数组从低到高排序。时间：**O(n lg n)。**
 
-堆还有一个`peek()`函数，它返回最大(最大堆）或最小(最小堆）元素，而不从堆中删除它。时间：**O(1)**。
+堆还有一个`peek()`函数，它返回最大(*max-heap*）或最小(*min-heap*）元素，而不从堆中删除它。时间：**O(1)**。
 
 > **Note:** By far the most common things you will do with a heap are inserting new values with `insert()` and removing the maximum or minimum value with `remove()`. Both take **O(log n)** time. The other operations exist to support more advanced usage, such as building a priority queue where the "importance" of items can change after they have been added to the queue.
 > **注意：** 到目前为止，您将使用堆执行的最常见操作是使用`insert()`插入新值，并使用`remove()`删除最大值或最小值。 两者都需要**O(log n)**时间。 存在其他操作以支持更高级的使用，例如构建优先级队列，其中项目的“重要性”在添加到队列后可以改变。
@@ -287,7 +293,7 @@ The `(16)` was added to the first available space on the last row.
 `(16)`被添加到最后一行的第一个可用空间。
 
 Unfortunately, the heap property is no longer satisfied because `(2)` is above `(16)`, and we want higher numbers above lower numbers. (This is a max-heap.)
-不幸的是，堆属性不再满足，因为`(2)`高于`(16)`，我们希望更高的数字高于低数字。 (这是最大堆。)
+不幸的是，堆属性不再满足，因为`(2)`高于`(16)`，我们希望更高的数字高于低数字。 (这是*max-heap*。)
 
 To restore the heap property, we swap `(16)` and `(2)`.
 要恢复堆属性，我们交换`(16)`和`(2)`。
@@ -329,7 +335,7 @@ When inserting, we put the new value at the end of the array. Here, we do the op
 ![The last node goes to the root](Images/Remove2.png)
 
 Let's look at how to **shift-down** `(1)`. To maintain the heap property for this max-heap, we want to the highest number of top. We have two candidates for swapping places with: `(7)` and `(2)`. We choose the highest number between these three nodes to be on top. That is `(7)`, so swapping `(1)` and `(7)` gives us the following tree.
-让我们来看看如何**降档**`(1)`。 要维护此最大堆的堆属性，我们希望得到最高的top数。 我们有两个交换位置的候选者：`(7)`和`(2)`。 我们选择这三个节点之间的最高数字位于顶部。 那是`(7)`，所以交换`(1)`和`(7)`给我们下面的树。
+让我们来看看如何**降档**`(1)`。 要维护此*max-heap*的堆属性，我们希望得到最高的top数。 我们有两个交换位置的候选者：`(7)`和`(2)`。 我们选择这三个节点之间的最高数字位于顶部。 那是`(7)`，所以交换`(1)`和`(7)`给我们下面的树。
 
 ![The last node goes to the root](Images/Remove3.png)
 
@@ -441,9 +447,9 @@ Despite this small optimization, searching is still an **O(n)** operation.
 
 如果我们想要搜索节点`(1）`的索引，我们可以通过线性搜索单步执行数组`[10,7,2,5,1]`。
 
-即使堆积属性没有考虑到搜索，我们仍然可以利用它。 我们知道在最大堆中父节点总是比它的子节点大，所以如果父节点已经小于我们要查找的值，我们可以忽略那些子节点(及其子节点等等）。
+即使堆积属性没有考虑到搜索，我们仍然可以利用它。 我们知道在*max-heap*中父节点总是比它的子节点大，所以如果父节点已经小于我们要查找的值，我们可以忽略那些子节点(及其子节点等等）。
 
-假设我们想要查看堆是否包含值`8`(它没有)。 我们从根`(10)`开始。 这不是我们想要的，所以我们递归地看看它的左右孩子。 左边的孩子是`(7)`。 这也不是我们想要的，但由于这是一个最大堆，我们知道查看`(7)`的孩子是没有意义的。 它们总是小于`7`，因此永远不会等于`8`; 同样，对于正确的孩子，`(2)`。
+假设我们想要查看堆是否包含值`8`(它没有)。 我们从根`(10)`开始。 这不是我们想要的，所以我们递归地看看它的左右孩子。 左边的孩子是`(7)`。 这也不是我们想要的，但由于这是一个*max-heap*，我们知道查看`(7)`的孩子是没有意义的。 它们总是小于`7`，因此永远不会等于`8`; 同样，对于正确的孩子，`(2)`。
 
 尽管有这么小的优化，搜索仍然是**O(n)**操作。
 
@@ -460,7 +466,7 @@ You have seen that there are two types of heaps: a max-heap and a min-heap. The 
 Rather than create two different versions, `MaxHeap` and `MinHeap`, there is just one `Heap` object and it takes an `isOrderedBefore` closure. This closure contains the logic that determines the order of two values. You have probably seen this before because it is also how Swift's `sort()` works.
 有关在Swift中实现这些概念的信息，请参见[Heap.swift](Heap.swift)。 大多数代码都很简单。 唯一棘手的问题是`shiftUp()`和`shiftDown()`。
 
-您已经看到有两种类型的堆：最大堆和最小堆。 它们之间的唯一区别在于它们如何对节点进行排序：首先是最大值或最小值。
+您已经看到有两种类型的堆：*max-heap*和*min-heap*。 它们之间的唯一区别在于它们如何对节点进行排序：首先是最大值或最小值。
 
 而不是创建两个不同的版本，`MaxHeap`和`MinHeap`，只有一个`Heap`对象，它需要一个`isOrderedBefore`闭包。 此闭包包含确定两个值的顺序的逻辑。 你之前可能已经看过了，因为它也是Swift的`sort()`的工作原理。
 
@@ -480,12 +486,10 @@ var minHeap = Heap<Int>(sort: <)
 I just wanted to point this out, because where most heap implementations use the `<` and `>` operators to compare values, this one uses the `isOrderedBefore()` closure.
 我只想指出这一点，因为大多数堆实现使用`<`和`>`运算符来比较值，这个使用`isOrderedBefore()`闭包。
 
-## See also
 ## 扩展阅读
 
 [Heap on Wikipedia](https://en.wikipedia.org/wiki/Heap_%28data_structure%29)
 
-*Written for the Swift Algorithm Club by [Kevin Randrup](http://www.github.com/kevinrandrup) and Matthijs Hollemans*
 
 *作者：[Kevin Randrup](http://www.github.com/kevinrandrup)， Matthijs Hollemans*   
 *翻译：[Andy Ron](https://github.com/andyRon)*  

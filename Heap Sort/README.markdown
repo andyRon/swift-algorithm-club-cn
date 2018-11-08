@@ -1,5 +1,4 @@
-# Heap Sort
-# 堆排序
+# 堆排序(Heap Sort)
 
 Sorts an array from low to high using a heap.
 使用堆将数组从低到高排序。
@@ -8,7 +7,7 @@ A [heap](../Heap/) is a partially sorted binary tree that is stored inside an ar
 [堆](../Heap/)是一个部分排序的二叉树，存储在数组中。 堆排序算法利用堆的结构来执行快速排序。
 
 To sort from lowest to highest, heap sort first converts the unsorted array to a max-heap, so that the first element in the array is the largest.
-要从最低到最高排序，堆排序首先将未排序的数组转换为最大堆，以便数组中的第一个元素是最大的。
+要从最低到最高排序，堆排序首先将未排序的数组转换为*max-heap*，以便数组中的第一个元素是最大的。
 
 Let's say the array to sort is:
 需要排序的数组：

@@ -1,5 +1,4 @@
-# IntroSort
-# 内省排序
+# 内省排序(IntroSort)
 
 Goal: Sort an array from low to high (or high to low).
 目标：将数组从低到高（或从高到低）排序。

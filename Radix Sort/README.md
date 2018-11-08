@@ -89,7 +89,7 @@ print(bigArray)
 ```
 
 
-更多查看[基数排序的维基百科](https://en.wikipedia.org/wiki/Radix_Sort)  
+更多查看 [基数排序的维基百科](https://en.wikipedia.org/wiki/Radix_Sort)  
 [基数排序的中文维基百科](https://zh.wikipedia.org/wiki/基数排序)
 
 
@@ -102,6 +102,6 @@ print(bigArray)
 # 翻译后补充
 
 
-基数排序对数组[53, 3, 542, 748, 14, 214, 154, 63, 616]的排序，示意图(来源：https://www.cnblogs.com/skywang12345/p/3603669.html) 说明：
+基数排序对数组`[53, 3, 542, 748, 14, 214, 154, 63, 616]`的排序，示意图(来源：https://www.cnblogs.com/skywang12345/p/3603669.html) 说明：
 
 ![](image/radix_sort.jpg)

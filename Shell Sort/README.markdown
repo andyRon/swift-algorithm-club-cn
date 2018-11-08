@@ -180,7 +180,7 @@ shellSort(&arr)
 
 - 一个希尔排序的动画
 
-[Comparison Sorting Algorithms](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
+  [Comparison Sorting Algorithms](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 
 ## 参考
 
