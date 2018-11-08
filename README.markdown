@@ -194,7 +194,7 @@
 - [布隆过滤器](Bloom%20Filter/)－一个常量内存数据结构，用于概率性的检测某个元素是否在集合中。
 - [哈希集合](Hash%20Set/)－使用哈希表实现的集合。
 - [多重集](Multiset/). A set where the number of times an element is added matters. (Also known as a bag.)
-- [⏳有序集](Ordered%20Set/)－很看重元素顺序的集合。
+- [有序集](Ordered%20Set/)－很看重元素顺序的集合。
 
 ### 图
 
