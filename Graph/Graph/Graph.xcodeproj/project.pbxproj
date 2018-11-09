@@ -10,6 +10,11 @@
 		EF1F8BA22195759300AE60D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F8BA12195759300AE60D4 /* AppDelegate.swift */; };
 		EF1F8BA42195759400AE60D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1F8BA32195759400AE60D4 /* Assets.xcassets */; };
 		EF1F8BA72195759400AE60D4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1F8BA52195759400AE60D4 /* MainMenu.xib */; };
+		EF1F8BB12195761F00AE60D4 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F8BB02195761F00AE60D4 /* Edge.swift */; };
+		EF1F8BB32195763F00AE60D4 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F8BB22195763F00AE60D4 /* Vertex.swift */; };
+		EF1F8BB52195766300AE60D4 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F8BB42195766300AE60D4 /* Graph.swift */; };
+		EF1F8BB72195768100AE60D4 /* AdjacencyListGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F8BB62195768100AE60D4 /* AdjacencyListGraph.swift */; };
+		EF1F8BB92195769A00AE60D4 /* AdjacencyMatrixGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F8BB82195769A00AE60D4 /* AdjacencyMatrixGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		EF1F8BA62195759400AE60D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EF1F8BA82195759400AE60D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1F8BA92195759400AE60D4 /* Graph.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Graph.entitlements; sourceTree = "<group>"; };
+		EF1F8BB02195761F00AE60D4 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		EF1F8BB22195763F00AE60D4 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		EF1F8BB42195766300AE60D4 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		EF1F8BB62195768100AE60D4 /* AdjacencyListGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjacencyListGraph.swift; sourceTree = "<group>"; };
+		EF1F8BB82195769A00AE60D4 /* AdjacencyMatrixGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjacencyMatrixGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +62,25 @@
 			isa = PBXGroup;
 			children = (
 				EF1F8BA12195759300AE60D4 /* AppDelegate.swift */,
-				EF1F8BA32195759400AE60D4 /* Assets.xcassets */,
-				EF1F8BA52195759400AE60D4 /* MainMenu.xib */,
-				EF1F8BA82195759400AE60D4 /* Info.plist */,
+				EF1F8BB02195761F00AE60D4 /* Edge.swift */,
+				EF1F8BB22195763F00AE60D4 /* Vertex.swift */,
+				EF1F8BB42195766300AE60D4 /* Graph.swift */,
+				EF1F8BB62195768100AE60D4 /* AdjacencyListGraph.swift */,
+				EF1F8BB82195769A00AE60D4 /* AdjacencyMatrixGraph.swift */,
 				EF1F8BA92195759400AE60D4 /* Graph.entitlements */,
+				EF1F8BA82195759400AE60D4 /* Info.plist */,
+				EF1F8BAF219575D900AE60D4 /* other */,
 			);
 			path = Graph;
+			sourceTree = "<group>";
+		};
+		EF1F8BAF219575D900AE60D4 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				EF1F8BA32195759400AE60D4 /* Assets.xcassets */,
+				EF1F8BA52195759400AE60D4 /* MainMenu.xib */,
+			);
+			path = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1F8BB72195768100AE60D4 /* AdjacencyListGraph.swift in Sources */,
+				EF1F8BB52195766300AE60D4 /* Graph.swift in Sources */,
+				EF1F8BB92195769A00AE60D4 /* AdjacencyMatrixGraph.swift in Sources */,
+				EF1F8BB12195761F00AE60D4 /* Edge.swift in Sources */,
 				EF1F8BA22195759300AE60D4 /* AppDelegate.swift in Sources */,
+				EF1F8BB32195763F00AE60D4 /* Vertex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
