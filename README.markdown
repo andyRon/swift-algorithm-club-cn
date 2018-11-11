@@ -116,7 +116,7 @@
 
 - [最大公约数算法(GCD)](GCD/)－特殊福利：最小公倍数算法。
 - [排列组合算法](Combinatorics/)－还记得高中学过俄组合数学吗？
-- [⏳调度场算法](Shunting%20Yard/)－用于将中缀表达式转换为后缀表达式的经典算法。
+- [调度场算法](Shunting%20Yard/)－用于将中缀表达式转换为后缀表达式的经典算法。
 - [⏳Karatsuba Multiplication](Karatsuba%20Multiplication/). Another take on elementary multiplication.
 - [⏳Haversine Distance](HaversineDistance/). Calculating the distance between 2 points from a sphere.
 - [⏳Strassen's Multiplication Matrix](Strassen%20Matrix%20Multiplication/). Efficient way to handle matrix multiplication.
