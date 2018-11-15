@@ -3,6 +3,8 @@
 > [说明和翻译进度](Schedule.markdown)
 
 
+初次翻译时保留英文+中文，校对后去除英文。
+
 
 ---------------------------------------------------------------
 以下是原项目的README.markdown翻译部分(译注：⏳表示还未翻译)
@@ -107,8 +109,8 @@
 ### 杂项
 
 - [洗牌算法](Shuffle/)	随机搅乱数组中的内容。
-- [⏳梳排序](Comb%20Sort/)	冒泡排序算法的改进。
-- [⏳凸包算法](Convex%20Hull/)
+- [梳排序](Comb%20Sort/)	冒泡排序算法的改进。
+- [凸包算法](Convex%20Hull/)
 - [⏳Miller-Rabin素性检测](Miller-Rabin%20Primality%20Test/). Is the number a prime number?
 - [⏳MinimumCoinChange](MinimumCoinChange/). A showcase for dynamic programming.
 
@@ -117,7 +119,7 @@
 - [最大公约数算法(GCD)](GCD/)－特殊福利：最小公倍数算法。
 - [排列组合算法](Combinatorics/)－还记得高中学过俄组合数学吗？
 - [调度场算法](Shunting%20Yard/)－用于将中缀表达式转换为后缀表达式的经典算法。
-- [⏳Karatsuba Multiplication](Karatsuba%20Multiplication/). Another take on elementary multiplication.
+- [⏳karatsuba乘法](Karatsuba%20Multiplication/). Another take on elementary multiplication.
 - [⏳Haversine Distance](HaversineDistance/). Calculating the distance between 2 points from a sphere.
 - [⏳Strassen's Multiplication Matrix](Strassen%20Matrix%20Multiplication/). Efficient way to handle matrix multiplication.
 
@@ -208,7 +210,7 @@
 - [最小生成树(加权图)](Minimum%20Spanning%20Tree/)
 
 - [任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/)
-- [⏳Dijkstra's shortest path algorithm](Dijkstra%20Algorithm/)
+- [⏳迪杰斯特拉算法(Dijkstra's shortest path algorithm)](Dijkstra%20Algorithm/)
 
 ## 智力题
 
