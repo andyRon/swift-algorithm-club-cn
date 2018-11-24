@@ -260,7 +260,7 @@ hashTable["firstName"] = nil       // delete
 
 ## 然后去哪儿？(Where to go from here?)
 
-`HashTable`非常基础。 将作为Swift标准库高效集成为`SequenceType`。
+`HashTable`非常基础。 作为Swift标准库高效集成为`SequenceType`。
 
 *作者：Matthijs Hollemans*   
 *翻译：[Andy Ron](https://github.com/andyRon)*  
