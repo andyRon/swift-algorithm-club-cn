@@ -83,6 +83,7 @@
 | 洗牌算法   					| andyRon    |  Y            |	    	|			|
 | 梳排序  					| andyRon    |  Y            |	    	|			|
 | 凸包算法  					| andyRon    |  Y            |	    	|			|
+| Miller-Rabin素性检测  		| andyRon    |  Y            |	    	|			|
 
 ### 数学算法
 
