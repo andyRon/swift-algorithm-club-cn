@@ -112,7 +112,7 @@
 - [梳排序](Comb%20Sort/)	冒泡排序算法的改进。
 - [凸包算法](Convex%20Hull/)
 - [Miller-Rabin素性检测](Miller-Rabin%20Primality%20Test/). Is the number a prime number?
-- [⏳MinimumCoinChange](MinimumCoinChange/). A showcase for dynamic programming.
+- [MinimumCoinChange](MinimumCoinChange/). A showcase for dynamic programming.
 
 ### 数学算法
 
