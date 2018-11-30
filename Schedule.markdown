@@ -112,7 +112,7 @@
 |    Bit Set				| andyRon    |     Y         |	    	|			|
 | Fixed Size Array			| andyRon    |     Y         |	    	|			|
 | Ordered Array				| andyRon    |     Y         |	    	|			|
-| Rootish Array Stack		| andyRon    |               |	    	|			|
+| Rootish Array Stack		| andyRon    |     Y         |	    	|			|
 
 ### 队列
 
