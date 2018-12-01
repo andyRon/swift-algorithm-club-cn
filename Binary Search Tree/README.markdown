@@ -46,7 +46,6 @@
 
 > ** 注意：** 节点的 *高度* 是从该节点到最低叶节点所需的步骤数。 整棵树的*高度*是从根到最低叶节点的距离。 二叉搜索树上的许多操作都以树的高度表示。
 
-By following this simple rule -- smaller values on the left, larger values on the right -- we keep the tree sorted, so whenever we query it, we can check if a value is in the tree.
 通过遵循这个简单的规则 —— 左侧较小的值，右侧较大的值 —— 我们保持树的排序，因此无论何时都可以查询某值是否在树种。
 
 
