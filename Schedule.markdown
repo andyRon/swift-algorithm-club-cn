@@ -138,7 +138,7 @@
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Tree  					| andyRon    |  Y            | andyRon	| Y			|
 | Binary Tree  				| andyRon    |  Y            | andyRon	| Y			|
-| Binary Search Tree  		| andyRon    |  Y            |	    	|			|
+| Binary Search Tree  		| andyRon    |  Y            | andyRon	| Y❗️		|
 | AVL Tree 					| andyRon    |  Y            |	    	|			|
 | Red-Black Tree   			| andyRon    |  Y            |	    	|			|
 | Splay Tree   				| andyRon    |  Y            |	    	|			|
@@ -181,3 +181,6 @@
 | All-Pairs Shortest Paths  		| andyRon    |  Y            |	    	|			|
 | Dijkstra's algorithm   			|    		 |               |	    	|			|
 |    								|    		 |               |	    	|			|
+
+
+> ❗️：表示理解不够深刻
