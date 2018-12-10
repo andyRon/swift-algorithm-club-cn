@@ -1,4 +1,5 @@
 # Weighted graph general concepts
+# 加权图一般概念
 
 Every weighted graph should contain:
 1. Vertices/Nodes (I will use "vertex" in this readme).

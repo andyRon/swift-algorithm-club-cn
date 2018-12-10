@@ -1,11 +1,12 @@
-# Red-Black Tree
-# 红黑树
+
+
+# 红黑树(Red-Black Tree)
 
 A red-black tree (RBT) is a balanced version of a [Binary Search Tree](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search%20Tree) guaranteeing that the basic operations (search, predecessor, successor, minimum, maximum, insert and delete) have a logarithmic worst case performance.
-红黑树（RBT）是[二叉搜索树](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search%20Tree)的平衡版本，保证基本 操作（搜索，前驱，后继，最小，最大，插入和删除）具有对数最坏情况的性能。
+红黑树（RBT）是[二叉搜索树](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search%20Tree)的平衡版本，保证基本操作（搜索，前驱，后继，最小，最大，插入和删除）具有对数最坏情况的性能。
 
 Binary search trees (BSTs) have the disadvantage that they can become unbalanced after some insert or delete operations. In the worst case, this could lead to a tree where the nodes build a linked list as shown in the following example:
-二进制搜索树（BST）的缺点是它们在一些插入或删除操作之后可能变得不平衡。 在最坏的情况下，这可能会导致节点构建链接列表的树，如以下示例所示：
+二叉搜索树（BST）的缺点是它们在一些插入或删除操作之后可能变得不平衡。 在最坏的情况下，这可能会变成链接列表的树，如以下示例所示：
 
 ```
 a
@@ -30,13 +31,15 @@ To prevent this issue, RBTs perform rebalancing operations after an insert or de
 
 1. 每个节点都是红色或黑色
 2. 根是黑色的
-3. 每片叶子（nullLeaf）都是黑色的
+3. 叶节点（nullLeaf）都是黑色的
 4. 如果节点为红色，则其子节点均为黑色
 5. 对于每个节点，从节点到后代叶子的所有路径都包含相同数量的黑色节点
 
 Property 5 includes the definition of the black-height of a node x, bh(x), which is the number of black nodes on a path from this node down to a leaf not counting the node itself.
 From [CLRS]
-属性5包括节点x的黑色高度的定义，bh(x)，它是从该节点到不计算节点本身的叶子的路径上的黑色节点的数量。
+属性5包括节点x的黑色高度的定义，bh(x)，它是从该节点到不计算节点本身的叶子的路径上的黑色节点的数量。（来自 [CLRS]）
+
+> **译注：** CLRS 是指《算法导论》
 
 ## Methods
 ## 方法
@@ -80,7 +83,7 @@ For convenience, all nil-pointers to children or the parent (except the parent o
 
 Left rotation (around x):
 Assumes that x.rightChild y is not a nullLeaf, rotates around the link from x to y, makes y the new root of the subtree with x as y's left child and y's left child as x's right child, where n = a node, [n] = a subtree
-左旋（x周围）：
+左旋（围绕x）：
 假设x.rightChild y不是nullLeaf，围绕从x到y的链接旋转，使y成为子树的新根，x为y的左子，y的左子为x的右子，其中 n = a node, [n] = a subtree
 
 ```
@@ -94,7 +97,7 @@ Assumes that x.rightChild y is not a nullLeaf, rotates around the link from x to
 
 Right rotation (around y):
 Assumes that y.leftChild x is not a nullLeaf, rotates around the link from y to x, makes x the new root of the subtree with y as x's right child and x's right child as y's left child, where n = a node, [n] = a subtree
-右旋（y左右）：
+右旋（围绕y）：
 假设y.leftChild x不是nullLeaf，围绕从y到x的链接旋转，使x成为子树的新根，其中y为x的右子，x的右子为y的左子，其中 n = a node, [n] = a subtree
 
 ```
@@ -266,12 +269,13 @@ The overall runtime of delete is O(log n).
 由于我们在最多O(log n)次执行情况2并且所有其他步骤最多执行一次，因此我们有O(log n)重新着色并且最多3次旋转。
 删除的总体运行时间是O(log n)。
 
-## Resources:
-## 资源
+## 资源：
 
 [CLRS]  T. Cormen, C. Leiserson, R. Rivest, and C. Stein. "Introduction to Algorithms", Third Edition. 2009
 
-*Written for Swift Algorithm Club by Ute Schiehlen. Updated from Jaap Wijnen and Ashwin Raghuraman's contributions.*
+[CLRS]  T. Cormen, C. Leiserson, R. Rivest, and C. Stein. 《算法导论》, 第三版. 2009
+
+
 
 *作者：Ute Schiehlen， Jaap Wijnen， Ashwin Raghuraman*   
 *翻译：[Andy Ron](https://github.com/andyRon)*  
