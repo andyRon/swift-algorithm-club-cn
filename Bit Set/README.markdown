@@ -1,11 +1,10 @@
-# Bit Set
-# 比特集
+# 比特集(Bit Set)
 
 A fixed-size sequence of *n* bits. Also known as bit array or bit vector.
-固定大小的 *n* 位序列。 也称为位阵列或位向量。
+固定大小的 *n* 位序列。 也称为位数组或位向量。
 
 To store whether something is true or false you use a `Bool`. Every programmer knows that... But what if you need to remember whether 10,000 things are true or not?
-要存储某些内容是真还是假使用`Bool`类型。 每个程序员都知道......但是如果你需要记住10,000件事情是否真实呢？
+要存储某些内容是 真还是假 使用`Bool`类型。 每个程序员都知道......但是如果你需要记住10,000件事情是否是真呢？
 
 You could make an array of 10,000 booleans but you can also go hardcore and use 10,000 bits instead. That's a lot more compact because 10,000 bits fit in less than 160 `Int`s on a 64-bit CPU.
 你可以制作一个包含10,000个布尔值的数组，但你也可以使用10,000位代替。 这更加紧凑，因为在64位CPU上，10,000位正好小于160个`Int`。
@@ -13,11 +12,10 @@ You could make an array of 10,000 booleans but you can also go hardcore and use 
 Since manipulating individual bits is a little tricky, you can use `BitSet` to hide the dirty work.
 因为操纵单个位有点棘手，所以你可以使用`BitSet`来隐藏棘手的工作。
 
-## The code
 ## 代码
 
 A bit set is simply a wrapper around an array. The array doesn't store individual bits but larger integers called the "words". The main job of `BitSet` is to map the bits to the right word.
-位集只是数组的包装器。 该数组不存储单个位，而是存储称为“字”的较大整数。 “BitSet”的主要工作是将位映射到正确的单词。
+比特集只是数组的包装器。 该数组不存储单个位，而是存储称为“words”的较大整数。 `BitSet`的主要工作是将位映射到正确的单词。
 
 ```swift
 public struct BitSet {
@@ -73,7 +71,7 @@ The `indexOf()` function returns the array index of the word, as well as a "mask
 `indexOf()`函数返回单词的数组索引，以及一个“掩码”，它显示该位在该单词内的确切位置。
 
 For example, `indexOf(2)` returns the tuple `(0, 4)` because bit 2 is in the first word (index 0). The mask is 4. In binary the mask looks like the following:
-例如，`indexOf(2)`返回元组`(0,4)`，因为第2位在第一个字（索引0）中。 掩码为4.在二进制中，掩码如下所示：
+例如，`indexOf(2)`返回元组`(0,4)`，因为第2位在第一个字（索引0）中。 掩码为4。在二进制中，掩码如下所示：
 
 	0010000000000000000000000000000000000000000000000000000000000000
 
@@ -81,10 +79,10 @@ That 1 points at the second bit in the word.
 那1指向该词的第二位。
 
 > **Note:** Remember that everything is shown in little-endian order, including the bits themselves. Bit 0 is on the left, bit 63 on the right.
-> **注意：** 请记住，所有内容都以小端顺序显示，包括位本身。 位0位于左侧，位63位于右侧。
+> **注意：** 请记住，所有内容都以小端顺序显示，包括位本身。 位0位于最左侧，位63位于最右侧。
 
 Another example: `indexOf(127)` returns the tuple `(1, 9223372036854775808)`. It is the last bit of the second word. The mask is:
-另一个例子：`indexOf(127)`返回元组`（1,9223372036854775808）`。 这是第二个单词的最后一点。 掩码是：
+另一个例子：`indexOf(127)`返回元组`（1,9223372036854775808）` （9223372036854775808 = 2^63）。 这是第二个单词的最后一点。 掩码是：
 
 	0000000000000000000000000000000000000000000000000000000000000001
 

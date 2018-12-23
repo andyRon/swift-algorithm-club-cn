@@ -59,7 +59,7 @@
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon | Y		    |
 |Selection Sort  			| andyRon    |   Y  		 |  andyRon | Y			|
 |Shell Sort    				| andyRon    |   Y           |	andyRon | Y			|
-|Quicksort 					| andyRon    |   Y  		 |  andyRon | 			|
+|Quicksort 					| andyRon    |   Y  		 |  andyRon | Y			|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | Y			|
 |Heap Sort    				| andyRon    |   Y           |	    	|			|
 |Introsort    				| andyRon    |   Y           |	    	|			|

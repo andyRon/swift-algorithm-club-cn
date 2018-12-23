@@ -234,7 +234,7 @@ In ASCII art the array is divided up like this:
 	         i
 	             j
 
-“values <= pivot”区域现在是`[0,3]”。 让我们再做一次......`9`大于枢轴，所以简单地向前跳：
+“values <= pivot”区域现在是`[0,3]`。 让我们再做一次......`9`大于枢轴，所以简单地向前跳：
 
 	[ 0, 3 | 10, 9 | 2, 14, 26, 27, 1, 5, 8, -1 | 8 ]
 	  low                                         high
