@@ -216,7 +216,7 @@
 
 很多程序员在面试时都会被问到一些算法性质的智力题。这里只囊括了一点比较有趣的。想了解更多的智力题（及答案），请浏览[这里](http://elementsofprogramminginterviews.com/)，还有[这里](http://www.crackingthecodinginterview.com)。
 
-- [⏳二和问题](Two-Sum%20Problem/)
+- [二和问题](Two-Sum%20Problem/)
 - [⏳Three-Sum/Four-Sum Problem](3Sum%20and%204Sum/)
 - [⏳Fizz Buzz](Fizz%20Buzz/)
 - [⏳蒙提霍尔问题](Monty%20Hall%20Problem/)
