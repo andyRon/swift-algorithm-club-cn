@@ -1,10 +1,12 @@
-
-
-
+/**
+ * 固定长度数组
+ */
 struct FixedSizeArray<T> {
+    /// 数组最大存储元素数量
     private var maxSize: Int
     private var defaultValue: T
     private var array: [T]
+    /// 数组当前包含的元素数量
     private(set) var count = 0
     
     init(maxSize: Int, defaultValue: T) {
@@ -43,3 +45,5 @@ struct FixedSizeArray<T> {
     }
     
 }
+
+var a = FixedSizeArray(maxSize: 10, defaultValue: 0)
