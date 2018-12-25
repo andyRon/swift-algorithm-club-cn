@@ -111,7 +111,7 @@
 |    Array2D				| andyRon 	 |     Y         | andyRon	| Y			|
 |    Bit Set				| andyRon    |     Y         |	    	|			|
 | Fixed Size Array			| andyRon    |     Y         | andyRon	| Y			|
-| Ordered Array				| andyRon    |     Y         |	    	|			|
+| Ordered Array				| andyRon    |     Y         | andyRon	| Y			|
 | Rootish Array Stack		| andyRon    |     Y         |	    	|			|
 
 ### 队列

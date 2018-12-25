@@ -1,6 +1,7 @@
 
-
-
+/**
+ * 有序数组
+ */
 public struct OrderedArray<T: Comparable> {
     fileprivate var array = [T]()
     
@@ -57,3 +58,14 @@ extension OrderedArray: CustomStringConvertible {
         return array.description
     }
 }
+
+
+var a = OrderedArray<Int>(array: [5, 1, 3, 9, 7, -1])
+a              // [-1, 1, 3, 5, 7, 9]
+
+a.insert(4)    // inserted at index 3
+a              // [-1, 1, 3, 4, 5, 7, 9]
+
+a.insert(-2)   // inserted at index 0
+a.insert(10)   // inserted at index 8
+a              // [-2, -1, 1, 3, 4, 5, 7, 9, 10]

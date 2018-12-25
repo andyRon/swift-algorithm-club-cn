@@ -150,5 +150,5 @@ var a = FixedSizeArray(maxSize: 10, defaultValue: 0)
 
 *作者：Matthijs Hollemans*  
 *翻译：[Andy Ron](https://github.com/andyRon)*   
-*翻译：[Andy Ron](https://github.com/andyRon)*   
+*校对：[Andy Ron](https://github.com/andyRon)*   
 
