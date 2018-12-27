@@ -112,7 +112,7 @@
 |    Bit Set				| andyRon    |     Y         |	    	|			|
 | Fixed Size Array			| andyRon    |     Y         | andyRon	| Y			|
 | Ordered Array				| andyRon    |     Y         | andyRon	| Y			|
-| Rootish Array Stack		| andyRon    |     Y         |	    	|			|
+| Rootish Array Stack		| andyRon    |     Y         | andyRon	| Y			|
 
 ### 队列
 
@@ -139,7 +139,7 @@
 | Tree  					| andyRon    |  Y            | andyRon	| Y			|
 | Binary Tree  				| andyRon    |  Y            | andyRon	| Y			|
 | Binary Search Tree  		| andyRon    |  Y            | andyRon	| Y❗️		|
-| AVL Tree 					| andyRon    |  Y            | andyRon  | Y			|
+| AVL Tree 					| andyRon    |  Y            | andyRon  | Y❓		|
 | Red-Black Tree   			| andyRon    |  Y            |	    	|			|
 | Splay Tree   				| andyRon    |  Y            |	    	|			|
 | Threaded Binary Tree   	| andyRon    |  Y            |	    	|			|
@@ -190,3 +190,4 @@
 
 
 > ❗️：表示理解不够深刻
+> ❓：有疑问

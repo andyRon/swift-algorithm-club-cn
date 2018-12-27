@@ -1,13 +1,20 @@
 
 import Darwin
 
+/*:
+ Rootish Array Stack
+ 
+ ![](https://github.com/andyRon/swift-algorithm-club-cn/raw/master/Rootish%20Array%20Stack/images/RootishArrayStackExample2.png)
+ */
 public struct RootishArrayStack<T> {
     
+    /// 可调整大小的数组
     fileprivate var blocks = [Array<T?>]()
     fileprivate var internalCount = 0
     
     public init() { }
     
+    /// 只读，当前包含的元素数量
     var count: Int {
         return internalCount
     }
@@ -36,11 +43,12 @@ public struct RootishArrayStack<T> {
         return blocks[block][innerBlockIndex]
     }
     
+    /// 索引元素所在的block索引
     fileprivate func block(fromIndex index: Int) -> Int {
         let block = Int(ceil((-3.0 + sqrt(9.0 + 8.0*Double(index))) / 2))
         return block
     }
-    
+    /// 索引元素所在的block的内部索引
     fileprivate func innerBlockIndex(fromIndex index: Int, fromBlock block: Int) -> Int {
         return index - block * (block + 1) / 2
     }
