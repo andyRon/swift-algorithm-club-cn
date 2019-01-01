@@ -120,7 +120,7 @@
 |---------------------------|------------|:-------------:|----------|:---------:|
 |   Stack 					| andyRon  	 |     Y         | andyRon	| Y			|
 |   Queue 					| andyRon    |     Y         | andyRon	| Y			|
-|   Deque 					| andyRon    |     Y         |	    	|			|
+|   Deque 					| andyRon    |     Y         | andyRon	| Y			|
 |   Priority Queue 			| andyRon    |     Y         |	    	|			|
 |Bounded Priority Queue    	| andyRon    |     Y         |	    	|			|
 |  Ring Buffer				| andyRon    |     Y         |	    	|			|

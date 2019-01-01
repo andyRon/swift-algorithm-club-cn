@@ -1,4 +1,3 @@
-
 /**
  * 优化的双端队列。
  * 出队和入队操作都是 O(1)。
@@ -29,7 +28,7 @@ public struct Deque<T> {
     }
     
     public mutating func enqueueFront(_ element: T) {
-        if head == 0 {
+        if head == 0 {  // 队列前面空白空间耗尽时，需要添加
             capacity *= 2
             let emptySpace = [T?](repeating: nil, count: capacity)
             array.insert(contentsOf: emptySpace, at: 0)
@@ -46,7 +45,7 @@ public struct Deque<T> {
         array[head] = nil
         head += 1
         
-        if capacity >= originalCapacity && head >= capacity*2 {
+        if capacity >= originalCapacity && head >= capacity*2 { // 清理队列前面有时多于的空白空间
             let amountToRemove = capacity + capacity/2
             array.removeFirst(amountToRemove)
             head -= amountToRemove
@@ -79,17 +78,3 @@ public struct Deque<T> {
         }
     }
 }
-
-
-var deque = Deque<Int>()
-deque.enqueue(1)
-deque.enqueue(2)
-deque.enqueue(3)
-deque.enqueue(4)
-
-deque.dequeue()       // 1
-deque.dequeueBack()   // 4
-
-deque.enqueueFront(5) // deque: [5, 2, 3]
-
-deque.dequeue()       // 5
