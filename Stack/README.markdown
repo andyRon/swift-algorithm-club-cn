@@ -72,5 +72,6 @@ public struct Stack<T> {
 
 关于栈的有趣知识：每次你调用函数或方法，CPU都会将函数返回地址压入到运行栈中。当这个函数执行结束的时候，CPU将返回地址从栈中取出，并据此返回到函数被调用的位置。所以，如果不断地调用太多的函数(例如死递归函数)，就会得到一个所谓的“栈溢出(stack overflow)” 错误，因为CPU运行栈没有空间了。
 
-*作者：Matthijs Hollemans；译者：KSCO*  
+*作者：Matthijs Hollemans*  
+*译者：KSCO*    
 *校队：[Andy Ron](https://github.com/andyRon)*

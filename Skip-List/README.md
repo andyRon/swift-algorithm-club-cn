@@ -1,11 +1,11 @@
-# Skip List
-# 跳跃列表
+# 跳表(Skip List)
 
 Skip List is a probablistic data-structure  with same logarithmic time bound and
 efficiency  as AVL/  or  Red-Black  tree and  provides  a  clever compromise  to
 efficiently support  search and update  operations and is relatively  simpler to
 implement compared to other map data structures.
-跳跃列表是一个概率数据结构，具有相同的对数时间限制和作为AVL/或红黑树的效率，并提供了一个聪明的妥协有效地支持搜索和更新操作，并且相对简单与其他地图数据结构相比，实现。
+
+跳表是一个概率数据结构，具有相同的对数时间限制和作为AVL或红黑树的效率，并提供了一个聪明的妥协有效地支持搜索和更新操作，并且相对简单与其他映射数据结构相比，实现。
 
 A skip  list *S*  consists of  series of  sorted linked  lists *{L0,  ..., Ln}*,
 layered hierarchicaly and each layer *L* stores  a subset of items in layer *L0*
@@ -16,26 +16,25 @@ layers serve as  express lanes to the layer underneath  them, effectively making
 fast O(log n) searching possible by  skipping lanes and reducing travel distance
 and in worse case  searching degrades to O (n), as  expected with regular linked
 list.
-跳跃列表 *S* 由一系列排序链表 *{L0, ..., Ln}* 组成，分层次的层次结构和每一层 *L* 存储图层中的项目子集 *L0* 按增量顺序。层 *{L1, ... Ln}* 中的项目是随机选择的基于硬币翻转功能，概率为1/2。 为了遍历，每一个图层中的项目包含对下面节点和下一个节点的引用。 这个层作为快速通道到它们下面的层，有效地制作快速O(log n) 搜索可以通过跳过车道和减少行驶距离并且在更糟糕的情况下，搜索降级为O(n)，正如预期的那样经常链接名单。
+跳表 *S* 由一系列排序链表 *{L0, ..., Ln}* 组成，分层次的层次结构和每一层 *L* 存储图层中的项目子集 *L0* 按增量顺序。层 *{L1, ... Ln}* 中的项目是随机选择的基于硬币翻转功能，概率为1/2。为了遍历，每一个图层中的项目包含对下面节点和下一个节点的引用。这个层作为快速通道到它们下面的层，有效地制作快速O(log n) 搜索可以通过跳过车道和减少行驶距离并且在更糟糕的情况下，搜索降级为O(n)，正如预期的那样经常链接名单。
 
 For a skip list *S*:
-对于跳跃列表 *S*
+对于跳表 *S*
 
 1. List *L0* contains every inserted item.
 2.  For lists *{L1, ..., Ln}*, *Li*  contains a randomly generated subset of the
    items in *Li-1*
 3. Height is determined by coin-flipping.
 
-1. 列表 *L0* 包含每个插入的项目。
-2. 对于列表*{L1, ..., Ln}*，*Li* 包含随机生成的子集
-    物品*Li-1*
+1. 链表 *L0* 包含每个插入的项目。
+5. 对于列表*{L1, ..., Ln}*，*Li* 包含随机生成的子集物品*Li-1*
 3. 高度由硬币翻转决定。
 
 ![Schematic view](Images/Intro.png)
 Figure 1
 
 
-# Searching
+
 # 搜索
 
 Searching for  element *N* starts by  traversing from top most  layer *Ln* until *L0*.
@@ -48,14 +47,17 @@ value of *K.next* is equal to *N*,  search is terminated and we return *K.next*,
 otherwise drop underneath using *K.down* to the node below ( at layer Ln-1 ) and
 repeat the process until *L0* where *K.down* is `nil` which indicates that level
 is *L0* and item doesn't exists.
+
 我们的目标是找到一个元素 *K*，使其在最右边的值当前层的位置，小于目标项及其后续节点大于等于或等于零 (  *K.key < N.key  <= (K.next.key or nil)*  。 如果 *K.next* 的值等于 *N*，搜索终止，我们返回 *K.next*，否则使用*K.down*下面到下面的节点（在层Ln-1）和重复该过程，直到*L0*，其中*K.down*为`nil`，表示该级别是*L0*且项目不存在。
 
-### Example:
-## 例子
+
+
+## 例子：
 
 ![Inserting first element](Images/Search1.png)
 
-# Inserting
+
+
 # 插入
 
 Inserting  element  *N*  has  a  similar process  as  searching.  It  starts  by
@@ -102,15 +104,16 @@ In case 2:
 repeat until stack is empty Pop an item *F* from stack and update the references
 accordingly.  *F.next* will be *K.next* and *K.next* will be *F*
 重复直到堆栈为空从堆栈中弹出项目*F*并更新引用因此。 *F.next*将是*K.next*和*K.next*将是*F*
-	
+​	
 when  stack  is  empty Create  a  new  layer  consisintg  of a  head  node  *NM*
 referencing  head node  of layer  below  and *NM.next*  referencing new  element
 *N*. New element *N* referencing element *N* at previous layer.
 当stack为空时创建一个头节点的新层consisintg *NM* 引用下面层的头节点和*NM.next*引用新元素*N*。 新元素*N*在前一层引用元素*N*。
-		 
+​		 
 
-### Example:
-## 例子
+
+
+## 例子：
 
 Inserting 13. with coin flips (0)
 
@@ -128,20 +131,20 @@ Inserting 20. with 4 times coin flips (1)
 ![Inserting first element](Images/Insert11.png)
 ![Inserting first element](Images/Insert12.png)
 
-# Removing
+
 # 删除
 
-Removing works similar to insert procedure.
+
 删除工作类似于插入过程。
 
 TODO
 
-# See also
+
+
 # 扩展阅读
 
 [跳跃列表在维基百科](https://en.wikipedia.org/wiki/Skip_list) 
 
-Written for Swift Algorithm Club by [Mike Taghavi](https://github.com/mitghi)
-
 *作者：[Mike Taghavi](https://github.com/mitghi)*    
-*翻译：[Andy Ron](https://github.com/andyRon)*
+*翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  

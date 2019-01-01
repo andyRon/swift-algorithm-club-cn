@@ -279,7 +279,8 @@ q.count             // 1
 
 队列有很多变体，包括[双端队列](../Deque/)，一个两端都可以出队和入队的队列；[优先队列](../Priority%20Queue/)，一个有序的队列，最重要的元素排在队首。
 
-*作者：Matthijs Hollemans；译者：KSCO*
+*作者：Matthijs Hollemans*  
+*译者：KSCO*  
 *校队：[Andy Ron](https://github.com/andyRon)*
 
 
