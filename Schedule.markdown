@@ -94,6 +94,7 @@
 | Combinatorics	   			| andyRon    |  Y            |	    	|			|
 | Shunting Yard	   			| andyRon    |  Y            |	    	|			|
 | karatsuba乘法	   			| andyRon    |  Y            |	    	|			|
+| Haversine Distance	   	| andyRon    |  Y            |	    	|			|
 
 
 ### 机器学习
