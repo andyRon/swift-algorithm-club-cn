@@ -180,7 +180,7 @@
 | Minimum Spanning Tree   			| andyRon    |  Y            |	    	|			|
 | Minimum Spanning Tree(unweighted)	| andyRon    |  Y            |	    	|			|
 | All-Pairs Shortest Paths  		| andyRon    |  Y            |	    	|			|
-| Dijkstra's algorithm   			|    		 |               |	    	|			|
+| Dijkstra's algorithm   			| andyRon    |  Y            |	    	|			|
 |    								|    		 |               |	    	|			|
 
 ### 智力题

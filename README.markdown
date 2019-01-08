@@ -210,7 +210,7 @@
 - [最小生成树(加权图)](Minimum%20Spanning%20Tree/)
 
 - [任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/)
-- [⏳迪杰斯特拉算法(Dijkstra's shortest path algorithm)](Dijkstra%20Algorithm/)
+- [迪杰斯特拉算法(Dijkstra's shortest path algorithm)](Dijkstra%20Algorithm/)
 
 ## 智力题
 
