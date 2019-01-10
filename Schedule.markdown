@@ -1,11 +1,11 @@
 # 说明
 
+> 部分翻译来自[ksco/swift-algorithm-club-cn](https://github.com/ksco/swift-algorithm-club-cn)
 
 
 
 # 翻译进度
 
-> 部分翻译来自[ksco/swift-algorithm-club-cn](https://github.com/ksco/swift-algorithm-club-cn)
 
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
@@ -101,6 +101,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | k-Means Clustering   		| andyRon    |  Y            |	    	|			|
+| Naive Bayes Classifier   	| andyRon    |               |	    	|			|
 
 
 ## 数据结构
@@ -147,7 +148,7 @@
 | Segment Tree   			| andyRon    |  Y            |	    	|			|
 |   Lazy Propagation   		| andyRon    |  Y            |	    	|			|
 | Sparse Table   			| andyRon    |  Y            |	    	|			|
-| Heap   					| andyRon    |  Y            |	    	|			|
+| Heap   					| andyRon    |  Y            | andyRon | Y❗️ |
 | Trie   					| andyRon    |  Y            |	    	|			|
 | B-Tree   					| andyRon    |  Y            |	    	|			|
 | QuadTree   				| andyRon    |  Y            |	    	|			|
@@ -188,6 +189,14 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Two-Sum Problem  			|   andyRon  | Y             |	    	|			|
+| Three-Sum/Four-Sum Problem|            |              |	    	|			|
+| Fizz Buzz  			    |            |              |	    	|			|
+| Monty Hall Problem  		|            |              |	    	|			|
+| Finding Palindromes 		|            |              |	    	|			|
+| Dining Philosophers		|            |              |	    	|			|
+| Egg Drop Problem			|            |              |	    	|			|
+| Encoding and Decoding Binary Tree |            |              |	    	|			|
+
 
 
 > ❗️：表示理解不够深刻
