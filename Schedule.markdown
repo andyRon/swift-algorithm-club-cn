@@ -1,7 +1,8 @@
 # 说明
 
-> 部分翻译来自[ksco/swift-algorithm-club-cn](https://github.com/ksco/swift-algorithm-club-cn)
+- 部分翻译来自[ksco/swift-algorithm-club-cn](https://github.com/ksco/swift-algorithm-club-cn)
 
+- 初次翻译时保留英文+中文，校对后去除英文。`README_en.md`文件是原文。
 
 
 # 翻译进度
@@ -17,6 +18,7 @@
 |Algorithm Design		    | andyRon	 |   Y           |	andyRon	|	Y		|
 
 
+
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|	
 |Stack  					| andyRon    |   Y  		 |  andyRon |  Y		|
@@ -25,6 +27,8 @@
 |Binary Search  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon |  Y		|
 |Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
+
+
 
 ## 算法列表
 
@@ -148,7 +152,7 @@
 | Segment Tree   			| andyRon    |  Y            |	    	|			|
 |   Lazy Propagation   		| andyRon    |  Y            |	    	|			|
 | Sparse Table   			| andyRon    |  Y            |	    	|			|
-| Heap   					| andyRon    |  Y            | andyRon | Y❗️ |
+| Heap   					| andyRon    |  Y            | andyRon  | Y❗️ 		|
 | Trie   					| andyRon    |  Y            |	    	|			|
 | B-Tree   					| andyRon    |  Y            |	    	|			|
 | QuadTree   				| andyRon    |  Y            |	    	|			|

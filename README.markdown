@@ -1,13 +1,14 @@
-> 注：本项目翻译自[Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)。  
-> 欢迎有兴趣学习算法和数据结构，有时间的小伙伴一起参与翻译，欢迎issue，或者直接提交pull request。  
+
+> 本项目是我对[Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)，边学习边翻译的项目。由于能力有限，如发现错误或翻译不妥，请指正，欢迎pull request。也欢迎有兴趣、有时间的小伙伴一起参与翻译和学习🤓。当然也欢迎加⭐️，🤩🤩🤩🤨🤪。
+
 > [说明和翻译进度](Schedule.markdown)
 
 
-初次翻译时保留英文+中文，校对后去除英文。
+
 
 
 ---------------------------------------------------------------
-以下是原项目的README.markdown翻译部分(⏳表示还未翻译)
+以下是原项目的README.markdown翻译(⏳表示还未翻译)
 ---------------------------------------------------------------
 
 
