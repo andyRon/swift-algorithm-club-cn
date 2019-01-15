@@ -65,7 +65,7 @@
 |Shell Sort    				| andyRon    |   Y           |	andyRon | Y			|
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | Y			|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | Y			|
-|Heap Sort    				| andyRon    |   Y           |	    	|			|
+|Heap Sort    				| andyRon    |   Y           | andyRon	| Y			|
 |Introsort    				| andyRon    |   Y           |	    	|			|
 |Counting Sort    			| andyRon    |   Y           | andyRon  | Y			|
 |Radix Sort    				| andyRon    |   Y           | andyRon	| Y			|

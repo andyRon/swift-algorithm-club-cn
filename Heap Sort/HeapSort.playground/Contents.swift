@@ -1,9 +1,8 @@
-/**
- * 堆
- */
+import Foundation
+
 public struct Heap<T> {
     
-    var nodes = [T]()
+    public var nodes = [T]()
     
     private var orderCriteria: (T, T) -> Bool
     
@@ -24,12 +23,12 @@ public struct Heap<T> {
         }
     }
     
-//    private mutating func buildHeap(fromArray array: [T]) {
-//        elements = array
-//        for i in stride(from: (nodes.count/2-1), through: 0, by: -1) {
-//            shiftDown(index: i, heapSize: elements.count)
-//        }
-//    }
+    //    private mutating func buildHeap(fromArray array: [T]) {
+    //        elements = array
+    //        for i in stride(from: (nodes.count/2-1), through: 0, by: -1) {
+    //            shiftDown(index: i, heapSize: elements.count)
+    //        }
+    //    }
     
     public var isEmpty: Bool {
         return nodes.isEmpty
@@ -153,3 +152,28 @@ extension Heap where T: Equatable {
     }
     
 }
+
+
+// MARK: - 堆排序
+extension Heap {
+    public mutating func sort() -> [T] {
+        for i in stride(from: (nodes.count - 1), through: 1, by: -1) {
+            nodes.swapAt(0, i)
+            shiftDown(from: 0, until: i)
+        }
+        return nodes
+    }
+}
+// 堆排序的辅助函数
+public func heapsort<T>(_ a: [T], _ sort: @escaping (T, T) -> Bool) -> [T] {
+    let reverseOrder = {i1, i2 in sort(i2, i1) }
+    var h = Heap(array: a, sort: reverseOrder)
+    return h.sort()
+}
+
+var h1 = Heap(array: [5, 13, 2, 25, 7, 17, 20, 8, 4], sort: >)
+let a1 = h1.sort()
+print(a1)
+
+let a2 = heapsort([5, 13, 2, 25, 7, 17, 20, 8, 4], <)
+print(a2)
