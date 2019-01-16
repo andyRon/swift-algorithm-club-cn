@@ -1,5 +1,6 @@
-# Topological Sort
-# 拓扑排序
+
+
+# 拓扑排序(Topological Sort)
 
 Topological sort is an algorithm that orders a directed graph such that for each directed edge *u→v*, vertex *u* comes before vertex *v*.
 拓扑排序是一种对有向图进行排序的算法，使得对于每个有向边*u→v*，顶点*u*在顶点*v*之前。

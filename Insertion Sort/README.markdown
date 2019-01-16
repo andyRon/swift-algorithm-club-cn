@@ -1,4 +1,4 @@
-# 插入排序
+# 插入排序(Insertion Sort)
 
 ![插入排序动画](https://upload-images.jianshu.io/upload_images/1678135-356b8d2db83067f0.gif?imageMogr2/auto-orient/strip)
 

@@ -66,10 +66,10 @@
 |Quicksort 					| andyRon    |   Y  		 |  andyRon | Y			|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon | Y			|
 |Heap Sort    				| andyRon    |   Y           | andyRon	| Y			|
-|Introsort    				| andyRon    |   Y           |	    	|			|
+|Introsort    				| andyRon    |   Y           |	    	| ❓		|
 |Counting Sort    			| andyRon    |   Y           | andyRon  | Y			|
 |Radix Sort    				| andyRon    |   Y           | andyRon	| Y			|
-|Topological Sort    		| andyRon    |   Y           |	    	|			|
+|Topological Sort    		| andyRon    |   Y           |	    	|	❓		|
 |Bubble Sort    			| andyRon    |   Y           | andyRon  | Y			|
 |Slow Sort    				| andyRon    |   Y           | andyRon  | Y	    	|
 
