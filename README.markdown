@@ -30,15 +30,15 @@
 
 ## 重要链接
 
-[什么是算法和数据结构？](What%20are%20Algorithms.markdown)－ 薄饼！
+[什么是算法和数据结构？](What%20are%20Algorithms.markdown) ——  薄饼！
 
-[为什么要学习算法？](Why%20Algorithms.markdown)－ 还在担心这不是你的菜吗？请读一下这篇文章。
+[为什么要学习算法？](Why%20Algorithms.markdown) ——  还在担心这不是你的菜吗？请读一下这篇文章。
 
-[大O表示法](Big-O%20Notation.markdown)－ 我们经常会听到这样的话：“这个算法是 **O(n)** 的”。如果你不知道这是啥意思，请读读这篇文章。
+[大O表示法](Big-O%20Notation.markdown) ——  我们经常会听到这样的话：“这个算法是 **O(n)** 的”。如果你不知道这是啥意思，请读读这篇文章。
 
-[算法设计技巧](Algorithm%20Design.markdown)－ 怎样设计自己的算法？
+[算法设计技巧](Algorithm%20Design.markdown) ——  怎样设计自己的算法？
 
-欢迎参与贡献 － 通过留下issue反馈，或者提交pull request。
+欢迎参与贡献  ——  通过留下issue反馈，或者提交pull request。
 
 ## 从哪开始？
 
@@ -117,22 +117,24 @@
 
 ### 数学算法
 
-- [最大公约数算法(GCD)](GCD/)－特殊福利：最小公倍数算法。
-- [排列组合算法](Combinatorics/)－还记得高中学过俄组合数学吗？
-- [调度场算法](Shunting%20Yard/)－用于将中缀表达式转换为后缀表达式的经典算法。
+- [最大公约数算法(GCD)](GCD/) —— 特殊福利：最小公倍数算法。
+- [排列组合算法](Combinatorics/) —— 还记得高中学过俄组合数学吗？
+- [调度场算法](Shunting%20Yard/) —— 用于将中缀表达式转换为后缀表达式的经典算法。
 - [karatsuba乘法](Karatsuba%20Multiplication/). Another take on elementary multiplication.
 - [Haversine Distance](HaversineDistance/). Calculating the distance between 2 points from a sphere.
 - [⏳Strassen's Multiplication Matrix](Strassen%20Matrix%20Multiplication/). Efficient way to handle matrix multiplication.
 
 ### 机器学习
 
-- [k-Means 聚类算法](K-Means/)－无监督的分类器，将数据聚类为 K 个簇。
+- [k-Means 聚类算法](K-Means/) —— 无监督的分类器，将数据聚类为 K 个簇。
 - ⏳K-近邻算法
-- ⏳线性回归
+- [⏳线性回归](Linear%20Regression/). A technique for creating a model of the relationship between two (or more) variable quantities.
 - ⏳逻辑回归
 - ⏳神经网络
 - ⏳网页排名算法
 - [⏳Naive Bayes Classifier](Naive%20Bayes%20Classifier/)
+- [⏳Simulated annealing](Simulated%20annealing/). Probabilistic technique for approximating the global maxima in a (often discrete) large search space.
+
 
 
 ## 数据结构
@@ -147,40 +149,40 @@
 
 ### 数组变体
 
-- [二维数组](Array2D/)－固定尺寸的二维数组，可用于棋盘游戏。
-- [比特集](Bit%20Set/)－**n** 位大小固定尺度的序列。
+- [二维数组](Array2D/) —— 固定尺寸的二维数组，可用于棋盘游戏。
+- [比特集](Bit%20Set/) —— **n** 位大小固定尺度的序列。
 - [固定大小数组](Fixed%20Size%20Array/) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
-- [有序数组](Ordered%20Array/)－一个永远有序的数组。
+- [有序数组](Ordered%20Array/) —— 一个永远有序的数组。
 - [Rootish Array Stack](Rootish%20Array%20Stack/). A space and time efficient variation on Swift arrays.
 
 ### 队列
 
-- [栈](Stack/)－后进先出！
-- [队列](Queue/)－先进先出！
+- [栈](Stack/) —— 后进先出！
+- [队列](Queue/) —— 先进先出！
 - [双端队列](Deque/)
-- [优先队列](Priority%20Queue)－一个保持最重要的元素总是在最前面的队列。
-- [有限优先队列](Bounded%20Priority%20Queue)－元素最大数受限制的优先队列。 :construction:
-- [环形缓冲区](Ring%20Buffer/)－一个语义上的固定大小的环形缓冲区，实际使用的是一维序列头尾相接实现。
+- [优先队列](Priority%20Queue) —— 一个保持最重要的元素总是在最前面的队列。
+- [有限优先队列](Bounded%20Priority%20Queue) —— 元素最大数受限制的优先队列。 :construction:
+- [环形缓冲区](Ring%20Buffer/) —— 一个语义上的固定大小的环形缓冲区，实际使用的是一维序列头尾相接实现。
 
 ### 列表
 
-- [链表](Linked%20List/)－链接起来的数据序列。包含单向和双向链表。
-- [跳跃列表](Skip-List/) —— 跳过列表是一种概率数据结构，具有与AVL/或红黑树相同的对数时间限制和效率，并提供了有效支持搜索和更新操作的巧妙折衷。
+- [链表](Linked%20List/) —— 链接起来的数据序列。包含单向和双向链表。
+- [跳表](Skip-List/) —— 跳过列表是一种概率数据结构，具有与AVL/或红黑树相同的对数时间限制和效率，并提供了有效支持搜索和更新操作的巧妙折衷。
 
 ### 树
 
-- [树](Tree/)－通用目的的树形结构。
-- [二叉树](Binary%20Tree/)－一种节点最多有两个孩子节点的树形结构。
-- [二叉搜索树(BST)](Binary%20Search%20Tree/)－以某种方式组织自己的节点的二叉树，以求较快的查询速度。
-- [AVL树](AVL%20Tree/)－一种通过旋转来维持平衡的二叉搜索树。 :construction:
+- [树](Tree/) —— 通用目的的树形结构。
+- [二叉树](Binary%20Tree/) —— 一种节点最多有两个子节点的树形结构。
+- [二叉搜索树(BST)](Binary%20Search%20Tree/) —— 以某种方式组织自己的节点的二叉树，以求较快的查询速度。
+- [AVL树](AVL%20Tree/) —— 一种通过旋转来维持平衡的二叉搜索树。 :construction:
 - [红黑树](Red-Black%20Tree/). A self balancing binary search tree.
 - [伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
 - [线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
-- [线段树](Segment%20Tree/)－能够快速地对某区间进行计算。
+- [线段树](Segment%20Tree/) —— 能够快速地对某区间进行计算。
   - [Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)
 - ⏳k-d 树
 - [ST(稀疏表)算法](Sparse%20Table/). Another take on quickly computing a function over a portion of an array, but this time we'll make it even quicker!.
-- [堆](Heap/)－存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
+- [堆](Heap/) —— 存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
 - ⏳斐波那契堆
 - [字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
 - [B 树](B-Tree/). A self-balancing search tree, in which nodes can have more than two children.
@@ -189,25 +191,25 @@
 
 ### 哈希
 
-- [哈希表](Hash%20Table/)－允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
+- [哈希表](Hash%20Table/) —— 允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
 - ⏳哈希函数
 
 ### 集合
 
-- [布隆过滤器](Bloom%20Filter/)－一个常量内存数据结构，用于概率性的检测某个元素是否在集合中。
-- [哈希集合](Hash%20Set/)－使用哈希表实现的集合。
+- [布隆过滤器](Bloom%20Filter/) —— 一个常量内存数据结构，用于概率性的检测某个元素是否在集合中。
+- [哈希集合](Hash%20Set/) —— 使用哈希表实现的集合。
 - [多重集](Multiset/). A set where the number of times an element is added matters. (Also known as a bag.)
-- [有序集](Ordered%20Set/)－很看重元素顺序的集合。
+- [有序集](Ordered%20Set/) —— 很看重元素顺序的集合。
 
 ### 图
 
 - [图](Graph/)
 - [广度优先搜索(BFS)](Breadth-First%20Search/)
 - [深度优先搜索(DFS)](Depth-First%20Search/)
-- [最短路径算法](Shortest%20Path%20%28Unweighted%29/)－作用对象为无权值树。
+- [最短路径算法](Shortest%20Path%20%28Unweighted%29/) —— 作用对象为无权值树。
 - [单源最短路径算法](Single-Source%20Shortest%20Paths%20(Weighted)/)
 
-- [最小生成树(未加权图)](Minimum%20Spanning%20Tree%20%28Unweighted%29/)－作用对象为无权值树。
+- [最小生成树(未加权图)](Minimum%20Spanning%20Tree%20%28Unweighted%29/) —— 作用对象为无权值树。
 - [最小生成树(加权图)](Minimum%20Spanning%20Tree/)
 
 - [任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/)
