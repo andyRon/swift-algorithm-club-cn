@@ -5,7 +5,7 @@
 - 初次翻译时保留英文+中文，校对后去除英文。`README_en.md`文件是原文。
 
 
-# 翻译进度 (26/93)
+# 翻译进度 (27/93)
 
 
 
@@ -50,7 +50,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 |Brute-Force String Search  | andyRon    |   Y  		 | andyRon | Y |
-|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
+|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | Y |
 |Knuth-Morris-Pratt 		| andyRon    |   Y  		 |   		| 			|
 |Rabin-Karp 				| andyRon    |   Y  		 |   		| 			|
 |Longest Common Subsequence | andyRon    |   Y  		 |   		| 			|
