@@ -5,7 +5,7 @@
 - 初次翻译时保留英文+中文，校对后去除英文。`README_en.md`文件是原文。
 
 
-# 翻译进度
+# 翻译进度 (26/93)
 
 
 
@@ -49,7 +49,7 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
-|Brute-Force String Search  | andyRon    |   Y  		 |   		| 			|
+|Brute-Force String Search  | andyRon    |   Y  		 | andyRon | Y |
 |Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
 |Knuth-Morris-Pratt 		| andyRon    |   Y  		 |   		| 			|
 |Rabin-Karp 				| andyRon    |   Y  		 |   		| 			|
@@ -99,13 +99,16 @@
 | Shunting Yard	   			| andyRon    |  Y            |	    	|			|
 | karatsuba乘法	   			| andyRon    |  Y            |	    	|			|
 | Haversine Distance	   	| andyRon    |  Y            |	    	|			|
+| Strassen's Multiplication Matrix |     |              |	    	|			|
 
 
 ### 机器学习
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | k-Means Clustering   		| andyRon    |  Y            |	    	|			|
-| Naive Bayes Classifier   	| andyRon    |               |	    	|			|
+| 线性回归   					|     |               |	    	|			|
+| Naive Bayes Classifier   	|     |               |	    	|			|
+| Simulated annealing   	|     |               |	    	|			|
 
 
 ## 数据结构
