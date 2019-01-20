@@ -1,11 +1,10 @@
-# Knuth-Morris-Pratt String Search
-# Knuth-Morris-Pratt(KMP)算法
+# KMP算法(Knuth-Morris-Pratt String Search)
 
 Goal: Write a linear-time string matching algorithm in Swift that returns the indexes of all the occurrencies of a given pattern.
 目标：在Swift中编写线性时间字符串匹配算法，返回给定模式的所有出现的索引。
 
 In other words, we want to implement an `indexesOf(pattern: String)` extension on `String` that returns an array `[Int]` of integers, representing all occurrences' indexes of the search pattern, or `nil` if the pattern could not be found inside the string.
-换句话说，我们想在`String`上实现了`indicesOf(pattern:String)`方法，它返回一个整数的数组`[Int]`，表示搜索模式的所有出现的索引，如果在字符串中找不到模式，则返回`nil` 。
+换句话说，我们想在`String`上实现了`indixesOf(pattern:String)`方法，它返回一个整数的数组`[Int]`，表示搜索模式的所有出现的索引，如果在字符串中找不到模式，则返回`nil` 。
 
 For example:
 例如：

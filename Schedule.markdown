@@ -50,7 +50,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 |Brute-Force String Search  | andyRon    |   Y  		 | andyRon | Y |
-|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | Y |
+|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | Y❗️ |
 |Knuth-Morris-Pratt 		| andyRon    |   Y  		 |   		| 			|
 |Rabin-Karp 				| andyRon    |   Y  		 |   		| 			|
 |Longest Common Subsequence | andyRon    |   Y  		 |   		| 			|

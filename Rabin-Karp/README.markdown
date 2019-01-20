@@ -96,3 +96,4 @@ This will return 13 since ump is in the 13 position of the zero based string.
 *Written by [Bill Barbour](https://github.com/brbatwork)*
 *作者：[Bill Barbour](https://github.com/brbatwork)*  
 *翻译：[Andy Ron](https://github.com/andyRon)*
+

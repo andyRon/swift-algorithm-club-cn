@@ -174,6 +174,8 @@ Some remarks:
 
 > **注意：**对于使用深度优先搜索的拓扑排序略有不同的实现，请参阅[TopologicalSort3.swift]（TopologicalSort3.swift）。 这使用堆栈，并且不需要您首先找到具有in-degree 0的所有顶点。
 
+
+
 ## Kahn's algorithm
 
 Even though depth-first search is the typical way to perform a topological sort, there is another algorithm that also does the job. 
@@ -198,6 +200,8 @@ Source: I first read about this alternative algorithm in the Algorithm Alley col
 资料来源：我从1993年5月开始在Dr. Dobb杂志的Algorithm Alley专栏中首次阅读这种替代算法。
 
 *Written for Swift Algorithm Club by Ali Hafizji and Matthijs Hollemans*
+
+
 
 *作者：Ali Hafizji， Matthijs Hollemans*  
 *翻译：[Andy Ron](https://github.com/andyRon)*

@@ -30,7 +30,7 @@ animals.indexOf(pattern: "🐮")
 
 [暴力方法](../Brute-Force%20String%20Search/)工作正常，但效率不高，尤其是在大块文本上。 事实证明，您不需要从源字符串中查看 _每个_ 字符 —— 通常可以跳过多个字符。
 
-这种跳过算法被称为[Boyer-Moore](https://en.wikipedia.org/wiki/Boyer-Moore_string_search_algorithm)，它已存在很长时间了。它被认为是所有字符串搜索算法的基准。
+这种跳过算法被称为[Boyer-Moore](https://en.wikipedia.org/wiki/Boyer-Moore_string_search_algorithm)算法，它已存在很长时间了。它被认为是所有字符串搜索算法的基准。
 
 
 以下是您在Swift中编写它的方法：

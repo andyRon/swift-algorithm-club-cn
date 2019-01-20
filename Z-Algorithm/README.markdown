@@ -99,8 +99,8 @@ func ZetaAlgorithm(ptrn: String) -> [Int]? {
 
 Let's make an example reasoning with the code above. Let's consider the string `P = “abababbb"`. The algorithm begins with `k = 1`, `left = right = 0`. So, no Z-box is "active" and thus, because `k > right` we start with the character comparisons beetwen `P[1]` and `P[0]`.
 让我们用上面的代码作一个例子推理。 让我们考虑字符串`P ="abababbb"`。算法以`k = 1`，`left = right = 0`开头。所以，没有Z-box是“活跃的”因此，因为`k > right`我们 从字符比较 `P[1]`和`P[0]`开始。
-  
-    
+
+
        01234567
     k:  x
        abababbb
@@ -200,5 +200,6 @@ Credits: This code is based on the handbook ["Algorithm on String, Trees and Seq
 致谢：此代码基于手册[“字符串，树和序列算法：计算机科学和计算生物学”]（https://books.google.it/books/about/Algorithms_on_Strings_Trees_and_Sequence.html?id=Ofw5w1yuD8kC&redir_esc=y ）Dan Gusfield，剑桥大学出版社，1997年。
 
 *Written for Swift Algorithm Club by Matteo Dunnhofer*
+
 *作者：Matteo Dunnhofer*  
 *翻译：[Andy Ron](https://github.com/andyRon)*
