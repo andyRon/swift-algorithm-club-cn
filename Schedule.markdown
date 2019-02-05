@@ -106,7 +106,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | k-Means Clustering   		| andyRon    |  Y            |	    	|			|
-| 线性回归   					|     |               |	    	|			|
+| 线性回归   					| andyRon    |  Y            |	    	|			|
 | Naive Bayes Classifier   	|     |               |	    	|			|
 | Simulated annealing   	|     |               |	    	|			|
 
@@ -189,7 +189,6 @@
 | Minimum Spanning Tree(unweighted)	| andyRon    |  Y            |	    	|			|
 | All-Pairs Shortest Paths  		| andyRon    |  Y            |	    	|			|
 | Dijkstra's algorithm   			| andyRon    |  Y            |	    	|			|
-|    								|    		 |               |	    	|			|
 
 ### 智力题
 
