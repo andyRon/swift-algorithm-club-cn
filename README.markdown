@@ -132,8 +132,8 @@
 - ⏳逻辑回归
 - ⏳神经网络
 - ⏳网页排名算法
-- [⏳Naive Bayes Classifier](Naive%20Bayes%20Classifier/)
-- [⏳Simulated annealing](Simulated%20annealing/). Probabilistic technique for approximating the global maxima in a (often discrete) large search space.
+- [⏳朴素贝叶斯分类器](Naive%20Bayes%20Classifier/)
+- [⏳模拟退火算法(Simulated Annealing，SA)](Simulated%20annealing/). Probabilistic technique for approximating the global maxima in a (often discrete) large search space.
 
 
 

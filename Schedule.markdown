@@ -107,7 +107,7 @@
 |---------------------------|------------|:-------------:|----------|:---------:|
 | k-Means Clustering   		| andyRon    |  Y            |	    	|			|
 | 线性回归   					| andyRon    |  Y            |	    	|			|
-| Naive Bayes Classifier   	|     |               |	    	|			|
+| Naive Bayes Classifier   	| andyRon | Y |	    	|			|
 | Simulated annealing   	|     |               |	    	|			|
 
 
