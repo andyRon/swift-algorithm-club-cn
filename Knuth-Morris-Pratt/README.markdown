@@ -24,7 +24,7 @@ The idea behind the algorithm is not too different from the [naive string search
 该算法背后的想法与[暴力字符串搜索](../Brute-Force％20String％20Search/)程序没有太大区别。 因此，KMP算法将文本与模式对齐，并从左到右进行字符比较。 但是，当发生不匹配时，不是使一个字符移位，而是使用更智能的方式沿着文本移动模式。 实际上，该算法具有模式预处理阶段，其中它获取将使算法跳过冗余比较的所有信息，从而导致更大的移位。
 
 The pre-processing stage produces an array (called `suffixPrefix` in the code) of integers in which every element `suffixPrefix[i]` records the length of the longest proper suffix of `P[0...i]` (where `P` is the pattern) that matches a prefix of `P`. In other words, `suffixPrefix[i]` is the longest proper substring of `P` that ends at position `i` and that is a prefix of `P`. Just a quick example. Consider `P = "abadfryaabsabadffg"`, then `suffixPrefix[4] = 0`, `suffixPrefix[9] = 2`, `suffixPrefix[14] = 4`.
-预处理阶段产生一个整数的数组（在代码中称为`suffixPrefix`），其中每个元素`suffixPrefix[i]`记录最长的正确后缀`P[0 ... i]`的长度（其中 `P`是模式）匹配前缀`P`。 换句话说，`suffixPrefix[i]`是`P`的最长的正确子串，它在位置`i`结束并且是`P`的前缀。 只是一个简单的例子。 考虑`P = "abadfryaabsabadffg"`，然后`suffixPrefix[4] = 0`，`suffixPrefix 9] = 2`，`suffixPrefix[14] = 4`。
+预处理阶段产生一个整数的数组（在代码中称为`suffixPrefix`），其中每个元素`suffixPrefix[i]`记录最长的正确后缀`P[0...i]`的长度（其中 `P`是模式）匹配前缀`P`。 换句话说，`suffixPrefix[i]`是`P`的最长的正确子串，它在位置`i`结束并且是`P`的前缀。 只是一个简单的例子。 考虑`P = "abadfryaabsabadffg"`，然后`suffixPrefix[4] = 0`，`suffixPrefix 9] = 2`，`suffixPrefix[14] = 4`。
 
 There are different ways to obtain the values of `SuffixPrefix` array. We will use the method based on the [Z-Algorithm](../Z-Algorithm/). This function takes in input the pattern and produces an array of integers. Each element represents the length of the longest substring starting at position `i` of `P` and that matches a prefix of `P`. You can notice that the two arrays are similar, they record the same informations but on the different places. We only have to find a method to map `Z[i]` to `suffixPrefix[j]`. It is not that difficult and this is the code that will do for us:
 有不同的方法来获取`SuffixPrefix`数组的值。 我们将使用基于[Z-Algorithm](../Z-Algorithm/)的方法。 此函数接受输入模式并生成整数数组。 每个元素表示从`P`的位置`i`开始并且与`P`的前缀匹配的最长子串的长度。 你可以注意到两个数组是相似的，它们记录相同的信息，但是在不同的地方。 我们只需找到一种方法将`Z[i]`映射到`suffixPrefix[j]`。 这并不困难，这是为我们做的代码：
@@ -40,7 +40,7 @@ We are simply computing the index of the end of the substring starting at positi
 我们只是简单地计算从位置`i`开始的子串结束的索引（因为我们知道匹配`P`的前缀）。 在该索引处的`suffixPrefix`元素然后将使用子字符串的长度进行设置。
 
 Once the shift-array `suffixPrefix` is ready we can begin with pattern search stage. The algorithm first attempts to compare the characters of the text with those of the pattern. If it succeeds, it goes on until a mismatch occurs. When it happens, it checks if an occurrence of the pattern is present (and reports it). Otherwise, if no comparisons are made then the text cursor is moved forward, else the pattern is shifted to the right. The shift's amount is based on the `suffixPrefix` array, and it guarantees that the prefix `P[0...suffixPrefix[i]]` will match its opposing substring in the text. In this way, shifts of more than one character are often made and lot of comparisons can be avoided, saving a lot of time.
-一旦移位数组`suffixPrefix`准备就绪，我们就可以从模式搜索阶段开始。 该算法首先尝试将文本的字符与模式的字符进行比较。 如果成功，它会一直持续到发生不匹配为止。 当它发生时，它会检查是否存在模式（并报告）。 否则，如果没有进行比较，则文本光标向前移动，否则图案向右移动。 shift的数量基于`suffixPrefix`数组，它保证前缀`P[0 ... suffixPrefix[i]]`将匹配文本中相反的子字符串。 通过这种方式，通常可以进行多个字符的移位，并且可以避免大量的比较，从而节省大量时间。
+一旦移位数组`suffixPrefix`准备就绪，我们就可以从模式搜索阶段开始。 该算法首先尝试将文本的字符与模式的字符进行比较。 如果成功，它会一直持续到发生不匹配为止。 当它发生时，它会检查是否存在模式（并报告）。 否则，如果没有进行比较，则文本光标向前移动，否则图案向右移动。 shift的数量基于`suffixPrefix`数组，它保证前缀`P[0...suffixPrefix[i]]`将匹配文本中相反的子字符串。 通过这种方式，通常可以进行多个字符的移位，并且可以避免大量的比较，从而节省大量时间。
 
 Here is the code of the Knuth-Morris-Pratt algorithm:
 KMP算法代码：
@@ -172,7 +172,7 @@ The pre-processing stage involves only the pattern. The running time of the Z-Al
 > **注意：** 要执行[KnuthMorrisPratt.swift](./KnuthMorrisPratt.swift)中的代码，您必须复制[ZAlgorithm.swift](../Z-Algorithm/ZAlgorithm.swift)文件中包含的 [Z-Algorithm](../Z-Algorithm/)文件夹。 [KnuthMorrisPratt.playground](./KnuthMorrisPratt.playground)已经包含了`Zeta`函数的定义。
 
 Credits: This code is based on the handbook ["Algorithm on String, Trees and Sequences: Computer Science and Computational Biology"](https://books.google.it/books/about/Algorithms_on_Strings_Trees_and_Sequence.html?id=Ofw5w1yuD8kC&redir_esc=y) by Dan Gusfield, Cambridge University Press, 1997.
-致谢：此代码基于手册[“字符串，树和序列算法：计算机科学和计算生物学”](https://books.google.it/books/about/Algorithms_on_Strings_Trees_and_Sequence.html?id=Ofw5w1yuD8kC&redir_esc=y) Dan Gusfield，剑桥大学出版社，1997年。
+致谢：此代码基于手册 [“字符串，树和序列算法：计算机科学和计算生物学”](https://books.google.it/books/about/Algorithms_on_Strings_Trees_and_Sequence.html?id=Ofw5w1yuD8kC&redir_esc=y) Dan Gusfield，剑桥大学出版社，1997年。
 
 *Written for Swift Algorithm Club by Matteo Dunnhofer*
 

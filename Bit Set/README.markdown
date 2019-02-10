@@ -1,4 +1,4 @@
-# 比特集(Bit Set)
+# 比特集合(Bit Set)
 
 A fixed-size sequence of *n* bits. Also known as bit array or bit vector.
 固定大小的 *n* 位序列。 也称为位数组或位向量。
