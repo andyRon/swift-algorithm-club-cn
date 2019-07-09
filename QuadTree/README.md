@@ -1,17 +1,16 @@
-# QuadTree
-# 四分树/四叉树
+# 四叉树（QuadTree）
 
 A quadtree is a [tree](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree) in which each internal (not leaf) node has four children.
-四叉树是一种[树](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree)，其中每个内部（非叶子）节点有四个子节点。
+四叉树是一种[树](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree)，其中每个内部（非叶节点）节点有四个子节点。
 
-<img src="https://github.com/timaktimak/swift-algorithm-club/blob/master/QuadTree/Images/quadtree.png" width="500">
+<img src="Images/quadtree.png" width="500">
 
 ### Problem
 ### 问题
 
 Consider the following problem: your need to store a number of points (each point is a pair of `X` and `Y` coordinates) and then you need to answer which points lie in a certain rectangular region. A naive solution would be to store the points inside an array and then iterate over the points and check each one individually. This solution runs in O(n) though.
 
-考虑以下问题：您需要存储多个点（每个点是一对`X`和`Y`坐标），然后您需要回答哪些点位于某个矩形区域。 一个天真的解决方案是将点存储在一个数组中，然后迭代这些点并分别检查每个点。 该解决方案在O（n）中运行。
+考虑以下问题：您需要存储多个点（每个点是一对`X`和`Y`坐标），然后您需要回答哪些点位于某个矩形区域。一个天真的解决方案是将点存储在一个数组中，然后迭代这些点并分别检查每个点。 该解决方案花费O(n)。
 
 ### A Better Approach
 ### 更好的方法
@@ -54,7 +53,7 @@ class QuadTreeNode {
 
 ```
 Once the limit in a leaf node is reached, four child nodes are added to the node and they represent `topLeft`, `topRight`, `bottomLeft`, `bottomRight` quadrants of the node's rect; each of the consequent points in the rect will be passed to one of the children. Thus, new points are always added to leaf nodes.
-一旦达到叶子节点的限制，就会向节点添加四个子节点，它们代表节点rect的`topLeft`，`topRight`，`bottomLeft`，`bottomRight`象限; rect中的每个结果点都将传递给其中一个孩子。 因此，总是将新点添加到叶节点。
+一旦达到叶节点的限制，就会向节点添加四个子节点，它们代表节点rect的`topLeft`，`topRight`，`bottomLeft`，`bottomRight`象限;rect中的每个结果点都将传递给其中一个子节点。 因此，总是将新点添加到叶节点。
 
 ```swift
 extension QuadTreeNode {
@@ -161,15 +160,13 @@ extension QuadTreeNode {
 Both adding a point and searching can still take up to O(n) in the worst case, since the tree isn't balanced in any way. However, on average it runs significantly faster (something comparable to O(log n)).
 在最坏的情况下，添加点和搜索仍然可以占用O(n)，因为树不以任何方式平衡。 但是，平均而言，它的运行速度明显更快（与O(log n)相当）。
 
-### See also
 ### 扩展阅读
 
 Displaying a large amount of objects in a MapView - a great use case for a Quadtree ([Thoughtbot Article](https://robots.thoughtbot.com/how-to-handle-large-amounts-of-data-on-maps))
 在MapView中显示大量对象 - 四叉树的一个很好的用例（[Thoughtbot Article](https://robots.thoughtbot.com/how-to-handle-large-amounts-of-data-on-maps)）
 
-More info on [Wikipedia](https://en.wikipedia.org/wiki/Quadtree)
 [四叉树的维基百科](https://en.wikipedia.org/wiki/Quadtree)
 
-*Written for Swift Algorithm Club by Timur Galimov*  
 *作者：Timur Galimov*  
 *翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  
