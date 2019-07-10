@@ -53,3 +53,21 @@ func sdbm(x: String) -> Int {
     }
     return Int(hash)
 }
+
+
+
+/* A simple test */
+
+let bloom = BloomFilter<String>(size: 17, hashFunctions: [djb2, sdbm])
+
+bloom.insert("Hello world!")
+print(bloom.array)
+
+bloom.query("Hello world!")    // true
+bloom.query("Hello WORLD")     // false
+
+bloom.insert("Bloom Filterz")
+print(bloom.array)
+
+bloom.query("Bloom Filterz")   // true
+bloom.query("Hello WORLD")     // true
