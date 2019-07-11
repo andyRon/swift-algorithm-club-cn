@@ -171,10 +171,10 @@
 
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|---------- |:---------:|
-| Bloom Filter   			| andyRon    | Y             | andyRon	 | Y❗️		 |
+| Bloom Filter   			| andyRon    | Y             | andyRon	 | Y		 |
 | Hash Set   				| andyRon    | Y             | andyRon	 |			 |
-| Multiset   				| andyRon    | Y             | andyRon	 | Y❗️	   	|
-| Ordered Set   			| andyRon    | Y             | andyRon	 | ❗️		|
+| Multiset   				| andyRon    | Y             | andyRon	 | Y	   	|
+| Ordered Set   			| andyRon    | Y             | andyRon	 | Y		|
 
 ### 图
 
