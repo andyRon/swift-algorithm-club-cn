@@ -14,7 +14,7 @@ If the following were arrays, they'd all be different. However, they all represe
 ```
 
 Because each element can appear only once, it doesn't matter how often you write the element down -- only one of them counts.
-因为每个元素只能出现一次，所以将元素写入的次数并不重要 - 只有其中一个元素有效。
+因为每个元素只能出现一次，所以将元素写入的次数并不重要 —— 只有其中一个元素有效。
 
 > **Note:** I often prefer to use sets over arrays when I have a collection of objects but don't care what order they are in. Using a set communicates to the programmer that the order of the elements is unimportant. If you're using an array, then you can't assume the same thing.
 > **注意：**当我有一组对象但不关心它们的顺序时，我经常更喜欢使用数组上的集合。使用集合与程序员通信，元素的顺序并不重要。 如果你正在使用数组，那么你不能假设同样的事情。
@@ -33,12 +33,12 @@ Typical operations on a set are:
 - 插入元素
 - 删除元素
 - 检查集合是否包含元素
-- 与另一组结合
+- 与另一组合并
 - 与另一组交叉
 - 计算与另一组的差异
 
 Union, intersection, and difference are ways to combine two sets into a single one:
-联合，交集和差异是将两个集合组合成一个集合的方法：
+并集，交集和差集是将两个集合组合成一个集合的方法：
 
 ![Union, intersection, difference](Images/CombineSets.png)
 
@@ -46,7 +46,7 @@ As of Swift 1.2, the standard library includes a built-in `Set` type but here I'
 从Swift 1.2开始，标准库包含一个内置的`Set`类型，但在这里我将展示如何制作自己的类型。 您不会在生产代码中使用它，但了解如何实现集合是有益的。
 
 It's possible to implement a set using a simple array but that's not the most efficient way. Instead, we'll use a dictionary. Since `Swift`'s dictionary is built using a hash table, our own set will be a hash set.
-使用简单数组实现集合是可能的，但这不是最有效的方法。 相反，我们将使用字典。 由于`Swift`的字典是使用哈希表构建的，因此我们自己的集合将是一个哈希集。
+使用简单数组实现集合是可能的，但这不是最有效的方法。 相反，我们将使用字典。由于`Swift`的字典是使用哈希表构建的，因此我们自己的集合将是一个哈希集。
 
 ## The code
 ## 代码
@@ -121,10 +121,10 @@ The `allElements()` function converts the contents of the set into an array. Not
 
 
 ## Combining sets
-## 组合集
+## 合并集合
 
 A lot of the usefulness of sets is in how you can combine them. (If you've ever used a vector drawing program like Sketch or Illustrator, you'll have seen the Union, Subtract, Intersect options to combine shapes. Same thing.)
-集合的很多用处在于如何组合它们。（如果你曾经使用像Sketch或Illustrator这样的矢量绘图程序，你会看到Union，Subtract，Intersect选项来组合形状。同样的事情。）
+集合的很多用处在于如何合并它们。（如果你曾经使用像Sketch或Illustrator这样的矢量绘图程序，你会看到Union，Subtract，Intersect选项来组合形状。这边也是同样的事情。）
 
 Here is the code for the union operation:
 这是union操作的代码：
@@ -170,7 +170,7 @@ As you can see, the union of the two sets contains all of the elements now. The 
 如您所见，两个集合的并集现在包含所有元素。 值`3`和`4`仍然只出现一次，即使它们都在两组中。
 
 The *intersection* of two sets contains only the elements that they have in common. Here is the code:
-两个集合的*交集*仅包含它们共有的元素。 这是代码：
+两个集合的*intersection*仅包含它们共有的元素。 这是代码：
 
 ```swift
 extension HashSet {
@@ -186,7 +186,7 @@ extension HashSet {
 }
 ```
 
-To test it:
+测试:
 
 ```swift
 let intersection = setA.intersect(setB)
@@ -197,7 +197,7 @@ This prints `[3, 4]` because those are the only objects from set A that are also
 这打印 `[3, 4]` 因为那些是集合A中也是集合B的唯一对象。
 
 Finally, the *difference* between two sets removes the elements they have in common. The code is as follows:
-最后，两组之间的*差异*删除了它们共有的元素。 代码如下：
+最后，两组之间的*difference*删除了它们共有的元素。 代码如下：
 
 ```swift
 extension HashSet {
@@ -234,11 +234,11 @@ Another thing you could do is replace the `Dictionary` with an actual [hash tabl
 您可以做的另一件事是将`Dictionary`替换为实际的[哈希表](../Hash%20Table)，但是只存储键并且不将它们与任何东西相关联。 所以你不再需要`Bool`值了。
 
 If you often need to look up whether an element belongs to a set and perform unions, then the [union-find](../Union-Find/) data structure may be more suitable. It uses a tree structure instead of a dictionary to make the find and union operations very efficient.
-如果您经常需要查找元素是否属于集合并执行联合，那么[union-find](../Union-Find/)数据结构可能更合适。它使用树结构而不是字典来使查找和联合操作非常有效。
+如果您经常需要查找元素是否属于集合并执行并集，那么[并查集](../Union-Find/)数据结构可能更合适。它使用树结构而不是字典来使查找和并集操作非常有效。
 
 > **Note:** I'd like to make `HashSet` conform to `ArrayLiteralConvertible` so you can write `let setA: HashSet<Int> = [1, 2, 3, 4]` but currently this crashes the compiler.
 > **注意：**我想让`HashSet`符合`ArrayLiteralConvertible`，这样你就可以编写`let setA: HashSet<Int> = [1, 2, 3, 4]`但是目前这会使编译器崩溃。
 
-*Written for Swift Algorithm Club by Matthijs Hollemans*  
 *作者：Matthijs Hollemans*   
 *翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  
