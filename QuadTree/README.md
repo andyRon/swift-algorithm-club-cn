@@ -1,7 +1,7 @@
 # 四叉树（QuadTree）
 
 A quadtree is a [tree](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree) in which each internal (not leaf) node has four children.
-四叉树是一种[树](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Tree)，其中每个内部（非叶节点）节点有四个子节点。
+四叉树是一种[树](../Tree)，其中每个内部（非叶节点）节点有四个子节点。
 
 <img src="Images/quadtree.png" width="500">
 

@@ -1,5 +1,4 @@
-# Hash Set
-# 哈希集合
+# 哈希集合（Hash Set）
 
 A set is a collection of elements that is kind of like an array but with two important differences: the order of the elements in the set is unimportant and each element can appear only once.
 集合是元素的集合，有点像数组但有两个重要的区别：集合中元素的顺序不重要，每个元素只能出现一次。
@@ -15,7 +14,7 @@ If the following were arrays, they'd all be different. However, they all represe
 ```
 
 Because each element can appear only once, it doesn't matter how often you write the element down -- only one of them counts.
-因为每个元素只能出现一次，所以将元素写下来的频率并不重要 - 只有其中一个元素有效。
+因为每个元素只能出现一次，所以将元素写入的次数并不重要 - 只有其中一个元素有效。
 
 > **Note:** I often prefer to use sets over arrays when I have a collection of objects but don't care what order they are in. Using a set communicates to the programmer that the order of the elements is unimportant. If you're using an array, then you can't assume the same thing.
 > **注意：**当我有一组对象但不关心它们的顺序时，我经常更喜欢使用数组上的集合。使用集合与程序员通信，元素的顺序并不重要。 如果你正在使用数组，那么你不能假设同样的事情。

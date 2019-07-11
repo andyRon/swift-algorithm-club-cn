@@ -1,5 +1,4 @@
-# k-th Largest Element Problem
-# 第K大元素问题
+# 第K大元素问题(k-th Largest Element Problem)
 
 You're given an integer array `a`. Write an algorithm that finds the *k*-th largest element in the array.
 你得到一个整数数组`a`。 编写一个算法，在数组中找到第*k*最大的元素。
@@ -169,5 +168,6 @@ Pretty cool, huh? Normally quicksort is an **O(n log n)** algorithm, but because
 > **注意：** 此函数计算数组中第*k*最小项，其中*k*从0开始。如果你想要第*k*最大项，请用`a.count - k`。
 
 *Written by Daniel Speiser. Additions by Matthijs Hollemans.*
-*作者：Matthijs Hollemans，Daniel Speiser补充*  
+
+*作者：Daniel Speiser，Matthijs Hollemans*  
 *翻译：[Andy Ron](https://github.com/andyRon)*

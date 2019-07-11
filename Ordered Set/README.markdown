@@ -1,11 +1,10 @@
-# Ordered Set
-# 有序集
+# 有序集（Ordered Set）
 
 Let's look into how to implement [Ordered Set](https://developer.apple.com/documentation/foundation/nsorderedset).
-我们来看看如何实现[有序集](https://developer.apple.com/documentation/foundation/nsorderedset)。
+我们来看看苹果如何实现[有序集](https://developer.apple.com/documentation/foundation/nsorderedset)。
 
 Here is the example about how it works
-以下是有关其工作原理的示例
+以下是有关其工作原理的示例：
 
 ```swift
 let s = AppleOrderedSet<Int>()
@@ -18,7 +17,7 @@ s.insert(4, at: 3)
 
 print(s.all()) // [1, 2, -1, 4, 0]
 
-s.set(-1, at: 0) // We already have -1 in index: 2, so we will do nothing here
+s.set(-1, at: 0) // 已经有-1在index: 2，因此这个操作不做任何事情
 
 print(s.all()) // [1, 2, -1, 4, 0]
 
@@ -90,7 +89,7 @@ public func insert(_ object: T, at index: Int) {
 }
 ```
 
-###  Set
+###  设置
 
 If the `object` already existed in the `OrderedSet`, do nothing. Otherwise, we need to update the `indexOfkey` and `objects`.
 如果`object`已存在于`OrderedSet`中，则什么也不做。 否则，我们需要更新`indexOfkey`和`objects`。
@@ -111,7 +110,7 @@ public func set(_ object: T, at index: Int) {
 }
 ```
 
-### Remove
+### 删除
 
 Remove element in the array will cost `O(n)`. At the same time, we need to update all elements's index after the removed element.
 删除数组中的元素将花费 `O(n)`。 同时，我们需要在删除元素后更新所有元素的索引。
@@ -131,6 +130,6 @@ public func remove(_ object: T) {
 }
 ```
 
-*Written By Kai Chen*  
 *作者：Kai Chen*  
 *翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  
