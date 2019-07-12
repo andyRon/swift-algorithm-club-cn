@@ -1,14 +1,13 @@
-# Segment Tree
-# 线段树
+# 线段树（Segment Tree）
 
 > For an example on lazy propagation, see this [article](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation).
-> 有关延迟传播的示例，请参阅此[文章](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)。
+> 有关懒惰传播的示例，请参阅此[文章](./LazyPropagation)。
 
 I'm pleased to present to you Segment Tree. It's actually one of my favorite data structures because it's very flexible and simple in realization.
-我很高兴向您介绍Segment Tree。 它实际上是我最喜欢的数据结构之一，因为它非常灵活且实现简单。
+我很高兴向您介绍线段树（Segment Tree）。 它实际上是我最喜欢的数据结构之一，因为它非常灵活且实现简单。
 
 Let's suppose that you have an array **a** of some type and some associative function **f**. For example, the function can be sum, multiplication, min, max, [gcd](../GCD/), and so on.
-假设你有一个数组**a**某种类型和一些关联函数**f**。 例如，函数可以是sum，multiplication，min，max，[gcd](../GCD/)等。
+假设你有一个某种类型的数组**a**和一些关联函数**f**。 例如，函数可以是求和，乘法，最小，最大，[最大公约数](../GCD/)等。
 
 Your task is to:
 你的任务是：
@@ -27,7 +26,7 @@ var a = [ 20, 3, -1, 101, 14, 29, 5, 61, 99 ]
 ```
 
 We want to query this array on the interval from 3 to 7 for the function "sum". That means we do the following:
-我们想在函数"sum"的3到7区间内查询这个数组。 这意味着我们执行以下操作：
+我们想查询这个数组3到7区间，并执行函数"sum"。 这意味着我们执行以下操作：
 
 	101 + 14 + 29 + 5 + 61 = 210
 
@@ -35,7 +34,7 @@ because `101` is at index 3 in the array and `61` is at index 7. So we pass all 
 因为`101`在数组的索引3处，而`61`在索引7处。所以我们将`101`和`61`之间的所有数字传递给sum函数，这将它们全部加起来。 如果我们使用了“min”函数，结果将为`5`，因为这是3到7之间的最小数字。
 
 Here's naive approach if our array's type is `Int` and **f** is just the sum of two integers:
-如果我们的数组的类型是`Int`并且**f**只是两个整数的总和，这是原始的方法：
+如果我们的数组的类型是`Int`并且**f**只是两个整数的求和，这是原始的方法：
 
 ```swift
 func query(array: [Int], l: Int, r: Int) -> Int {
@@ -47,14 +46,14 @@ func query(array: [Int], l: Int, r: Int) -> Int {
 }
 ```
 
-The running time of this algorithm is **O(n)** in the worst case, that is when **l = 0, r = n-1** (where **n** is the number of elements in the array). And if we have **m** queries to answer we get **O(m*n)** complexity.
-在最坏的情况下，该算法的运行时间为**O(n)**，即当**l = 0, r =n-1**（其中**n**是元素中的元素数量数组）。 如果我们有 **m **查询来回答，我们得到**O(m*n)**复杂度。
+The running time of this algorithm is **O(n)** in the worst case, that is when **l = 0, r = n-1** (where **n** is the number of elements in the array). And if we have **m** queries to answer we get **O(m\*n)** complexity.
+在最坏的情况下，该算法的运行时间为**O(n)**，即当**l = 0, r =n-1**（其中**n**是数组的元素数量）。 如果我们有**m**次查询，我们得到**O(m\*n)**复杂度。
 
 If we have an array with 100,000 items (**n = 10^5**) and we have to do 100 queries (**m = 100**), then our algorithm will do **10^7** units of work. Ouch, that doesn't sound very good. Let's look at how we can improve it.
-如果我们有一个包含100,000个项目的数组(**n = 10^5**并且我们必须执行100个查询 (**m = 100**)，那么我们的算法将执行 **10^7**单位工作。 哎哟，这听起来不太好。 让我们来看看我们如何改进它。
+如果我们有一个包含100,000个项的数组(**n = 10^5**并且我们必须执行100个查询 (**m = 100**)，那么我们的算法将执行 **10^7**单位工作。 哎哟，这听起来不太好。 让我们来看看我们如何改进它。
 
 Segment trees allow us to answer queries and replace items with **O(log n)** time. Isn't it magic? :sparkles:
-线段树允许我们回答查询并用 **O(log n)**时间替换项目。 这不是魔术吗？✨
+线段树允许我们应答查询并用 **O(log n)**时间替换。 这不是魔术吗？✨
 
 The main idea of segment trees is simple: we precalculate some segments in our array and then we can use those without repeating calculations.  
 线段树的主要思想很简单：我们预先计算数组中的一些段，然后我们可以使用它们而不重复计算。
@@ -83,12 +82,12 @@ Each node has the following data:
 - `leftChild` and `rightChild` are pointers to child nodes
 - `value` is the result of applying the function `f(a[leftBound], a[leftBound+1], ..., a[rightBound-1], a[rightBound])`
 
-- `leftBound`和`rightBound`描述了一个间隔
-- `leftChild`和`rightChild`是指向子节点的指针
-- `value`是应用函数 `f(a[leftBound], a[leftBound+1], ..., a[rightBound-1], a[rightBound])` 的结果。
+- `leftBound`和`rightBound` 描述了一个间隔
+- `leftChild`和`rightChild` 是指向子节点的指针
+- `value`是函数 `f(a[leftBound], a[leftBound+1], ..., a[rightBound-1], a[rightBound])` 的结果。
 
 If our array is `[1, 2, 3, 4]` and the function `f = a + b`, the segment tree looks like this:
-如果我们的数组是`[1, 2, 3, 4]`和函数 `f = a + b` ，则线段树看起来像这样：
+如果我们的数组是`[1, 2, 3, 4]`，函数 `f = a + b` ，则线段树看起来像这样：
 
 ![structure](Images/Structure.png)
 
@@ -132,23 +131,25 @@ Notice that this is a recursive method. You give it an array such as `[1, 2, 3, 
 
 4. After having constructed our child nodes, we can calculate our own value because **f(leftBound, rightBound) = f(f(leftBound, middle), f(middle+1, rightBound))**. It's math!
 
-1. 如果`leftBound`和`rightBound`相等，则递归终止。 这样的“SegmentTree”实例表示叶节点。 对于输入数组`[1,2,3,4]`，这个过程将创建四个这样的叶节点：`1`，`2`，`3`和`4`。 我们只用数组中的数字填充`value`属性。
+1. 如果`leftBound`和`rightBound`相等，则递归终止。这样的`SegmentTree`实例表示叶节点。对于输入数组`[1,2,3,4]`，这个过程将创建四个这样的叶节点：`1`，`2`，`3`和`4`。我们只用数组中的数字填充`value`属性。
 
-2. 但是，如果`rightBound`仍然大于`leftBound`，我们创建两个子节点。 我们将当前段划分为两个相等的段（至少，如果长度是偶数;如果它是奇数，则一个段将略大）。
+2. 但是，如果`rightBound`仍然大于`leftBound`，我们创建两个子节点。我们将当前段划分为两个相等的段（至少，如果长度是偶数;如果它是奇数，则一个段将略大）。
 
 3. 递归地为这两个段构建子节点。 左子节点覆盖区间**[leftBound, middle]**，右子节点覆盖**[middle + 1, rightBound]**。
 
 4. 在构造了我们的子节点之后，我们可以计算自己的值，因为**f(leftBound, rightBound) = f(f(leftBound, middle), f(middle+1, rightBound))**。 这是数学！
 
 Building the tree is an **O(n)** operation.
+构建这个树的操作是**O(n)**。
 
 ## Getting answer to query
-## 获得查询答案
+## 获得查询结果
 
 We go through all this trouble so we can efficiently query the tree.
 我们经历了所有这些麻烦，因此我们可以有效地查询树。
 
 Here's the code:
+代码：
 
 ```swift
   public func query(withLeftBound: leftBound: Int, rightBound: Int) -> T {
@@ -186,12 +187,12 @@ Again, this is a recursive method. It checks four different possibilities.
 ![equalSegments](Images/EqualSegments.png)
 
 2) Does the query segment fully lie within the right child? If so, recursively perform the query on the right child.
-2) 查询段是否完全位于正确的孩子中？ 如果是这样，则递归地对正确的子项执行查询。
+2) 查询段是否完全位于右子节点中？ 如果是这样，则递归地对右子节点执行查询。
 
 ![rightSegment](Images/RightSegment.png)
 
 3) Does the query segment fully lie within the left child? If so, recursively perform the query on the left child.
-3) 查询段是否完全位于左子项内？ 如果是这样，则递归地对左子项执行查询。
+3) 查询段是否完全位于左子节点内？ 如果是这样，则递归地对左子节点执行查询。
 
 ![leftSegment](Images/LeftSegment.png)
 
@@ -252,11 +253,11 @@ See the playground for more examples of how to use the segment tree.
 ## See also
 ## 扩展阅读
 
-[Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation) implementation and explanation.
+[懒惰传播](./LazyPropagation)的执行和说明。
 
-[Segment tree at PEGWiki](http://wcipeg.com/wiki/Segment_tree)
+[线段树在PEGWiki的百科](http://wcipeg.com/wiki/Segment_tree)
 
-*Written for Swift Algorithm Club by [Artur Antonov](https://github.com/goingreen)*
 
 *作者：[Artur Antonov](https://github.com/goingreen)*  
 *翻译：[Andy Ron](https://github.com/andyRon)*  
+*校对：[Andy Ron](https://github.com/andyRon)*  
