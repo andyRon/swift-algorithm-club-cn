@@ -1,5 +1,4 @@
-# Threaded Binary Tree
-# 线索二叉树
+# 线索二叉树（Threaded Binary Tree）
 
 A threaded binary tree is a special kind of [binary tree](../Binary%20Tree/) (a
 tree in which each node has at most two children) that maintains a few extra
@@ -8,7 +7,7 @@ explore the general structure of threaded binary trees, as well as
 [the Swift implementation](ThreadedBinaryTree.swift) of a fully functioning
 threaded binary tree.
 
-线程二叉树是一种特殊的[二叉树](../Binary%20Tree/)(每个节点最多有两个子节点的树)，其中保留了一些额外的节点变量允许廉价和快速**按顺序遍历**树。 我们会探索线程二叉树的一般结构，以及[Swift实现](ThreadedBinaryTree.swift)功能齐全线程二叉树。
+线索二叉树是一种特殊的[二叉树](../Binary%20Tree/)(每个节点最多有两个子节点的树)，其中保留了一些额外的节点变量允许廉价和快速地**按中序遍历**树。 我们会探索线索二叉树的一般结构，以及[Swift实现](ThreadedBinaryTree.swift)功能齐全线程二叉树。
 
 If you don't know what a tree is or what it is for, then
 [read this first](../Tree/).
@@ -17,7 +16,7 @@ If you don't know what a tree is or what it is for, then
 
 
 ## In-order traversal
-## 有序遍历
+## 中序遍历
 
 The main motivation behind using a threaded binary tree over a simpler and
 smaller standard binary tree is to increase the speed of an in-order traversal
@@ -28,11 +27,11 @@ trees are also binary search trees.  The idea is to visit all the left children
 of a node first, then visit the node itself, and then visit the right children
 last.
 
-使用线程二叉树而不是更简单的主要动机较小的标准二叉树是为了提高有序遍历的速度树的 二叉树的有序遍历访问了节点中的节点它们的存储顺序，与a的基本顺序相匹配[二叉搜索树](../Binary%20Search%20Tree/)。 这意味着大多数线程二进制树也是二叉搜索树。 这个想法是访问所有左边的孩子首先是节点，然后访问节点本身，然后访问正确的子节点持续。
+使用线索二叉树而不是更简单、更小的标准二叉树的主要动机是为了提高中序遍历的速度。 二叉树的中序遍历访问了节点中的存储顺序，与[二叉搜索树](../Binary%20Search%20Tree/)基本顺序相匹配。这意味着大多数线程二叉树也是二叉搜索树。这个想法是首先访问所有左子节，然后访问节点本身，最后访问右子节点。
 
 An in-order traversal of any binary tree generally goes as follows (using Swift
 syntax):
-任何二叉树的有序遍历通常如下（使用Swift语法）：
+任何二叉树的中序遍历通常如下（使用Swift语法）：
 
 ```swift
 func traverse(n: Node?) {
@@ -49,7 +48,7 @@ Where `n` is a a node in the tree (or `nil`), each node stores its children as
 action on it.  We would call this function by passing to it the root of the
 tree we wish to traverse.
 
-其中`n`是树中的节点（或`nil`），每个节点将其子节点存储为`left`和`right`，以及“访问”一个节点可能意味着执行任何所需的采取行动。 我们通过传递给它的根来调用这个函数我们希望穿越的树。
+其中`n`是树中的节点（或`nil`），每个节点将其子节点存储为`left`和`right`，以及“访问”一个节点可以意味着对这个节点任意操作。 我们通过传递给它树的根节点，来调用这个函数遍历树。
 
 While simple and understandable, this algorithm uses stack space proportional
 to the height of the tree due to its recursive nature.  If the tree has **n**
@@ -62,11 +61,11 @@ A threaded binary tree fixes this problem.
 线索二叉树修复了这个问题。
 
 > For more information about in-order traversals [see here](../Binary%20Tree/).
-> 有关有序遍历的更多信息[请参阅此处](../Binary%20Tree/)。
+> 有关中序遍历的更多信息[请参阅此处](../Binary%20Tree/)。
 
 
 ## Predecessors and successors
-## 前身和继承人
+## 前驱和后继
 
 An in-order traversal of a tree yields a linear ordering of the nodes.  Thus
 each node has both a **predecessor** and a **successor** (except for the first
@@ -76,7 +75,7 @@ stores the node's predecessor (if it exists), and each right child that would
 normally be `nil` instead stores the node's successor (if it exists).  This is
 what separates threaded binary trees from standard binary trees.
 
-树的有序遍历产生节点的线性排序。 从而每个节点都有**前任**和**后继**（第一个除外）和最后的节点，分别只有后继者或前任者。 在一个线程化的二叉树，每个左边的孩子通常都是`nil`存储节点的前任（如果存在），以及每个正确的子节点通常是`nil`而是存储节点的后继（如果存在）。 这是什么将线程二叉树与标准二叉树分开。
+树的中序遍历产生节点的线性排序。从而每个节点都有**前驱**和**后继**（第一个和最后的节点除外，它们分别只有后继或前驱）。在一个线索二叉树中，每个左子节点通常都是`nil`存储节点的前驱（如果存在），以及每个右子节点通常是`nil`替代存储节点的后继（如果存在）。这让线索二叉树与标准二叉树区分开。
 
 There are two types of threaded binary trees:  **single threaded** and **double
 threaded**:
@@ -85,18 +84,16 @@ threaded**:
 - A double threaded tree keeps track of **both** the in-order predecessor
   **and** successor (left **and** right).
 
-有两种类型的线程二叉树：**单线程**和**双螺纹**：
-- 单线程树跟踪**或者有序的前任
-   **或**继任者（左**或**右）。
-- 双线程树跟踪**两个**有序的前身
-   **和**继承人（左**和**右）。
+有两种类型的线索二叉树：**单线索**和**双线索**：
+- 单线索树**不是**追踪中序前驱，**就是**追踪后继（左**或**右）。
+- 双线索树**既**追踪中序前驱，**又**追踪后继（左**和**右）。 
 
 Using a single or double threaded tree depends on what we want to accomplish.
 If we only need to traverse the tree in one direction (either forward or
 backward), then we use a single threaded tree.  If we want to traverse in both
 directions, then we use a double threaded tree.
 
-使用单线程或双线程树取决于我们想要完成的任务。如果我们只需要在一个方向上遍历树（向前或向后），然后我们使用单线程树。 如果我们想要在两者中遍历方向，然后我们使用双线程树。
+使用单线索或双线索树取决于我们想要完成的任务。如果我们只需要在一个方向上遍历树（向前或向后），那么我们使用单线程树。 如果我们想要在前后都要遍历，然后我们使用双线索树。
 
 It is important to note that each node stores either its predecessor or its
 left child, and either its successor or its right child.  The nodes do not
@@ -104,10 +101,10 @@ need to keep track of both.  For example, in a double threaded tree, if a node
 has a right child but no left child, it will track its predecessor in place of
 its left child.
 
-重要的是要注意每个节点存储其前任或其前导离开了孩子，无论是继任者还是正确的孩子。 节点没有需要跟踪两者。 例如，在双线程树中，如果是节点有一个合适的孩子，但没有留下孩子，它将跟踪其前身代替它的左孩子。
+重要的是要注意每个节点存储其前驱或其前左子节点，和后继或其有子节点。节点没有需要跟踪两者。例如，在双线索树中，如果是节点有一个左子节点，而没有右子节点，它将追踪其前驱替代它的左子节点。
 
 Here is an example valid "full" threaded binary tree:
-这是一个有效的“完整”线程二叉树示例：
+这是一个有效的“完整”线索二叉树示例：
 
 ![Full](Images/Full.png)
 
@@ -115,7 +112,7 @@ While the following threaded binary tree is not "full," it is still valid.  The
 structure of the tree does not matter as long as it follows the definition of a
 binary search tree:
 
-虽然以下线程二叉树不是“完整”，但它仍然有效。该树的结构无关紧要，只要它遵循a的定义二叉搜索树：
+虽然以下线索二叉树不是“完整”，但它仍然有效。该树的结构无关紧要，只要它遵循二叉搜索树的定义：
 
 ![Partial](Images/Partial.png)
 
@@ -129,10 +126,11 @@ goes to the node's right child if it exists, and to its in-order successor if
 it does not.  The exceptions are the left-most node and the right-most node,
 which do not have a predecessor or successor, respectively.
 
-实线表示父母和孩子之间的联系，而虚线表示线条表示“线程”。 重要的是要注意孩子和孩子线程边缘相互作用。 除根之外的每个节点都有一个进入边缘（从其父节点）和两个离开边缘：一个在左边，一个在右边。 左边的边缘到达节点的左边的子节点存在，如果不存在，则存在于其有序的前任中。 正确的离开边缘如果它存在，则转到节点的右子节点，如果存在则转到它的有序后继节点它不是。 最左边的节点和最右边的节点是例外，它们分别没有前任或后继者。
+实线表示父节点和自己诶单之间的联系，而虚线表示表示“线索”。重要的是要注意子节点和子节点线索边缘相互作用。除根节点之外的每个节点都有一个进入边缘（从其父节点）和两个离开边缘：一个在左边，一个在右边。左边缘到达节点的左子节点，如果不存在，则存在于其中序的前驱中。正确的离开边缘如果它存在，则转到节点的右子节点，如果存在则转到它的有序后继节点它不是。 最左边的节点和最右边的节点是例外，它们分别没有前驱或后继。
 
 
 ## Representation
+## 表示
 
 Before we go into detail about the methods of a threaded binary tree, we should
 first explain how the tree itself is represented.  The core of this data
@@ -147,19 +145,19 @@ this class represents a node with six member variables:  `value`, `parent`,
 - `leftThread: ThreadedBinaryTree?` is the in-order predecessor of this node
 - `rightThread: ThreadedBinaryTree?` is the in-order successor of this node
 
-在我们详细介绍线程二叉树的方法之前，我们应该这样做首先解释树本身是如何表示的。 这个数据的核心结构是`ThreadedBinaryTree <T：Comparable>`类。 每个实例这个类代表一个有六个成员变量的节点：`value`，`parent`，`left`，`right`，`leftThread`和`rightThread`。 仅在所有这些中`value`是必需的。 其他五个是Swift *选项*（它们可能是`nil`）。
-- `value：T`是该节点的值（例如1,2，A，B等）
-- `parent：ThreadedBinaryTree？`是这个节点的父节点
-- `left：ThreadedBinaryTree？`是这个节点的左子节点
-- `right：ThreadedBinaryTree？`是这个节点的正确子节点
-- `leftThread：ThreadedBinaryTree？`是这个节点的有序前身
-- `rightThread：ThreadedBinaryTree？`是这个节点的有序继承者
+在我们详细介绍线索二叉树的方法之前，我们应该这样做首先解释树本身是如何表示的。 这个数据的核心结构是`ThreadedBinaryTree <T：Comparable>`类。 这个类的每个实例有节点的六个成员变量：`value`，`parent`，`left`，`right`，`leftThread`和`rightThread`。 其中仅`value`是必需的。 其他五个是Swift *optionals*（它们可能是`nil`）。
+- `value: T`是该节点的值（例如1,2，A，B等）
+- `parent: ThreadedBinaryTree?` 是这个节点的父节点
+- `left: ThreadedBinaryTree?` 是这个节点的左子节点
+- `right: ThreadedBinaryTree?` 是这个节点的右子节点
+- `leftThread: ThreadedBinaryTree?` 是这个节点的中序前驱
+- `rightThread: ThreadedBinaryTree?` 是这个节点的中序前驱
 
 As we are storing both `leftThread` and `rightThread`, this is a double
 threaded tree. Now we are ready to go over some of the member functions in our
 `ThreadedBinaryTree` class.
 
-因为我们存储了`leftThread`和`rightThread`，所以这是双倍的线程树。 现在我们准备好了解一下我们的一些成员函数`ThreadedBinaryTree`类。
+因为我们存储了`leftThread`和`rightThread`，所以这是双线索树。 现在我们准备好了解一下我们的一些成员函数`ThreadedBinaryTree`类。
 
 ## Traversal algorithm
 ## 遍历算法
@@ -170,7 +168,7 @@ node in the tree.  If the node has no `left`/`right` child, we can simply
 return the node's `leftThread`/`rightThread`.  Otherwise, it is trivial to move
 down the tree and find the correct node.
 
-让我们从使用线程二叉树的主要原因开始。 就是现在很容易找到有序的前任和任何的有序继承者树中的节点。 如果节点没有`left` /`right`子节点，我们可以简单地说返回节点的`leftThread` /`rightThread`。 否则，移动是微不足道的在树下找到正确的节点。
+让我们从使用线索二叉树的主要原因开始。就是现在很容易在树种找到中序前驱和任何节点中序后继。如果节点没有`left`/`right`子节点，我们可以简单地说返回节点的`leftThread`/`rightThread`。 否则，向下移动树和寻找正确节点是微不足道的。
 
 ```swift
   func predecessor() -> ThreadedBinaryTree<T>? {
@@ -193,20 +191,20 @@ down the tree and find the correct node.
 return the largest/smallest node in a given sub-tree.  See
 [the implementation](ThreadedBinaryTree.swift) for more detail.
 
-> 注意：`maximum()`和`minimum()`是`ThreadedBinaryTree`的方法返回给定子树中的最大/最小节点。 看到[实现](ThreadedBinaryTree.swift)了解更多细节。
+> 注意：`maximum()`和`minimum()`是`ThreadedBinaryTree`的方法，返回给定子树中的最大/最小节点。 到[实现](ThreadedBinaryTree.swift)了解更多细节。
 
 Because these are `ThreadedBinaryTree` methods, we can call
 `node.predecessor()` or `node.successor()` to obtain the predecessor or
 successor of any `node`, provided that `node` is a `ThreadedBinaryTree` object.
 
-因为这些是`ThreadedBinaryTree`方法，我们可以调用`node.predecessor()`或`node.successor()`来获取前一个或任何`node`的后继者，只要`node`是`ThreadedBinaryTree`对象。
+因为这些是`ThreadedBinaryTree`的方法，我们可以调用`node.predecessor()`或`node.successor()`来获取任何`node`的前驱和后继，只要`node`是`ThreadedBinaryTree`对象。
 
 Because predecessors and/or successors are tracked, an in-order traversal of a
 threaded binary tree is much more efficient than the recursive algorithm
 outlined above.  We use these predecessor/successor attributes to great effect
 in this new algorithm for both forward and backward traversals:
 
-因为跟踪前辈和/或后继者，所以有序遍历a线程二叉树比递归算法更有效概述如上。 我们使用这些前任/后继属性产生了很大的效果在这个用于前向和后向遍历的新算法中：
+因为前驱和/或后继被追踪，所以如上概述，中序遍历线索二叉树比递归算法更有效概述如上。 在这个用向前和向后遍历的新算法中，我们使用这些前驱/后继的属性产生了很大的效果：
 
 ```swift
     public func traverseInOrderForward(_ visit: (T) -> Void) {
@@ -241,12 +239,12 @@ a function that executes on each node as they are visited.  This function can
 be anything you want, as long as it accepts `T` (the type of the values of the
 nodes of the tree) and has no return value.
 
-再一次，这是一个`ThreadedBinaryTree`的方法，所以我们通过它来调用它`node.traverseInorderForward（visitFunction）`。 请注意，我们可以指定在访问每个节点时执行的函数。 这个功能可以是你想要的任何东西，只要它接受`T`（值的类型树的节点）并且没有返回值。
+再一次，这是一个`ThreadedBinaryTree`的方法，所以我们通过它来调用它`node.traverseInorderForward(visitFunction)`。 请注意，我们可以指定在访问每个节点时执行的函数。 这个功能可以是你想要的任何东西，只要它接受`T`（树节点值的类型）并且没有返回值。
 
 Let's walk through a forward traversal of a tree by hand to get a better idea
 of how a computer would do it.  For example, take this simple threaded tree:
 
-让我们手动通过树的向前遍历来获得更好的主意计算机将如何做到这一点。 例如，采用这个简单的线程树：
+让我们手动通过树的向前遍历来获得更好的想法，看看计算机将如何做到这一点。 例如，采用这个简单的线索树：
 
 ![Base](Images/Base.png)
 
@@ -263,8 +261,8 @@ node has a `rightThread` that leads to `nil`, which signals that we have
 completed the traversal!  We visited the nodes in order **2, 5, 7, 9, 12**,
 which intuitively makes sense, as that is their natural increasing order.
 
-我们从树的根开始，**9**。 请注意，我们还没有`visit(9)`。从那里我们想要进入树中的`minimum()`节点，即**2** in
-这个案例。 然后我们``visit(2)``并看到它有一个`rightThread`，因此我们立即知道它的`successor()`是什么。 我们按照线程** ** **，没有任何离开的线程。 因此，在我们`visit(5)`之后，我们去了到`right`子树中的`minimum()`节点，即 **7**。 然后我们`visit(7)`并看到它有一个`rightThread`，我们按照它来回到**9**。 *现在*我们`visit(9)`，并注意到它没有`rightThread`，我们转到`right`子树中的`minimum()`节点，即** 12**。 这个节点有一个`rightThread`，它会导致`nil`，它表示我们有完成了遍历！ 我们按顺序访问节点 **2,5,7,9,12**，直觉上有意义，因为这是他们自然增长的顺序。
+我们从树的根节点开始，**9**。 请注意，我们还没有`visit(9)`。我们想要进入树中的`minimum()`节点，在这个案例即**2**
+。然后我们`visit(2)`并看到它有一个`rightThread`，因此我们立即知道它的`successor()`是什么。 我们按照线索**5**，没有任何离开的线程。 因此，在我们`visit(5)`之后，我们去了到`right`子树中的`minimum()`节点，即 **7**。 然后我们`visit(7)`并看到它有一个`rightThread`，我们按照它来回到**9**。 *现在*我们`visit(9)`，并注意到它没有`rightThread`，我们转到`right`子树中的`minimum()`节点，即** 12**。 这个节点有一个`rightThread`，它会导致`nil`，它表示我们有完成了遍历！ 我们按顺序访问节点 **2,5,7,9,12**，直觉上有意义，因为这是他们自然增长的顺序。
 
 A backward traversal would be very similar, but you would replace `right`,
 `rightThread`, `minimum()`, and `successor()` with `left`, `leftThread`,
