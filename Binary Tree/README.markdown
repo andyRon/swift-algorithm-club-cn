@@ -107,6 +107,8 @@ extension BinaryTree: CustomStringConvertible {
 2. *Pre-order*： 首先查看节点，然后查看其左右子节点。
 3. *Post-order*： 首先查看左右子节点最后处理节点本身。
 
+> **译注：**这三种遍历方式分别称为：前序（Pre-order），中序（In-order），后序（Post-order）
+
 以下是您实现的方法：
 
 ```swift

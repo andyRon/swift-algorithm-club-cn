@@ -1,4 +1,3 @@
-
 # 红黑树(Red-Black Tree)
 
 A red-black tree (RBT) is a balanced version of a [Binary Search Tree](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search%20Tree) guaranteeing that the basic operations (search, predecessor, successor, minimum, maximum, insert and delete) have a logarithmic worst case performance.
