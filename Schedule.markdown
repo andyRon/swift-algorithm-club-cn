@@ -118,7 +118,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Array2D					| andyRon 	 |     Y         | andyRon	| Y			|
-| Bit Set					| andyRon    |     Y         |	    	|			|
+| Bit Set					| andyRon    |     Y         | andyRon	| ❗️			|
 | Fixed Size Array			| andyRon    |     Y         | andyRon	| Y			|
 | Ordered Array				| andyRon    |     Y         | andyRon	| Y			|
 | Rootish Array Stack		| andyRon    |     Y         | andyRon	| Y			|
