@@ -50,7 +50,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Brute-Force String Search | andyRon    |   Y  		 | andyRon  | Y 		|
-| Boyer-Moore-Horspool  	| andyRon    |   Y  		 |  andyRon | Y❗️ 		|
+| Boyer-Moore-Horspool  	| andyRon    |   Y  		 | andyRon  | Y❗️ 		|
 | Knuth-Morris-Pratt 		| andyRon    |   Y  		 |   		| 			|
 | Rabin-Karp 				| andyRon    |   Y  		 |   		| 			|
 | Longest Common Subsequence| andyRon    |   Y  		 |   		| 			|
@@ -79,7 +79,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | 变动长度编码法(RLE)   		| andyRon    |  Y            |	    	|			|
-| 哈夫曼编码   			    | andyRon    |  Y            |	    	|			|
+| Huffman Coding   			| andyRon    |  Y            |	    	|			|
 
 ### 杂项
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
@@ -93,8 +93,8 @@
 ### 数学算法
 
 | 题目    							|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
-|-----------------------------------|------------|:-------------:|----------|:---------:|
-| GCD	   							| andyRon    |  Y            |	    	|			|
+|-----------------------------------|------------|:-------------:|---------- |:---------:|
+| GCD	   							| andyRon    |  Y            | andyRon	 | Y		 |
 | Combinatorics	   					| andyRon    |  Y            |	    	|			|
 | Shunting Yard	   					| andyRon    |  Y            |	    	|			|
 | karatsuba乘法	   					| andyRon    |  Y            |	    	|			|
@@ -131,8 +131,8 @@
 | Queue 					| andyRon    |     Y         | andyRon	| Y			|
 | Deque 					| andyRon    |     Y         | andyRon	| Y			|
 | Priority Queue 			| andyRon    |     Y         | andyRon  | Y 		|
-| Bounded Priority Queue    | andyRon    |     Y         |	    	|			|
-| Ring Buffer				| andyRon    |     Y         |	    	|			|
+| Bounded Priority Queue    | andyRon    |     Y         | andyRon	| Y❗️		|
+| Ring Buffer				| andyRon    |     Y         | andyRon	| Y❗️		|
 
 ### 列表
 
@@ -149,17 +149,17 @@
 | Binary Tree  				| andyRon    |  Y            | andyRon	| Y			|
 | Binary Search Tree  		| andyRon    |  Y            | andyRon	| Y❗️		|
 | AVL Tree 					| andyRon    |  Y            | andyRon  | Y❓		|
-| Red-Black Tree   			| andyRon    |  Y            | andyRon	| 	❗️		|
-| Splay Tree   				| andyRon    |  Y            | andyRon	|	❗️		|
-| Threaded Binary Tree   	| andyRon    |  Y            |	    	|			|
-| Segment Tree   			| andyRon    |  Y            |	    	|			|
+| Red-Black Tree   			| andyRon    |  Y            | andyRon	| 	❓		|
+| Splay Tree   				| andyRon    |  Y            | andyRon	| Y❗️		|
+| Threaded Binary Tree   	| andyRon    |  Y            | andyRon	|	❗️		|
+| Segment Tree   			| andyRon    |  Y            | andyRon	| Y❗️		|
 |   Lazy Propagation   		| andyRon    |  Y            |	    	|			|
 | Sparse Table   			| andyRon    |  Y            |	    	|			|
 | Heap   					| andyRon    |  Y            | andyRon  | Y❗️ 		|
-| Trie   					| andyRon    |  Y            | andyRon	| ❗️			|
+| Trie   					| andyRon    |  Y            | andyRon	| Y❗️			|
 | B-Tree   					| andyRon    |  Y            | andyRon	| ❗️			|
-| QuadTree   				| andyRon    |  Y            | andyRon	| ❗️			|
-| Octree   					| andyRon    |  Y            | andyRon	| ❗️			|
+| QuadTree   				| andyRon    |  Y            | andyRon	| Y❗️			|
+| Octree   					| andyRon    |  Y            | andyRon	| Y❗️			|
 
 ### 哈希
 
@@ -172,9 +172,9 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|---------- |:---------:|
 | Bloom Filter   			| andyRon    | Y             | andyRon	 | Y		 |
-| Hash Set   				| andyRon    | Y             | andyRon	 |			 |
-| Multiset   				| andyRon    | Y             | andyRon	 | Y	   	|
-| Ordered Set   			| andyRon    | Y             | andyRon	 | Y		|
+| Hash Set   				| andyRon    | Y             | andyRon	 | Y❗️		 |
+| Multiset   				| andyRon    | Y             | andyRon	 | Y	   	 |
+| Ordered Set   			| andyRon    | Y             | andyRon	 | Y		 |
 
 ### 图
 
