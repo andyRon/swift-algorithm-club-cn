@@ -180,7 +180,7 @@
 
 | 题目    							|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |-----------------------------------|------------|:-------------:|----------|:---------:|
-| Graph   							| andyRon    |  Y            | andyRon  | ❓        |
+| Graph   							| andyRon    |  Y            | andyRon  | Y❗️       |
 | Breadth-First Search   			| andyRon    |  Y            |	    	|			|
 | Depth-First Search   				| andyRon    |  Y            |	    	|			|
 | Shortest Path   					| andyRon    |  Y            |	    	|			|
