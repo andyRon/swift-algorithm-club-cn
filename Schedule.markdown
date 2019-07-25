@@ -181,7 +181,7 @@
 | 题目    							|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |-----------------------------------|------------|:-------------:|----------|:---------:|
 | Graph   							| andyRon    |  Y            | andyRon  | Y❗️       |
-| Breadth-First Search   			| andyRon    |  Y            |	    	|			|
+| Breadth-First Search   			| andyRon    |  Y            | andyRon  | Y❗️		|
 | Depth-First Search   				| andyRon    |  Y            |	    	|			|
 | Shortest Path   					| andyRon    |  Y            |	    	|			|
 | Single-Source Shortest Paths		| andyRon    |  Y            |	    	|			|
