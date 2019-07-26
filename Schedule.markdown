@@ -182,7 +182,7 @@
 |-----------------------------------|------------|:-------------:|----------|:---------:|
 | Graph   							| andyRon    |  Y            | andyRon  | Y❗️       |
 | Breadth-First Search   			| andyRon    |  Y            | andyRon  | Y❗️		|
-| Depth-First Search   				| andyRon    |  Y            |	    	|			|
+| Depth-First Search   				| andyRon    |  Y            | andyRon  | Y❗️	    |	
 | Shortest Path   					| andyRon    |  Y            |	    	|			|
 | Single-Source Shortest Paths		| andyRon    |  Y            |	    	|			|
 | Minimum Spanning Tree   			| andyRon    |  Y            |	    	|			|
