@@ -185,7 +185,7 @@ print(minimumSpanningTree) // [node: a edges: ["b", "h"]]
                            // [node: h edges: ["g", "i"]]
 ```
 
-> **注意：**在未加权的图上，任何生成树始终是最小生成树。 这意味着您还可以使用[深度优先搜索](../Depth-First%20Search)来查找最小生成树。
+> **注意：** 在未加权的图上，任何生成树始终是最小生成树。 这意味着您还可以使用[深度优先搜索](../Depth-First%20Search)来查找最小生成树。
 
 
 *作者：[Chris Pilcher](https://github.com/chris-pilcher)， Matthijs Hollemans*  
