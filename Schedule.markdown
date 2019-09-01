@@ -5,7 +5,7 @@
 - 初次翻译时保留英文+中文，校对后去除英文。`README_en.md`文件是原文。
 
 
-# 翻译进度 (35/93)
+# 翻译进度 (53/93)
 
 
 
@@ -26,7 +26,7 @@
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon |  Y		|
-|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon | 			|
+|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon |  Y		|
 
 
 
@@ -40,7 +40,7 @@
 | Binary Search  			| andyRon    |   Y  		 |  andyRon | Y			|
 | Count Occurrences 		| andyRon    |   Y  		 |  andyRon | Y			|
 | Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | Y			|
-| k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | 			|
+| k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | Y			|
 | Selection Sampling     	| andyRon    |   Y  		 |  andyRon | 			|
 | Union-Find			    | andyRon    |   Y  		 |  andyRon | 			|
 
@@ -118,7 +118,7 @@
 | 题目    					|  翻译人员   |   翻译是否完成  | 校对人员   | 校对是否完成|
 |---------------------------|------------|:-------------:|----------|:---------:|
 | Array2D					| andyRon 	 |     Y         | andyRon	| Y			|
-| Bit Set					| andyRon    |     Y         | andyRon	| ❗️			|
+| Bit Set					| andyRon    |     Y         | andyRon	| ❗️		|
 | Fixed Size Array			| andyRon    |     Y         | andyRon	| Y			|
 | Ordered Array				| andyRon    |     Y         | andyRon	| Y			|
 | Rootish Array Stack		| andyRon    |     Y         | andyRon	| Y			|
