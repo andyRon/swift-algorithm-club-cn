@@ -41,7 +41,7 @@
 | Count Occurrences 		| andyRon    |   Y  		 |  andyRon | Y			|
 | Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | Y			|
 | k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | Y			|
-| Selection Sampling     	| andyRon    |   Y  		 |  andyRon | 			|
+| Selection Sampling     	| andyRon    |   Y  		 |  andyRon | Y❓		|
 | Union-Find			    | andyRon    |   Y  		 |  andyRon | 			|
 
 
