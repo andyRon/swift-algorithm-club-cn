@@ -92,7 +92,8 @@ public struct Array2D<T> {
 ```
 
 > 译注：`precondition(_:_:file:line:)`函数类似`assert`，满足条件会造成程序的提前终止并抛出错误信息，详细查看[官方文档](https://developer.apple.com/documentation/swift/1540960-precondition)。此处有来表示当下标超过范围的提示，效果如下：
-![](https://upload-images.jianshu.io/upload_images/1678135-23c580bf5f081edc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](http://images.andyron.com/2018/ar2018104.jpg)
 
 
 `Array2D`是一个泛型，因此能够支持所有类型对象，而不是只能是数字
