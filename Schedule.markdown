@@ -42,7 +42,7 @@
 | Select Minimum / Maximum 	| andyRon    |   Y  		 |  andyRon | Y			|
 | k-th Largest Element   	| andyRon    |   Y  		 |  andyRon | Y			|
 | Selection Sampling     	| andyRon    |   Y  		 |  andyRon | Y❓		|
-| Union-Find			    | andyRon    |   Y  		 |  andyRon | 			|
+| Union-Find			    | andyRon    |   Y  		 |  andyRon | Y❓		|
 
 
 ### 字符串搜索算法
