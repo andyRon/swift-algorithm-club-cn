@@ -1,5 +1,5 @@
 # Run-Length Encoding (RLE)
-# 变动长度编码法(RLE)
+# 变动长度编码法(Run-Length Encoding, RLE)
 
 RLE is probably the simplest way to do compression. Let's say you have data that looks like this:
 RLE可能是进行压缩的最简单方法。 假设您的数据如下所示：
@@ -12,7 +12,7 @@ then RLE encodes it as follows:
 	5a3b1c1d7e1f...
 
 Instead of repeating bytes, you first write how often that byte occurs and then the byte's actual value. So `5a` means `aaaaa`. If the data has a lot of "byte runs", that is lots of repeating bytes, then RLE can save quite a bit of space. It works quite well on images.
-您首先要写出该字节出现的频率，然后再写出字节的实际值，而不是重复字节。 所以`5a`的意思是`aaaaa`。 如果数据有很多“字节运行”，那就是很多重复的字节，那么RLE可以节省相当多的空间。 它在图像上运行良好。
+您首先要写出该字节出现的频率，然后再写出字节的实际值，而不是重复字节。所以`5a`的意思是`aaaaa`。如果数据有很多“字节运行”，那就是很多重复的字节，那么RLE可以节省相当多的空间。 它在图像上运行良好。
 
 There are many different ways you can implement RLE. Here's an extension of `Data` that does a version of RLE inspired by the old [PCX image file format](https://en.wikipedia.org/wiki/PCX).
 有许多不同的方法可以实现RLE。 这是`Data`的扩展，它使旧的[PCX图像文件格式](https://en.wikipedia.org/wiki/PCX)启发了一个RLE版本。

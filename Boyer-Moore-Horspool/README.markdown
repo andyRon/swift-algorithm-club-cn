@@ -1,5 +1,3 @@
-
-
 # Boyer-Moore字符串搜索(Boyer-Moore String Search)
 
 > 这个主题已经有教程 [here](https://www.raywenderlich.com/163964/swift-algorithm-club-booyer-moore-string-search-algorithm)
@@ -106,7 +104,6 @@ search pattern:    World
                        ^
 ```
 
-
 注意两个`o`字符现在是如何对齐的。 再次，您将搜索模式的最后一个字符与搜索文本进行比较：`W` vs`d`。 它们是不相同的，但`W`确实出现在搜索模式中。 因此，再次跳过一个位置，让两个`W`字符在相同位置：
 
 ```
@@ -127,20 +124,13 @@ l: 1
 d: 0
 ```
 
-
 字符越接近模式的末尾，跳过量越小。 如果某个字符在模式中出现多次，则最接近该模式结尾的字符将确定该字符的跳过值。
-
-
 
 > **注意：** 如果搜索模式只包含几个字符，则执行暴力搜索会更快。 在构建跳过表与为短模式执行暴力搜索之间需要进行权衡。
 
-
-
 致谢：此代码基于1989年7月Dr Dobb's杂志发表的文章["Faster String Searches" by Costas Menico](http://www.drdobbs.com/database/faster-string-searches/184408171)  —— 对 ，1989年！ 有时保留那些旧杂志是有用的。
 
-
 扩展阅读：这个算法的[详细分析](http://www.inf.fh-flensburg.de/lang/algorithmen/pattern/bmen.htm)
-
 
 
 ## Boyer-Moore-Horspool 算法
@@ -209,16 +199,12 @@ extension String {
 
 在实践中，Horspool版本的算法往往比原始版本略好一些。 但是，这取决于你愿意做出什么样的权衡。
 
-
-
 致谢：此代码基于论文：[R. N. Horspool (1980). "Practical fast searching in strings". Software - Practice & Experience 10 (6): 501–506.](http://www.cin.br/~paguso/courses/if767/bib/Horspool_1980.pdf)
-
 
 
 *作者：Matthijs Hollemans，Andreas Neusüß，[Matías Mazzei](https://github.com/mmazzei)*  
 *翻译：[Andy Ron](https://github.com/andyRon)*  
 *校对：[Andy Ron](https://github.com/andyRon)*  
-
 
 
 > **译注：**  阮一峰老师的文章 [字符串匹配的Boyer-Moore算法](http://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html) 讲的比较清晰。

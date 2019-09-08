@@ -1,8 +1,7 @@
-# Huffman Coding
-# 哈夫曼编码
+# 哈夫曼编码（Huffman Coding）
 
 The idea: To encode objects that occur often with a smaller number of bits than objects that occur less frequently.
-想法：编码通常以比不常发生的对象少的位数出现的对象。
+想法：编码通常让编码对象的位数减少。
 
 Although any type of objects can be encoded with this scheme, it is common to compress a stream of bytes. Suppose you have the following text, where each character is one byte:
 尽管可以使用此方案对任何类型的对象进行编码，但通常会压缩字节流。 假设您有以下文本，其中每个字符是一个字节：
@@ -34,7 +33,7 @@ We can assign bit strings to each of these bytes. The more common a byte is, the
 	    n: 2    0110          i: 1    10000
 
 Now if we replace the original bytes with these bit strings, the compressed output becomes:
-现在，如果我们用这些位字符串替换原始字节，压缩输出将变为：
+现在，如果我们用这些位串替换原始字节，压缩输出将变为：
 
 	101 000 010 111 11001 0011 10001 010 0010 000 1001 11010 101
 	s   o   _   m   u     c    h     _   w    o   r    d     s
@@ -63,25 +62,25 @@ For our example, the tree looks like this:
 ![The compression tree](Images/Tree.png)
 
 Note that the tree has 16 leaf nodes (the grey ones), one for each byte value from the input. Each leaf node also shows the count of how often it occurs. The other nodes are "intermediate" nodes. The number shown in these nodes is the sum of the counts of their child nodes. The count of the root node is therefore the total number of bytes in the input.
-请注意，树有16个叶节点（灰色节点），每个节点对应一个输入的字节值。 每个叶节点还显示其发生频率的计数。 其他节点是“中间”节点。 这些节点中显示的数字是其子节点的计数总和。 因此，根节点的计数是输入中的总字节数。
+请注意，树有16个叶节点（灰色节点），每个节点对应一个输入的字节值。 每个叶节点还显示其发生频率的计数。 其他节点是“过渡”节点。 这些节点中显示的数字是其子节点的计数总和。 因此，根节点的计数是输入中的总字节数。
 
 The edges between the nodes are either "1" or "0". These correspond to the bit-encodings of the leaf nodes. Notice how each left branch is always 1 and each right branch is always 0.
-节点之间的边缘是“1”或“0”。 这些对应于叶节点的位编码。 注意每个左分支始终为1，每个右分支始终为0。
+节点之间的边是“1”或“0”。 这些对应于叶节点的位编码。 注意每个左分支始终为1，每个右分支始终为0。
 
 Compression is then a matter of looping through the input bytes and for each byte traversing the tree from the root node to that byte's leaf node. Every time we take a left branch, we emit a 1-bit. When we take a right branch, we emit a 0-bit.
-然后，压缩是循环输入字节以及从根节点到该字节的叶节点遍历树的每个字节的问题。 每次我们采用左分支，我们发出1位。 当我们采用正确的分支时，我们发出一个0位。
+然后，压缩是循环输入字节以及从根节点到该字节的叶节点遍历树的每个字节的问题。 每次我们采用左分支，我们发出1位。 当我们采用右分支时，我们发出一个0位。
 
 For example, to go from the root node to `c`, we go right (`0`), right again (`0`), left (`1`), and left again (`1`). This gives the Huffman code as `0011` for `c`.
 例如，从根节点到`c`，我们向右（`0`），再向右（`0`），向左（`1`），再向左（`1`）。 这使得霍夫曼代码为`c`为`0011`。
 
 Decompression works in exactly the opposite way. It reads the compressed bits one-by-one and traverses the tree until it reaches to a leaf node. The value of that leaf node is the uncompressed byte. For example, if the bits are `11010`, we start at the root and go left, left again, right, left, and a final right to end up at `d`.
-减压的作用完全相反。 它逐个读取压缩位并遍历树，直到它到达叶节点。 该叶节点的值是未压缩的字节。 例如，如果位是`11010`，我们从根开始向左，向左，向左，向左，最后向右，以`d`结束。
+解压的作用完全相反。 它逐个读取压缩位并遍历树，直到它到达叶节点。 该叶节点的值是未压缩的字节。 例如，如果位是`11010`，我们从根开始向左，向左，向左，向左，最后向右，以`d`结束。
 
 ## The code
 ## 代码
 
 Before we get to the actual Huffman coding scheme, it is useful to have some helper code that can write individual bits to an `NSData` object. The smallest piece of data that `NSData` understands is the byte, but we are dealing in bits, so we need to translate between the two.
-在我们开始实际的霍夫曼编码方案之前，有一些辅助代码可以将单个位写入`NSData`对象。 `NSData`理解的最小数据是字节，但我们处理的是比特，所以我们需要在两者之间进行转换。
+在我们开始实际的霍夫曼编码方案之前，有一些辅助代码可以将单个位写入`NSData`对象。`NSData`理解的最小数据是字节，但我们处理的是比特，所以我们需要在两者之间进行转换。
 
 ```swift
 public class BitWriter {
@@ -111,7 +110,7 @@ public class BitWriter {
 ```
 
 To add a bit to the `NSData`, you can call `writeBit()`. This helper object stuffs each new bit into the `outByte` variable. Once you have written 8 bits, `outByte` gets added to the `NSData` object for real.
-要向`NSData`添加一点，可以调用`writeBit（）`。 这个帮助器对象将每个新位填充到`outByte`变量中。 一旦你写了8位，`outByte`就会被添加到`NSData`对象中。
+要向`NSData`添加一点，可以调用`writeBit()`。 这个帮助器对象将每个新位填充到`outByte`变量中。 一旦你写了8位，`outByte`就会被添加到`NSData`对象中。
 
 The `flush()` method is used for outputting the very last byte. There is no guarantee that the number of compressed bits is a nice round multiple of 8, in which case there may be some spare bits at the end. If so, `flush()` adds a few 0-bits to make sure that we write a full byte.
 `flush()`方法用于输出最后一个字节。 不能保证压缩位的数量是8的精确倍数，在这种情况下，最后可能会有一些备用位。 如果是这样，`flush()`会添加几个0位以确保我们写一个完整的字节。
@@ -144,10 +143,10 @@ public class BitReader {
 ```
 
 By using this helper object, we can read one whole byte from the `NSData` object and put it in `inByte`. Then, `readBit()` returns the individual bits from that byte. Once `readBit()` has been called 8 times, we read the next byte from the `NSData`.
-通过使用这个辅助对象，我们可以从`NSData`对象读取一个完整的字节并将其放在`inByte`中。 然后，`readBit（）`返回该字节的各个位。 一旦`readBit（）`被调用了8次，我们就从`NSData`读取下一个字节。
+通过使用这个辅助对象，我们可以从`NSData`对象读取一个完整的字节并将其放在`inByte`中。 然后，`readBit()`返回该字节的各个位。 一旦`readBit()`被调用了8次，我们就从`NSData`读取下一个字节。
 
 > **Note:** If you are unfamiliar with this type of bit manipulation, just know that these two helper objects make it simple for us to write and read bits.
-> **注意：** 如果您不熟悉这种类型的位操作，只需知道这两个辅助对象使我们可以轻松地编写和读取位。
+> **注意：** 如果您不熟悉这种类型的位操作，只需知道这两个辅助对象使我们可以轻松地写和读取比特。
 
 ## The frequency table
 ## 频率表
@@ -156,7 +155,7 @@ The first step in the Huffman compression is to read the entire input stream and
 霍夫曼压缩的第一步是读取整个输入流并构建频率表。 该表包含所有256个可能字节值的列表，并显示每个字节在输入数据中出现的频率。
 
 We could store this frequency information in a dictionary or an array, but since we need to build a tree, we might store the frequency table as the leaves of the tree.
-我们可以将这个频率信息存储在字典或数组中，但由于我们需要构建一个树，我们可能会将频率表存储为树的叶子。
+我们可以将这个频率信息存储在字典或数组中，但由于我们需要构建一个树，我们可能会将频率表存储为树的叶节点。
 
 Here are the definitions we need:
 以下是我们需要的定义：
@@ -180,7 +179,7 @@ class Huffman {
 ```
 
 The tree structure is stored in the `tree` array and will be made up of `Node` objects. Since this is a [binary tree](../Binary%20Tree/), each node needs two children, `left` and `right`, and a reference back to its `parent` node. Unlike a typical binary tree, these nodes do not use pointers to refer to each other but use simple integer indices in the `tree` array. (We also store the array `index` of the node itself; the reason for this will become clear later.)
-树结构存储在`tree`数组中，并由`Node`对象组成。 由于这是[二叉树](../Binary％20Tree/)，每个节点需要两个子节点，`left`和`right`，以及一个返回其`parent`节点的引用。 与典型的二叉树不同，这些节点不使用指针相互引用，而是在`tree`数组中使用简单的整数索引。 （我们还存储节点本身的数组`index`;之后会明白这个原因。）
+树结构存储在`tree`数组中，并由`Node`对象组成。 由于这是[二叉树](../Binary%20Tree/)，每个节点需要两个子节点，`left`和`right`，以及一个返回其`parent`节点的引用。 与典型的二叉树不同，这些节点不使用指针相互引用，而是在`tree`数组中使用简单的整数索引。 （我们还存储节点本身的数组`index`;之后会明白这个原因。）
 
 Note that the `tree` currently has room for 256 entries. These are for the leaf nodes because there are 256 possible byte values. Of course, not all of those may end up being used, depending on the input data. Later, we will add more nodes as we build up the actual tree. For the moment, there is not a tree yet. It includes 256 separate leaf nodes with no connections between them. All the node counts are 0.
 请注意，`tree`目前有256个条目的空间。 这些用于叶节点，因为有256个可能的字节值。 当然，并非所有这些都可能最终被使用，具体取决于输入数据。 稍后，我们将在构建实际树时添加更多节点。 目前还没有一棵树。 它包括256个单独的叶节点，它们之间没有连接。 所有节点计数均为0。

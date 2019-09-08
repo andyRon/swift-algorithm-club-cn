@@ -1,5 +1,3 @@
-
-
 # 暴力字符串搜索(Brute-Force String Search)
 
 如果不允许导入`Foundation`并且不能使用`NSString`的`rangeOfString()`方法，那么如何在纯Swift中编写字符串搜索算法呢？
@@ -24,8 +22,6 @@ animals.indexOf("🐮")
 ```
 
 > **注意：** 牛的索引是6，而不是你想象的3，因为字符串为表情符号使用更多的存储空间。 `String.Index`的实际值并不那么重要，只要它指向字符串中的正确字符。
-
-
 
 这是暴力解决方案：
 

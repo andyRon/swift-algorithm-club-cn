@@ -179,38 +179,38 @@ extension LinkedList {
     }
 }
 
-//public struct LinkedListIndex<T>: Comparable {
-//
-//    fileprivate let node: LinkedList<T>.LinkedListNode<T>?
-//    fileprivate let tag: Int
-//
-//    public static func==<T>(lhs: LinkedListIndex<T>, rhs: LinkedListIndex<T>) -> Bool {
-//        return (lhs.tag == rhs.tag)
-//    }
-//
-//    public static func< <T>(lhs: LinkedListIndex<T>, rhs: LinkedListIndex<T>) -> Bool {
-//        return (lhs.tag < rhs.tag)
-//    }
-//}
-//
-//extension LinkedList: Collection {
-//
-//    public typealias Index = LinkedListIndex<T>
-//
-//    public subscript(position: LinkedListIndex<T>) -> LinedListNode<T> {
-//        <#code#>
-//    }
-//
-//    public var startIndex: Index {
-//        get {
-//            return LinkedListIndex<T>(node: head, tag: 0)
-//        }
-//    }
-//
-//    public var endIndex: Index {
-//        <#code#>
-//    }
-//}
+public struct LinkedListIndex<T>: Comparable {
+
+    fileprivate let node: LinkedList<T>.LinkedListNode<T>?
+    fileprivate let tag: Int
+
+    public static func==<T>(lhs: LinkedListIndex<T>, rhs: LinkedListIndex<T>) -> Bool {
+        return (lhs.tag == rhs.tag)
+    }
+
+    public static func< <T>(lhs: LinkedListIndex<T>, rhs: LinkedListIndex<T>) -> Bool {
+        return (lhs.tag < rhs.tag)
+    }
+}
+
+extension LinkedList: Collection {
+
+    public typealias Index = LinkedListIndex<T>
+
+    public subscript(position: LinkedListIndex<T>) -> LinedListNode<T> {
+        <#code#>
+    }
+
+    public var startIndex: Index {
+        get {
+            return LinkedListIndex<T>(node: head, tag: 0)
+        }
+    }
+
+    public var endIndex: Index {
+        <#code#>
+    }
+}
 
 let list = LinkedList<String>()
 list.isEmpty   // true
