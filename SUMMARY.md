@@ -2,6 +2,14 @@
 # Swift 算法俱乐部
 
 
+
+### 介绍
+
+- [什么是算法和数据结构？](What%20are%20Algorithms.markdown) 
+- [为什么要学习算法？](Why%20Algorithms.markdown) 
+- [大O表示法](Big-O%20Notation.markdown)
+- [算法设计技巧](Algorithm%20Design.markdown) 
+
 ## 数据结构
 
 ### 数组变体
@@ -51,7 +59,6 @@
 - [广度优先搜索(BFS)](Breadth-First%20Search/README.markdown)
 - [深度优先搜索(DFS)](Depth-First%20Search/README.markdown)
 - [最短路径算法](Shortest%20Path%20%28Unweighted%29/README.markdown) 
-- [单源最短路径算法](Single-Source%20Shortest%20Paths%20\(Weighted\)/README.markdown)
 
 
 ## 算法列表
@@ -87,12 +94,6 @@
 - [归并排序](Merge%20Sort/README.markdown)
 - [堆排序](Heap%20Sort/README.markdown)
 
-- [内省排序](Introsort/README.markdown)
-
-
-- [计数排序](Counting%20Sort/README.markdown)
-- [基数排序](Radix%20Sort/README.markdown)
-- [拓扑排序](Topological%20Sort/README.markdown)
 
 
 - [冒泡排序](Bubble%20Sort/README.markdown)
