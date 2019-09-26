@@ -28,7 +28,6 @@
   let value = array[5]
   ```
 
-  Another example of O(1) is pushing and popping from Stack.
   另外一个O(1)的例子是栈的推进和弹出。
 
 
