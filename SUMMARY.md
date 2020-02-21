@@ -14,7 +14,7 @@
 
 ### 搜索算法
 - [线性搜索](Linear%20Search/README.markdown)
-- [二分搜索](Binary%20Search/README.md)
+- [二分搜索](Binary%20Search/README.markdown)
 - [统计出现次数](Count%20Occurrences/README.markdown)	
 - [查找最大／最小值](Select%20Minimum%20Maximum/README.markdown)	
 - [第K大元素](Kth%20Largest%20Element/README.markdown)	
@@ -47,18 +47,18 @@
 
 ### 压缩算法
 
-- [变动长度编码法(RLE)](Run-Length%20Encoding/)	
-- [哈夫曼编码](Huffman%20Coding/)	
+- [变动长度编码法(RLE)](Run-Length%20Encoding/README.markdown)	
+- [哈夫曼编码](Huffman%20Coding/README.markdown)	
 
 ## 数据结构
 
 ### 数组变体
 
 - [二维数组](Array2D/README.markdown)
-- [比特集](Bit%20Set/) 
+- [比特集](Bit%20Set/README.markdown) 
 - [固定大小数组](Fixed%20Size%20Array/README.markdown)
 - [有序数组](Ordered%20Array/README.markdown) 
-- [Rootish Array Stack](Rootish%20Array%20Stack/)
+- [Rootish Array Stack](Rootish%20Array%20Stack/README.markdown)
 
 ### 队列
 
@@ -97,17 +97,12 @@
 
 ### 图
 
-- [图](Graph/)
+- [图](Graph/README.markdown)
 - [广度优先搜索(BFS)](Breadth-First%20Search/README.markdown)
 - [深度优先搜索(DFS)](Depth-First%20Search/README.markdown)
 - [最短路径算法](Shortest%20Path%20%28Unweighted%29/README.markdown) 
-- [单源最短路径算法](Single-Source%20Shortest%20Paths%20(Weighted)/)
-- [最小生成树(未加权图)](Minimum%20Spanning%20Tree%20%28Unweighted%29/) —— 作用对象为无权值树。
-- [最小生成树(加权图)](Minimum%20Spanning%20Tree/)
-- [任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/)
-- [迪杰斯特拉算法(Dijkstra's shortest path algorithm)](Dijkstra%20Algorithm/)
-
-	
-
-
+- [最小生成树(未加权图)](Minimum%20Spanning%20Tree%20%28Unweighted%29/README.markdown)
+- [最小生成树(加权图)](Minimum%20Spanning%20Tree/README.markdown)
+- [任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/README.markdown)
+- [迪杰斯特拉算法](Dijkstra%20Algorithm/README.markdown)
 
