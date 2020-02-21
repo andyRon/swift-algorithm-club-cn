@@ -15,7 +15,6 @@
 ### 数组变体
 - [二维数组](Array2D/README.markdown)
 - [固定大小数组](Fixed%20Size%20Array/README.markdown)
-- [固定大小数组](Fixed%20Size%20Array/README.markdown) 
 - [有序数组](Ordered%20Array/README.markdown) 
 
 ### 队列
