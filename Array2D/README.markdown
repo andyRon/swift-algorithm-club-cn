@@ -40,7 +40,7 @@ func dim<T>(_ count: Int, _ value: T) -> [T] {
   return [T](repeating: value, count: count)
 }
 ```
-> 译注：这边的`dim`，应该是`dimension`（维度）的缩写。
+> 译注：这边的`dim`是`dimension`（维度）的缩写。
 
 然后，你可以这样创建数组：
 

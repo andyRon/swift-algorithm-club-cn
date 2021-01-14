@@ -5,8 +5,6 @@
 
 
 
-
-
 ---------------------------------------------------------------
 以下是原项目的README.markdown翻译(⏳表示还未翻译)
 ---------------------------------------------------------------
@@ -44,33 +42,33 @@
 
 如果你之前没有接触过算法和数据结构，你可以从下面这些简单易懂的算法开始看起：
 
-- [栈](Stack/)
-- [队列](Queue/)
-- [插入排序](Insertion%20Sort/)
-- [二分搜索](Binary%20Search/) 和 [二分搜索树](Binary%20Search%20Tree/)
-- [归并排序](Merge%20Sort/)
-- [Boyer-Moore字符串搜索](Boyer-Moore-Horspool/)
+- [栈](Stack/README.markdown)
+- [队列](Queue/README.markdown)
+- [插入排序](Insertion%20Sort/README.markdown)
+- [二分搜索](Binary%20Search/README.markdown) 和 [二分搜索树](Binary%20Search%20Tree/README.markdown)
+- [归并排序](Merge%20Sort/README.markdown)
+- [Boyer-Moore字符串搜索](Boyer-Moore-Horspool/README.markdown)
 
 ## 算法列表
 
 ### 搜索算法
 
-- [线性搜索](Linear%20Search/)	从数组中查找某个元素。
-- [二分搜索](Binary%20Search/)	从已排序的数组中快速查找元素。
-- [统计出现次数](Count%20Occurrences/)	统计某个值在数组中的出现次数。
-- [查找最大／最小值](Select%20Minimum%20Maximum)	找到数组中的最大／最小值。
-- [第K大元素](Kth%20Largest%20Element/)	找到数组中的第 **K** 大元素，例如中位数。
-- [选取样本](Selection%20Sampling/)	随机地从集合中选取一些元素作为样本。
-- [并查集](Union-Find/)	保持一些不相交的集合，帮助你快速合并它们。
+- [线性搜索](Linear%20Search/README.markdown)	从数组中查找某个元素。
+- [二分搜索](Binary%20Search/README.markdown)	从已排序的数组中快速查找元素。
+- [统计出现次数](Count%20Occurrences/README.markdown)	统计某个值在数组中的出现次数。
+- [查找最大／最小值](Select%20Minimum%20Maximum/README.markdown)	找到数组中的最大／最小值。
+- [第K大元素](Kth%20Largest%20Element/README.markdown)	找到数组中的第 **K** 大元素，例如中位数。
+- [选取样本](Selection%20Sampling/README.markdown)	随机地从集合中选取一些元素作为样本。
+- [并查集](Union-Find/README.markdown)	保持一些不相交的集合，帮助你快速合并它们。
 
 ### 字符串搜索算法
 
-- [暴力字符串搜索算法](Brute-Force%20String%20Search/)	一个简单粗暴的方法。
-- [Boyer-Moore算法](Boyer-Moore-Horspool/)	一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
-- [Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/)	一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
+- [暴力字符串搜索算法](Brute-Force%20String%20Search/README.markdown)	一个简单粗暴的方法。
+- [Boyer-Moore算法](Boyer-Moore-Horspool/README.markdown)	一种高效的字符串子串搜索算法。它不需要对被搜索的字符串中的字符进行逐一比较，而是根据一个查找表跳过其中的某些部分。
+- [Knuth-Morris-Pratt(KMP)算法](Knuth-Morris-Pratt/README.markdown)	一种线性时间字符串算法，它获得字符串出现的已经给定模型字符串的索引。
 - [Rabin-Karp 算法]	使用哈希的快速搜索
-- [最长公共子序列算法](Longest%20Common%20Subsequence/)	找到两个字符串中的最长公共子序列。
-- [Z-Algorithm](Z-Algorithm/)	在String中查找模式的所有实例，并返回模式在String中开始的索引。
+- [最长公共子序列算法](Longest%20Common%20Subsequence/README.markdown)	找到两个字符串中的最长公共子序列。
+- [Z-Algorithm](Z-Algorithm/README.markdown)	在String中查找模式的所有实例，并返回模式在String中开始的索引。
 
 ### 排序算法
 
@@ -78,62 +76,62 @@
 
 基本的排序算法：
 
-- [插入排序](Insertion%20Sort/)
-- [选择排序](Selection%20Sort/)
-- [希尔排序](Shell%20Sort/)
+- [插入排序](Insertion%20Sort/README.markdown)
+- [选择排序](Selection%20Sort/README.markdown)
+- [希尔排序](Shell%20Sort/README.markdown)
 
 快速的排序算法：
 
-- [快速排序](Quicksort/)
-- [归并排序](Merge%20Sort/)
-- [堆排序](Heap%20Sort/)
+- [快速排序](Quicksort/README.markdown)
+- [归并排序](Merge%20Sort/README.markdown)
+- [堆排序](Heap%20Sort/README.markdown)
 
 混合排序算法：
-- [内省排序](Introsort/)
+- [内省排序](Introsort/README.markdown)
 
 特殊的排序算法
 
-- [计数排序](Counting%20Sort/)
-- [基数排序](Radix%20Sort/)
-- [拓扑排序](Topological%20Sort/)
+- [计数排序](Counting%20Sort/README.markdown)
+- [基数排序](Radix%20Sort/README.markdown)
+- [拓扑排序](Topological%20Sort/README.markdown)
 
 不好的排序算法（知道就行了，不要用！）：
 
-- [冒泡排序](Bubble%20Sort/)
-- [慢排序](Slow%20Sort/)
+- [冒泡排序](Bubble%20Sort/README.markdown)
+- [慢排序](Slow%20Sort/README.markdown)
 
 ### 压缩算法
 
-- [变动长度编码法(RLE)](Run-Length%20Encoding/)	将重复的值存储为一个单字节及其计数。
-- [哈夫曼编码](Huffman%20Coding/)	将常见的元素使用更小的单位存储。
+- [变动长度编码法(RLE)](Run-Length%20Encoding/README.markdown)	将重复的值存储为一个单字节及其计数。
+- [哈夫曼编码](Huffman%20Coding/README.markdown)	将常见的元素使用更小的单位存储。
 
 ### 杂项
 
-- [洗牌算法](Shuffle/)	随机搅乱数组中的内容。
-- [梳排序](Comb%20Sort/)	冒泡排序算法的改进。
-- [凸包算法](Convex%20Hull/)
-- [Miller-Rabin素性检测](Miller-Rabin%20Primality%20Test/). Is the number a prime number?
-- [MinimumCoinChange](MinimumCoinChange/). A showcase for dynamic programming.
+- [洗牌算法](Shuffle/README.markdown)	随机搅乱数组中的内容。
+- [梳排序](Comb%20Sort/README.markdown)	冒泡排序算法的改进。
+- [凸包算法](Convex%20Hull/README.markdown)
+- [Miller-Rabin素性检测](Miller-Rabin%20Primality%20Test/README.markdown). Is the number a prime number?
+- [MinimumCoinChange](MinimumCoinChange/README.markdown). A showcase for dynamic programming.
 
 ### 数学算法
 
-- [最大公约数算法(GCD)](GCD/) —— 特殊福利：最小公倍数算法。
-- [排列组合算法](Combinatorics/) —— 还记得高中学过俄组合数学吗？
-- [调度场算法](Shunting%20Yard/) —— 用于将中缀表达式转换为后缀表达式的经典算法。
-- [karatsuba乘法](Karatsuba%20Multiplication/). Another take on elementary multiplication.
-- [Haversine Distance](HaversineDistance/). Calculating the distance between 2 points from a sphere.
-- [⏳Strassen's Multiplication Matrix](Strassen%20Matrix%20Multiplication/). Efficient way to handle matrix multiplication.
+- [最大公约数算法(GCD)](GCD/README.markdown) —— 特殊福利：最小公倍数算法。
+- [排列组合算法](Combinatorics/README.markdown) —— 还记得高中学过俄组合数学吗？
+- [调度场算法](Shunting%20Yard/README.markdown) —— 用于将中缀表达式转换为后缀表达式的经典算法。
+- [karatsuba乘法](Karatsuba%20Multiplication/README.markdown). Another take on elementary multiplication.
+- [Haversine Distance](HaversineDistance/README.markdown). Calculating the distance between 2 points from a sphere.
+- [⏳Strassen's Multiplication Matrix](Strassen%20Matrix%20Multiplication/README.markdown). Efficient way to handle matrix multiplication.
 
 ### 机器学习
 
-- [k-Means 聚类算法](K-Means/) —— 无监督的分类器，将数据聚类为 K 个簇。
+- [k-Means 聚类算法](K-Means/README.markdown) —— 无监督的分类器，将数据聚类为 K 个簇。
 - ⏳K-近邻算法
-- [⏳线性回归](Linear%20Regression/). A technique for creating a model of the relationship between two (or more) variable quantities.
+- [⏳线性回归](Linear%20Regression/README.markdown). A technique for creating a model of the relationship between two (or more) variable quantities.
 - ⏳逻辑回归
 - ⏳神经网络
 - ⏳网页排名算法
-- [⏳朴素贝叶斯分类器](Naive%20Bayes%20Classifier/)
-- [⏳模拟退火算法(Simulated Annealing，SA)](Simulated%20annealing/). Probabilistic technique for approximating the global maxima in a (often discrete) large search space.
+- [⏳朴素贝叶斯分类器](Naive%20Bayes%20Classifier/README.markdown)
+- [⏳模拟退火算法(Simulated Annealing，SA)](Simulated%20annealing/README.markdown). Probabilistic technique for approximating the global maxima in a (often discrete) large search space.
 
 
 
@@ -149,84 +147,84 @@
 
 ### 数组变体
 
-- [二维数组](Array2D/) —— 固定尺寸的二维数组，可用于棋盘游戏。
-- [比特集](Bit%20Set/) —— **n** 位大小固定尺度的序列。
-- [固定大小数组](Fixed%20Size%20Array/) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
-- [有序数组](Ordered%20Array/) —— 一个永远有序的数组。
-- [Rootish Array Stack](Rootish%20Array%20Stack/). A space and time efficient variation on Swift arrays.
+- [二维数组](Array2D/README.markdown) —— 固定尺寸的二维数组，可用于棋盘游戏。
+- [比特集](Bit%20Set/README.markdown) —— **n** 位大小固定尺度的序列。
+- [固定大小数组](Fixed%20Size%20Array/README.markdown) - 如果你确切的知道数据的大小，使用老式的固定长度的数组会更加高效。
+- [有序数组](Ordered%20Array/README.markdown) —— 一个永远有序的数组。
+- [Rootish Array Stack](Rootish%20Array%20Stack/README.markdown). A space and time efficient variation on Swift arrays.
 
 ### 队列
 
-- [栈](Stack/) —— 后进先出！
-- [队列](Queue/) —— 先进先出！
-- [双端队列](Deque/)
-- [优先队列](Priority%20Queue) —— 一个保持最重要的元素总是在最前面的队列。
-- [有限优先队列](Bounded%20Priority%20Queue) —— 元素最大数受限制的优先队列。 :construction:
-- [环形缓冲区](Ring%20Buffer/) —— 一个语义上的固定大小的环形缓冲区，实际使用的是一维序列头尾相接实现。
+- [栈](Stack/README.markdown) —— 后进先出！
+- [队列](Queue/README.markdown) —— 先进先出！
+- [双端队列](Deque/README.markdown)
+- [优先队列](Priority%20Queue/README.markdown) —— 一个保持最重要的元素总是在最前面的队列。
+- [有限优先队列](Bounded%20Priority%20Queue/README.markdown) —— 元素最大数受限制的优先队列。 :construction:
+- [环形缓冲区](Ring%20Buffer/README.markdown) —— 一个语义上的固定大小的环形缓冲区，实际使用的是一维序列头尾相接实现。
 
 ### 列表
 
-- [链表](Linked%20List/) —— 链接起来的数据序列。包含单向和双向链表。
-- [跳表](Skip-List/) —— 跳过列表是一种概率数据结构，具有与AVL/或红黑树相同的对数时间限制和效率，并提供了有效支持搜索和更新操作的巧妙折衷。
+- [链表](Linked%20List/README.markdown) —— 链接起来的数据序列。包含单向和双向链表。
+- [跳表](Skip-List/README.markdown) —— 跳过列表是一种概率数据结构，具有与AVL/或红黑树相同的对数时间限制和效率，并提供了有效支持搜索和更新操作的巧妙折衷。
 
 ### 树
 
-- [树](Tree/) —— 通用目的的树形结构。
-- [二叉树](Binary%20Tree/) —— 一种节点最多有两个子节点的树形结构。
-- [二叉搜索树(BST)](Binary%20Search%20Tree/) —— 以某种方式组织自己的节点的二叉树，以求较快的查询速度。
-- [AVL树](AVL%20Tree/) —— 一种通过旋转来维持平衡的二叉搜索树。 :construction:
-- [红黑树](Red-Black%20Tree/). A self balancing binary search tree.
-- [伸展树](Splay%20Tree/). A self balancing binary search tree that enables fast retrieval of recently updated elements.
-- [线索二叉树](Threaded%20Binary%20Tree/). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
-- [线段树](Segment%20Tree/) —— 能够快速地对某区间进行计算。
+- [树](Tree/README.markdown) —— 通用目的的树形结构。
+- [二叉树](Binary%20Tree/README.markdown) —— 一种节点最多有两个子节点的树形结构。
+- [二叉搜索树(BST)](Binary%20Search%20Tree/README.markdown) —— 以某种方式组织自己的节点的二叉树，以求较快的查询速度。
+- [AVL树](AVL%20Tree/README.markdown) —— 一种通过旋转来维持平衡的二叉搜索树。 :construction:
+- [红黑树](Red-Black%20Tree/README.markdown). A self balancing binary search tree.
+- [伸展树](Splay%20Tree/README.markdown). A self balancing binary search tree that enables fast retrieval of recently updated elements.
+- [线索二叉树](Threaded%20Binary%20Tree/README.markdown). A binary tree that maintains a few extra variables for cheap and fast in-order traversals.
+- [线段树](Segment%20Tree/README.markdown) —— 能够快速地对某区间进行计算。
   - [Lazy Propagation](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Segment%20Tree/LazyPropagation)
 - ⏳k-d 树
-- [ST(稀疏表)算法](Sparse%20Table/). Another take on quickly computing a function over a portion of an array, but this time we'll make it even quicker!.
-- [堆](Heap/) —— 存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
+- [ST(稀疏表)算法](Sparse%20Table/README.markdown). Another take on quickly computing a function over a portion of an array, but this time we'll make it even quicker!.
+- [堆](Heap/README.markdown) —— 存储在一维数组中的二叉树，所以它不需要使用指针。很适合做为优先队列使用。
 - ⏳斐波那契堆
-- [字典树(Trie)](Trie/). A special type of tree used to store associative data structures.
-- [B 树](B-Tree/). A self-balancing search tree, in which nodes can have more than two children.
-- [四分树](QuadTree/). A tree with 4 children.
-- [八叉树](Octree/). A tree with 8 children.
+- [字典树(Trie)](Trie/README.markdown). A special type of tree used to store associative data structures.
+- [B 树](B-Tree/README.markdown). A self-balancing search tree, in which nodes can have more than two children.
+- [四分树](QuadTree/README.markdown). A tree with 4 children.
+- [八叉树](Octree/README.markdown). A tree with 8 children.
 
 ### 哈希
 
-- [哈希表](Hash%20Table/) —— 允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
+- [哈希表](Hash%20Table/README.markdown) —— 允许你通过一个关键词来存取数据。字典通常都是基于哈希表实现的。
 - ⏳哈希函数
 
 ### 集合
 
-- [布隆过滤器](Bloom%20Filter/) —— 一个常量内存数据结构，用于概率性的检测某个元素是否在集合中。
-- [哈希集合](Hash%20Set/) —— 使用哈希表实现的集合。
-- [多重集](Multiset/). A set where the number of times an element is added matters. (Also known as a bag.)
-- [有序集](Ordered%20Set/) —— 很看重元素顺序的集合。
+- [布隆过滤器](Bloom%20Filter/README.markdown) —— 一个常量内存数据结构，用于概率性的检测某个元素是否在集合中。
+- [哈希集合](Hash%20Set/README.markdown) —— 使用哈希表实现的集合。
+- [多重集](Multiset/README.markdown). A set where the number of times an element is added matters. (Also known as a bag.)
+- [有序集](Ordered%20Set/README.markdown) —— 很看重元素顺序的集合。
 
 ### 图
 
-- [图](Graph/)
-- [广度优先搜索(BFS)](Breadth-First%20Search/)
-- [深度优先搜索(DFS)](Depth-First%20Search/)
-- [最短路径算法](Shortest%20Path%20%28Unweighted%29/) —— 作用对象为无权值树。
-- [单源最短路径算法](Single-Source%20Shortest%20Paths%20(Weighted)/)
+- [图](Graph/README.markdown)
+- [广度优先搜索(BFS)](Breadth-First%20Search/README.markdown)
+- [深度优先搜索(DFS)](Depth-First%20Search/README.markdown)
+- [最短路径算法](Shortest%20Path%20%28Unweighted%29/README.markdown) —— 作用对象为无权值树。
+- [单源最短路径算法](Single-Source%20Shortest%20Paths%20(Weighted)/README.markdown)
 
-- [最小生成树(未加权图)](Minimum%20Spanning%20Tree%20%28Unweighted%29/) —— 作用对象为无权值树。
-- [最小生成树(加权图)](Minimum%20Spanning%20Tree/)
+- [最小生成树(未加权图)](Minimum%20Spanning%20Tree%20%28Unweighted%29/README.markdown) —— 作用对象为无权值树。
+- [最小生成树(加权图)](Minimum%20Spanning%20Tree/README.markdown)
 
-- [任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/)
-- [迪杰斯特拉算法(Dijkstra's shortest path algorithm)](Dijkstra%20Algorithm/)
+- [任意两点间的最短路径算法](All-Pairs%20Shortest%20Paths/README.markdown)
+- [迪杰斯特拉算法(Dijkstra's shortest path algorithm)](Dijkstra%20Algorithm/README.markdown)
 
 ## 智力题
 
 很多程序员在面试时都会被问到一些算法性质的智力题。这里只囊括了一点比较有趣的。想了解更多的智力题（及答案），请浏览[这里](http://elementsofprogramminginterviews.com/)，还有[这里](http://www.crackingthecodinginterview.com)。
 
-- [二和问题](Two-Sum%20Problem/)
-- [⏳Three-Sum/Four-Sum Problem](3Sum%20and%204Sum/)
-- [⏳Fizz Buzz](Fizz%20Buzz/)
-- [⏳蒙提霍尔问题](Monty%20Hall%20Problem/)
-- [⏳Finding Palindromes](Palindromes/)
-- [⏳Dining Philosophers](DiningPhilosophers/)
-- [⏳Egg Drop Problem](Egg%20Drop%20Problem/)
-- [⏳Encoding and Decoding Binary Tree](Encode%20and%20Decode%20Tree/)
+- [二和问题](Two-Sum%20Problem/README.markdown)
+- [⏳Three-Sum/Four-Sum Problem](3Sum%20and%204Sum/README.markdown)
+- [⏳Fizz Buzz](Fizz%20Buzz/README.markdown)
+- [⏳蒙提霍尔问题](Monty%20Hall%20Problem/README.markdown)
+- [⏳Finding Palindromes](Palindromes/README.markdown)
+- [⏳Dining Philosophers](DiningPhilosophers/README.markdown)
+- [⏳Egg Drop Problem](Egg%20Drop%20Problem/README.markdown)
+- [⏳Encoding and Decoding Binary Tree](Encode%20and%20Decode%20Tree/README.markdown)
 
 
 ## 贡献者

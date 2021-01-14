@@ -26,7 +26,7 @@
 |Insertion Sort  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Binary Search  			| andyRon    |   Y  		 |  andyRon |  Y		|
 |Merge Sort  				| andyRon    |   Y  		 |  andyRon |  Y		|
-|Boyer-Moore-Horspool  	    | andyRon    |   Y  		 |  andyRon |  Y		|
+|Boyer-Moore-Horspoo|  	    | andyRon    |   Y  		 |  andyRon |  Y		|
 
 
 
@@ -182,7 +182,7 @@
 |-----------------------------------|------------|:-------------:|----------|:---------:|
 | Graph   							| andyRon    |  Y            | andyRon  | Y❗️       |
 | Breadth-First Search   			| andyRon    |  Y            | andyRon  | Y❗️		|
-| Depth-First Search   				| andyRon    |  Y            | andyRon  | Y❗️	    |	
+| Depth-First Search   				| andyRon    |  Y            | andyRon  | Y❗️	    |
 | Shortest Path   					| andyRon    |  Y            | andyRon  | Y 	    |
 | Single-Source Shortest Paths		| andyRon    |  Y            | andyRon	|			|
 | Minimum Spanning Tree   			| andyRon    |  Y            | andyRon	| Y❗️ 		|
